@@ -1,0 +1,24 @@
+[
+    {
+        "project": "docs",
+        "updated_on": "05/04/2014 16:17:29",
+        "stats": {
+            "untrans_entities": 6889,
+            "trans_entities": 3832,
+            "trans_words": 50026,
+            "completed": 35.742934427758605,
+            "untrans_words": 142393
+        }
+    },
+    {
+        "project": "site",
+        "updated_on": "05/04/2014 16:18:48",
+        "stats": {
+            "untrans_entities": 0,
+            "trans_entities": 1953,
+            "trans_words": 29562,
+            "completed": 100.0,
+            "untrans_words": 0
+        }
+    }
+]

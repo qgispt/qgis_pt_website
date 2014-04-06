@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+
+    <title>QGIS-PT</title>
+    
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700,700italic" rel="stylesheet" type='text/css'>
+    <!--<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700" rel="stylesheet" type='text/css'> -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/libs/bootstrapvalidator/dist/css/bootstrapValidator.min.css" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="/libs/leaflet/leaflet.css" />
+
+    <!-- Custom styles -->
+    <link href="styles/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://qgis.pt/"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                	<li><a href="http://qgis.org/pt_PT/site/forusers/download.html" target="_blank">Download</a></li>
+                    <li><a href="http://qgis.org/pt_PT/docs/index.html" target="_blank">Documentação</a></li>
+                    <li><a href="participar.html">Como participar</a></li>
+                    <li class="active"><a href="eventos.html">Eventos</a></li>
+                    <li class="dropdown">
+                    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">QGIS PT <b class="caret"></b></a>
+                    	<ul class="dropdown-menu">
+                    		<li><a href="traducao.html">Tradução</a></li>
+                    		<!-- <li><a href="">Casos de estudo</a></li>
+                    		<li><a href="">Estilos e simbologia</a></li>
+                    		<li><a href="">Modelos de processamento</a></li> -->
+                    	</ul>
+                    </li>
+                    <!-- <li><a href="#">Blog</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Content -->
+    
+    <div class="container adjust-margin">
+    	<div class="row">
+    		<div id="encontro-utilizadores" class="section">
+	    		<h1>2º Encontro de Utilizadores QGIS Portugal</h1>
+	    		<h3>2 de Junho, 2014 - Coimbra</h3>
+	    		<p>Depois do enorme sucesso do primeiro encontro realizado em 2012 em Lisboa, tornou-se bastante clara a necessidade de se relizarem mais encontros do mesmo género. É com enorme
+	    		   gosto que anunciamos o <b>2º Encontro de Utilizadores QGIS Portugal</b> a realizar-se na <b>Faculdade de Ciências e Tecnologia da Universidade de Coimbra</b> no próximo dia 2 de Junho. E desta vez com o Grupo de Utilizadores QGIS PT já formalizado!
+	    		   Será um dia inteiramente dedicado ao QGIS com apresentações das novidades, casos de estudo nacionais e <i>workshops</i>. Será também o espaço ideal para apresentar o Grupo de Utilizadores e quais os seus objectivos.
+	    		</p>
+		    	<p>O encontro será totalmente gratuito embora não dispense inscrição prévia pois teremos um número limitado de lugares. Serão ministrados quatro workshops dos quais poderá frequentar apenas dois. Estes workshops
+		    	   terão eles também um número limitado de lugares. Embora possa frequentar estes workshops gratuitamente, se quiser ter a certeza que o seu lugar está reservado deverá fazer uma doação mínima de 5€ por workshop,
+		    	   valor este que será de suporte para o projecto QGIS. Para acompanhar os workshops deverá ainda trazer o seu computador pessoal e, se possível, já com o QGIS (Desktop e Server) instalado.
+		    	</p>
+		    	<p>Não perca mais tempo... <a href="#inscricoes"><b>INSCREVA-SE JÁ!</b></a></p>
+	    	</div>
+    	</div>
+    	<div class="row">
+    		<h4 style="text-align: justify; margin-top: 0px;">Patrocinadores</h4>
+    		<div class="sponsors">
+    			<a class="sponsors-img uc" href="http://www.uc.pt/" target="_blank"></a>
+   				<a class="sponsors-img faunalia" href="http://www.faunalia.eu/pt/" target="_blank"></a>
+   			</div>
+    	</div>
+    </div>
+    
+    <div class="container">
+    	<div class="row">
+    		<div class="section">
+    			<h1>Programa provisório</h1>
+    			<table class="table table-striped">
+    				<tr>
+    					<th>Hora</th>
+    					<th>Título</th>
+    					<th>Autor</th>
+    					<th>Sala</th>
+    				</tr>
+    				<tr>
+    					<td>Manhã</td>
+    					<td>Apresentações</td>
+    					<td>...</td>
+    					<td>...</td>
+    				</tr>
+    				<tr>
+    					<td rowspan="5">Tarde</td>
+    					<td><b>Workshops</b></td>
+    					<td>...</td>
+    					<td>...</td>
+    				</tr>
+    				<tr>
+    					<td>Novidades QGIS</td>
+    					<td>Giovanni Manghi</td>
+    					<td>...</td>
+    				</tr>
+    				<tr>
+    					<td>Cartografia com QGIS</td>
+    					<td>Alexandre Neto</td>
+    					<td>...</td>
+    				</tr>
+    				<tr>
+    					<td>Processamento e análise com QGIS</td>
+    					<td>Pedro Venâncio</td>
+    					<td>...</td>
+    				</tr>
+    				<tr>
+    					<td>WebGIS com QGIS Server e os seus clientes</td>
+    					<td>Hugo Martins</td>
+    					<td>...</td>
+    				</tr>
+				</table>
+    		</div>
+    	</div>
+    </div>
+    
+    <div class="container">
+    	<div class="row">
+    		<div class="section">
+    			<h1>Local do encontro</h1>
+    			<p>O encontro irá realizar-se na sede da Faculdade de Ciências e Tecnologia (FCTUC), Pólo II da Universidade de Coimbra, no edifício onde
+    			   funcionam os Serviços Centrais e Órgãos de Gestão da FCTUC.
+    			</p>
+    			<div id="map"></div>
+    		</div>
+    	</div>
+    	<div class="row" style="text-align: justify; padding-top: 0px !important;">
+    		<div class="section">
+    			<h3>Como chegar à FCTUC</h3>
+    			<h4>De carro a partir de Lisboa:</h4>
+   				<ul>
+   					<li>Seguir pela auto-estrada A1 na direcção Norte.</li>
+   					<li>Sair da auto-estrada em Coimbra-Sul e seguir pela via rápida em direcção a Coimbra.</li>
+   				</ul>
+
+    			<h4>De carro a partir do Porto:</h4>
+   				<ul>
+   					<li>Seguir pela auto-estrada A1 na direcção Sul.</li>
+   					<li>Sair da auto-estrada em Coimbra-Sul e seguir pela via rápida em direcção a Coimbra.</li>
+   				</ul>
+   				
+   				<h4>De Transportes dentro da cidade de Coimbra:</h4>
+   				<ul>
+   					<li>As linhas que passam pela FCTUC e pelo centro da cidade são a <b>Linha 34</b> e a <b>Linha 38</b>.</li>
+   					<li>Os horários podem ser consultados no site dos Serviços Municipalizados de Transportes Urbanos de Coimbra (SMTUC) em <a href="http://www.smtuc.pt" target="_blank">http://www.smtuc.pt</a>.</li>
+   				</ul>
+   				
+   				<h4>De Transportes fora da cidade Coimbra:</h4>
+   				<ul>
+   					<li>Pode-se chegar à cidade de Coimbra por comboio. Os preços das viagens rondam valores entre os <i>11€</i> e os <i>25€</i> partindo de <i>Lisboa - Oriente</i> e entre os <i>8€</i> e os <i>20€</i> partindo do <i>Porto - Campanhã</i> até <i>Coimbra - B</i>.</li>
+   					<li>Os horários podem ser consultados no site da CP <a href="http://www.cp.pt" target="_blank">http://www.cp.pt</a>.</li>
+   					<li>Existem também linhas rodoviárias para a cidade. Os preços destas viagens rondam os <i>10€</i> vindo de Lisboa ou do Porto.</li>
+   					<li>Estas linhas podem ser consultadas em <a href="http://www.rede-expressos.pt" target="_blank">http://www.rede-expressos.pt</a>.</li>
+   				</ul>
+    		</div>
+    	</div>
+    </div>
+    
+    <div class="container">
+    	<div class="row">
+    		<div id="inscricoes" class="section">
+    			<h1>Inscrição</h1>
+    			<p>Para poder frequentar o encontro terá de se inscrever utilizando o formulário que é apresentado. Para poder reservar o seu lugar nos workshops, e assim ter a certeza que 
+    			   os poderá frequentar, deverá fazer uma doação mínima de 5€ por workshop (apenas pode frequentar 2 workshops). Para o fazer deverá não só preencher o nosso formulário, mas também
+    			   carregar no botão paypal que lhe é apresentado. No fim deverá enviar o comprovativo do paypal para
+    			   <a href="mailto:qgis.portugal@gmail.com?Subject=Donativo%20Paypal" target="_top">qgis.portugal@gmail.com</a>.
+    			</p>
+   				<form id="form-inscricao" role="form" class="form" method="post">
+  					<div class="col-md-6">
+  						<div class="form-group">
+	   						<label for="nome">Nome:</label>
+	   						<input type="text" class="form-control" name="nome" placeholder="Introduza o seu nome completo">
+	   					</div>
+	   				</div>
+   					<div class="col-md-6">
+   						<div class="form-group">
+	   						<label for="entidade">Entidade:</label>
+	   						<input type="text" class="form-control" name="entidade" placeholder="Introduza o nome da entidade de onde vem">
+	   					</div>
+   					</div>
+   					<div class="col-md-12">
+   						<div class="form-group">
+	   						<label for="email">Email:</label>
+	   						<input type="email" class="form-control" name="email" placeholder="Introduza o seu endereço de email">
+	   					</div>
+   					</div>
+   					<div class="col-md-6">
+	   						<label for="ws">Workshops que pretende frequentar:</label>
+	   						<p>Grupo 1</p>
+	   						<div class="form-group">
+		   						<div class="radio">
+									<label>
+										<input type="radio" name="ws1" value="novidades">Novidades QGIS
+									</label>
+								</div>
+								<div class="radio">
+									<label>
+										<input type="radio" name="ws1" value="processing">Processamento e análise com QGIS
+									</label>
+								</div>
+							</div>
+							<p>Grupo 2</p>
+							<div class="form-group">
+								<div class="radio">
+									<label>
+										<input type="radio" name="ws2" value="cartografia">Cartografia com QGIS
+									</label>
+								</div>
+								<div class="radio">
+									<label>
+										<input type="radio" name="ws2" value="qgis-server">WebGIS com QGIS Server
+									</label>
+								</div>
+							</div>
+   					</div>
+   					<div class="col-md-6">
+   						<div class="form-group">
+	   						<label for="so">Qual o sistema operativo que tem instalado no seu computador?</label>
+	   						<div class="radio">
+								<label>
+									<input type="radio" name="so" value="linux">Linux
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="so" value="windows">Windows
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="so" value="mac">Mac OS
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="so" value="outro">Outro
+								</label>
+							</div>
+	   					</div>
+   					</div>
+   					<div class="col-md-6">
+   						<div class="form-group">
+	   						<label for="softsig">Qual o software SIG que utiliza actualmente?</label>
+	   						<input type="text" class="form-control" name="softsig" placeholder="Introduza o nome do software SIG que utiliza actualmente">
+	   					</div>
+   					</div>
+   					<div class="col-md-6">
+   						<div class="form-group">
+	   						<label for="knowhowqgis">Qual o seu nível de conhecimentos em QGIS?</label>
+	   						<div class="radio">
+								<label>
+									<input type="radio" name="knowhowqgis" id="0" value="0">Nenhum
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="knowhowqgis" id="1" value="1">Reduzido
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="knowhowqgis" id="2" value="2">Médio
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="knowhowqgis" id="3" value="3">Bom
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="knowhowqgis" id="4" value="4">Elevado
+								</label>
+							</div>
+	   					</div>
+   					</div>
+   					<div class="col-md-6">
+   						<div class="form-group">
+	   						<label for="interesses">Que assuntos/temas gostaria de ver abordados pela comunidade QGIS PT?</label>
+	   						<textarea id="interesses" class="form-control" rows="5"></textarea>
+	   					</div>
+   					</div>
+   					<div class="col-md-12">
+   						<button id="reset-form" type="button" class="btn btn-lg btn-success btn-form">Limpar formulário</button>
+   						<button id="submit-form" type="submit" class="btn btn-lg btn-success btn-form">Submeter formulário</button> 
+   					</div>
+   				</form>
+   				<div class="col-md-12">
+   						<div id="form-alert" class="alert"><span id="form-alert-icon" class="glyphicon"></span><span id="form-alert-text"></span></div>
+   				</div>
+   				<div class="col-md-6">
+   					<p style="margin-top: 10px; text-align: justify;">Faça o seu donativo ao projecto QGIS e garanta o seu lugar nos workshops! Não se esqueça de nos enviar o comprovativo.</p>
+   				</div>
+   				<div class="col-md-6">
+   					<div class="col-md-3">
+   						<form method="post" action="https://www.paypal.com/cgi-bin/webscr" target="_blank">
+							<input type="hidden" value="_s-xclick" name="cmd">
+							<input type="hidden" value="27GAYFKF4U5EE" name="hosted_button_id">
+							<input type="image" border="0" alt="Donate via PayPal.com" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif">
+							<input type="hidden" value="us" name="lc">
+							<img width="1" height="1" border="0" align="middle" valign="top" src="https://www.paypal.com/en_US/i/scr/pixel.gif" alt="">
+						</form>
+   					</div>
+   					<div class="col-md-3">
+   						<div class="paypal"></div>
+   					</div>
+   				</div>
+    		</div>
+    	</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+    	<div class="container">
+    		<div class="row">
+    			<div class="copyright">
+    				<b>Grupo de Utilizadores QGIS PT, 2014</b>
+    				<br>
+    				<p>Se não for mencionado o contrário, todos os conteúdos licenciados sobre licença <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons Atribuição-Compartilha Igual 3.0 (CC BY-SA)</a></p>
+    			</div>
+    			<div class="social">
+    				<a class="footer-btn facebook" href="https://www.facebook.com/QGISPT" target="_blank"></a>
+    				<a class="footer-btn google-plus" href="https://plus.google.com/102851374948205667454/posts" target="_blank"></a>
+    				<a class="footer-btn twitter" href="https://twitter.com/QGISPT" target="_blank"></a>
+    				<a class="footer-btn github" href="https://github.com/qgispt" target="_blank"></a>
+    				<a class="footer-btn mailing-list" href="http://osgeo-org.1560.x6.nabble.com/QGIS-pt-f5128248.html" target="_blank"></a>
+    			</div>
+    		</div>
+    	</div>
+    </footer>
+
+    <!-- Core JavaScript -->
+    <script src="/libs/jquery.min.js"></script>
+    <script src="/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/libs/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
+    <script src="/libs/leaflet/leaflet.js"></script>
+    <script src="utils.js"></script>
+    <script src="analytics.js"></script>
+  </body>
+</html>

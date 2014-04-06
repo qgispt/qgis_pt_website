@@ -1,0 +1,15 @@
+BOOTSTRAP v3.1.1
+BOOTSTRAPVALIDAO v0.3.3
+JQUERY v1.11.0
+JQUERY Backstretch v2.0.4
+JQUERY Countdown v2.0.0
+LEAFLET v.0.7.2
+
+Esta directoria deve ter a seguinte estrutura:
+   - bootstrap (folder)
+   - bootstraovalidator (folder)
+   - leaflet (folder)
+   - jquery.min.js
+   - jquery.backstretch.min.js
+   - jquery.countdown.min.js
+   - jquery.plugin.min.js
