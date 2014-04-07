@@ -46,7 +46,7 @@
 		if (sendEmail($email, $msg) == true){
 			$response['success'] = true;
 			$response['message'] = 'Seja bem-vindo ao 2ª Encontro de Utilizadores QGIS Portugal! O seu registo foi concluido com sucesso e em breve deverá receber uma confirmação por email.';
-			echo json_encode($response);
 		}
+        echo json_encode($response);
 	}
 ?>
