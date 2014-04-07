@@ -1,13 +1,13 @@
-BOOTSTRAP v3.1.1
-BOOTSTRAPVALIDAO v0.3.3
-JQUERY v1.11.0
-JQUERY Backstretch v2.0.4
-JQUERY Countdown v2.0.0
-LEAFLET v.0.7.2
+BOOTSTRAP v3.1.1 (http://getbootstrap.com/getting-started/)
+BOOTSTRAPVALIDATOR v0.3.3 (http://bootstrapvalidator.com/)
+JQUERY v1.11.0 (http://jquery.com/download/)
+JQUERY Backstretch v2.0.4 (http://srobbin.com/jquery-plugins/backstretch/)
+JQUERY Countdown v2.0.0 (http://keith-wood.name/countdown.html)
+LEAFLET v.0.7.2 (http://leafletjs.com/download.html)
 
 Esta directoria deve ter a seguinte estrutura:
    - bootstrap (folder)
-   - bootstraovalidator (folder)
+   - bootstrapvalidator (folder)
    - leaflet (folder)
    - jquery.min.js
    - jquery.backstretch.min.js
