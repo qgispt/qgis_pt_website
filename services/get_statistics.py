@@ -19,11 +19,11 @@ class qgisTransifex:
         ]
         
     def getResourcesList(self, pslug):
-        req = r.get(os.path.join(self.transifexApi, pslug, '?details'), auth=(self.username, self.password))
+        req = r.get('/'.join([self.transifexApi, pslug]) + '?details', auth=(self.username, self.password))
         return json.loads(req.content)
     
     def getResourceStats(self, pslug, rslug):
-        req = r.get(os.path.join(self.transifexApi, pslug, 'resource', rslug, self.availableApis['stats'], self.language), auth=(self.username, self.password))
+        req = r.get('/'.join([self.transifexApi, pslug, 'resource', rslug, self.availableApis['stats'], self.language]), auth=(self.username, self.password))
         return json.loads(req.content)
     
     def getProjectStats(self, project, resources):
