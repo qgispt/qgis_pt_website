@@ -121,6 +121,13 @@ jQuery(document).ready(function() {
 						}
 					}
 				},
+                funcao: {
+                    validators: {
+                        notEmpty:{
+                            message: 'Este campo é obrigatório'
+                        }
+                    }
+                },
 				softsig: {
 					validators: {
 						notEmpty:{
