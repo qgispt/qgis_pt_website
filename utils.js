@@ -132,7 +132,12 @@ jQuery(document).ready(function() {
 					validators: {
 						notEmpty:{
 							message: 'Este campo é obrigatório'
-						}
+						},
+                        stringLength: {
+                            message: 'Este campo só aceita no máximo 50 caracteres',
+                            min: 1,
+                            max: 50
+                        }
 					}
 				},
 				ws1: {
