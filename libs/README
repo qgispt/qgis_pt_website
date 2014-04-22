@@ -4,11 +4,13 @@ JQUERY v1.11.0 (http://jquery.com/download/)
 JQUERY Backstretch v2.0.4 (http://srobbin.com/jquery-plugins/backstretch/)
 JQUERY Countdown v2.0.0 (http://keith-wood.name/countdown.html)
 LEAFLET v.0.7.2 (http://leafletjs.com/download.html)
+PRETTYPHOTO v.3.1.5 (http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/)
 
 Esta directoria deve ter a seguinte estrutura:
    - bootstrap (folder)
    - bootstrapvalidator (folder)
    - leaflet (folder)
+   - prettyPhoto (folder)
    - jquery.min.js
    - jquery.backstretch.min.js
    - jquery.countdown.min.js

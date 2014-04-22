@@ -255,4 +255,13 @@ jQuery(document).ready(function() {
 		untrans.html(data.stats.untrans_entities + ' items por traduzir (' + data.stats.untrans_words + ' palavras)');
 		trans.html(data.stats.trans_entities + ' items traduzidos (' + data.stats.trans_words + ' palavras)');
 	}
+    
+    //prettyPhoto
+    var imgBox = $("a[rel^='prettyPhoto']");
+    if (imgBox.size() > 0){
+        imgBox.prettyPhoto({
+	        social_tools: false
+	    });
+    }
 });
+
