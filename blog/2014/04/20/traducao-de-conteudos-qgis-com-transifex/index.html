@@ -329,8 +329,13 @@
         var disqus_config = function(){
             console.log(this.callbacks);
             this.callbacks.onReady =[function(){
-                $('footer').css('position', 'inherit');
-                setFooterPosition();
+                var footer = $('footer');
+                footer.css('position', 'inherit');
+                var innerHeight = $(window).height();
+                if (footer.position().top < innerHeight - 106){
+                    footer.css('position', 'fixed');
+                    footer.css('width', '100%');
+                }
             }];
         }
         var disqus_identifier = 'http://qgis.pt/2014/04/20/traducao-de-conteudos-qgis-com-transifex/';
