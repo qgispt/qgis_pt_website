@@ -4,7 +4,7 @@
   <title><![CDATA[QGIS-PT]]></title>
   <link href="http://qgis.pt/atom.xml" rel="self"/>
   <link href="http://qgis.pt/"/>
-  <updated>2014-05-01T19:44:33+01:00</updated>
+  <updated>2014-05-17T16:00:21+01:00</updated>
   <id>http://qgis.pt/</id>
   <author>
     <name><![CDATA[Grupo de Utilizadores QGIS PT]]></name>
@@ -216,7 +216,7 @@ utilização de <i>ssh</i> poderá usar o endereço apropriado e configurar o se
 
 <p>Desta forma irá garantir que está em total sincronia com o repositório oficial do grupo de utilizadores.</p>
 
-<p>Esperamos que este tutorial vos ajude e clarifique os procedimentos que deverão adoptar para contribuirem para a nossa comunidade. Qualquer dúvida que tenham não hesitem em contactar-nos na <i>mailing-lits</i>, 
+<p>Esperamos que este tutorial vos ajude e clarifique os procedimentos que deverão adoptar para contribuirem para a nossa comunidade. Qualquer dúvida que tenham não hesitem em contactar-nos na <i>mailing list</i>, 
    ou através da interface de comentários disponibilizada em baixo.
 </p>
 
@@ -330,7 +330,7 @@ utilização de <i>ssh</i> poderá usar o endereço apropriado e configurar o se
 <p>Nesta interface, pode adicionar o <i>Termo</i> em inglês que quer referir, no campo <i>Parte do Discurso</i> irá adicionar o tipo (Nome, Pronome, Adjectivo, Verbo, Advérbio, Preposição, 
    Conjunção, Interjeição). Para finalizar, na caixa <i>Tradução</i>, insira o texto em português e clique em <i>Gravar</i>.</p>
 
-<p>Esperamos que este tutorial facilite a sua contribuição para a tradução do QGIS. Caso tenha dúvidas, não hesite em usar a <i>mailinglist qgis-pt</i> para as esclarecer.</p>
+<p>Esperamos que este tutorial facilite a sua contribuição para a tradução do QGIS. Caso tenha dúvidas, não hesite em usar a <i>mailing list qgis-pt</i> para as esclarecer.</p>
 
 <br />
 <img class="gravatar img-circle" src="http://www.gravatar.com/avatar/0edb9f3a1e5191476215ce32183d80a4></img>

@@ -2,15 +2,15 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://qgis.pt/2014/04/20/traducao-de-conteudos-qgis-com-transifex/</loc>
-        <lastmod>2014-05-01T15:33:38+01:00</lastmod>
+        <lastmod>2014-05-17T15:25:56+01:00</lastmod>
     </url>
     <url>
         <loc>http://qgis.pt/2014/05/01/colaborar-no-nosso-github/</loc>
-        <lastmod>2014-05-01T19:44:28+01:00</lastmod>
+        <lastmod>2014-05-17T15:26:10+01:00</lastmod>
     </url>
     <url>
         <loc>http://qgis.pt/</loc>
-        <lastmod>2014-05-01T19:44:28+01:00</lastmod>
+        <lastmod>2014-05-17T15:26:10+01:00</lastmod>
     </url>
     <url>
         <loc>http://qgis.pt/robots.txt</loc>
@@ -18,6 +18,6 @@
     </url>
     <url>
         <loc>http://qgis.pt/archives/</loc>
-        <lastmod>2014-05-01T19:44:28+01:00</lastmod>
+        <lastmod>2014-05-17T15:26:10+01:00</lastmod>
     </url>
 </urlset>
