@@ -13,7 +13,7 @@ class qgisTransifex:
         self.transifexApi = 'https://www.transifex.com/api/2/project'
         self.availableApis = {'stats': 'stats'} 
         self.translateProjects = [
-            #{'name': 'gui', 'pslug': 'QGIS'},
+            {'name': 'gui', 'pslug': 'QGIS'},
             {'name': 'docs', 'pslug': 'qgis-documentation'},
             {'name': 'site', 'pslug': 'qgis-website'}
         ]

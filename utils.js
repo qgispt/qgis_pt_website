@@ -236,8 +236,10 @@ jQuery(document).ready(function() {
 	
 	function updateProgress(data) {
 		var bar = $('#' + data.project + '-progress');
-		if (parseInt(data.stats.completed) != 100){
+		if (parseInt(data.stats.completed) < 50){
 			bar.addClass('progress-bar-danger');
+        } else if (parseInt(data.stats.completed) >= 50 && parseInt(data.stats.completed) < 100){
+            bar.addClass('progress-bar-warning');
 		} else {
 			bar.addClass('progress-bar-success');
 		}

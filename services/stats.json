@@ -1,22 +1,33 @@
 [
     {
-        "project": "docs",
-        "updated_on": "05/04/2014 16:17:29",
+        "project": "gui",
+        "updated_on": "23/05/2014 17:47:25",
         "stats": {
-            "untrans_entities": 6889,
-            "trans_entities": 3832,
-            "trans_words": 50026,
-            "completed": 35.742934427758605,
-            "untrans_words": 142393
+            "untrans_entities": 234,
+            "trans_entities": 10557,
+            "trans_words": 49619,
+            "completed": 97.83152627189324,
+            "untrans_words": 15295
+        }
+    },
+    {
+        "project": "docs",
+        "updated_on": "23/05/2014 17:47:26",
+        "stats": {
+            "untrans_entities": 8148,
+            "trans_entities": 3363,
+            "trans_words": 30125,
+            "completed": 29.215532968464945,
+            "untrans_words": 182837
         }
     },
     {
         "project": "site",
-        "updated_on": "05/04/2014 16:18:48",
+        "updated_on": "23/05/2014 17:48:51",
         "stats": {
             "untrans_entities": 0,
-            "trans_entities": 1953,
-            "trans_words": 29562,
+            "trans_entities": 1922,
+            "trans_words": 29373,
             "completed": 100.0,
             "untrans_words": 0
         }
