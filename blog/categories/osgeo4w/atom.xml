@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: OSGeo4W | QGIS-PT]]></title>
+  <link href="http://qgis.pt/categories/osgeo4w/atom.xml" rel="self"/>
+  <link href="http://qgis.pt/"/>
+  <updated>2014-06-18T21:10:36+01:00</updated>
+  <id>http://qgis.pt/</id>
+  <author>
+    <name><![CDATA[Grupo de Utilizadores QGIS PT]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Instalação Do QGIS via OSGeo4W]]></title>
+    <link href="http://qgis.pt/2014/06/18/instalacao-do-qgis-via-osgeo4w/"/>
+    <updated>2014-06-18T18:22:27+01:00</updated>
+    <id>http://qgis.pt/2014/06/18/instalacao-do-qgis-via-osgeo4w</id>
+    <content type="html"><![CDATA[<p><p>Este post aborda o processo de instalação do QGIS em ambiente Windows utilizando o instalador OSGeo4W.<p>
+<!-- more -->Efetue o download do instalador segundo a versão do seu sistema operativo (32/64bits) utilizando o seguinte <a href="http://trac.osgeo.org/osgeo4w/" target="_blank">link</a>.<p></p>
+
+<p><h4>Etapas de instalação</h4>
+<p>Deve-se executar o instalador e escolher como tipo de instalação a opção <b><i>Advanced install</i></b>. Nas seguintes opções, deverá proceder segundo as instruções abaixo:</p>
+<ul></p>
+
+<pre><code>&lt;li&gt;Selecionar a opção &lt;b&gt;&lt;i&gt;Install from internet&lt;/i&gt;&lt;/b&gt;;&lt;/li&gt;
+&lt;li&gt;Aceitar a diretoria &lt;b&gt;&lt;i&gt;C:\OSGeo4w&lt;/i&gt;&lt;/b&gt; como o local de instalação do software;&lt;/li&gt;
+&lt;li&gt;Aceitar o local proposto para guardar os ficheiros de instalação;&lt;/li&gt;
+&lt;li&gt;Definir o tipo de ligação para que o instalador possa aceder à internet. Atenção à eventual existência de um proxy na sua ligação à internet;&lt;/li&gt;
+&lt;li&gt;Assim que os pacotes de instalação são acedidos, como mostra a imagem abaixo, são mostradas as várias opções de categoria a instalar;&lt;/li&gt;
+</code></pre>
+
+<p></ul>
+<div class="post-img"></p>
+
+<pre><code>&lt;a href="http://qgis.pt/blog/images/posts/setup_osgeo4w_image001.png" rel="prettyPhoto" title=""&gt;
+    <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/setup_osgeo4w_image001.png" width="500"  alt="Diversas categorias de software">
+&lt;/a&gt;
+</code></pre>
+
+<p></div>
+<ul></p>
+
+<pre><code>&lt;li&gt;Clique no botão + da opção &lt;b&gt;&lt;i&gt;Commandline_Utilities&lt;/i&gt;&lt;/b&gt; e depois em cima de &lt;b&gt;Skip&lt;/b&gt; para a opção &lt;b&gt;&lt;i&gt;setup:OSGeo4W Installer/Updater&lt;/i&gt;&lt;/b&gt;. Esta opção permitirá criar no menu OSGeo4W uma entrada designada por Setup, a qual permitirá depois aceder de forma rápida a este instalador;&lt;/li&gt;
+&lt;li&gt;Clique novamente no botão + da opção &lt;b&gt;&lt;i&gt;Desktop&lt;/i&gt;&lt;/b&gt; e selecione &lt;b&gt;&lt;i&gt;qgis:QGIS Desktop&lt;/i&gt;&lt;/b&gt; para instalar a versão corrente do QGIS. Se desejar, pode-se também instalar a versão que está em desenvolvimento, ativando para isso a opção &lt;b&gt;&lt;i&gt;qgis-dev:QGIS nightly build of the master&lt;/i&gt;&lt;/b&gt;;&lt;/li&gt;
+&lt;li&gt;Na secção &lt;b&gt;&lt;i&gt;Libs&lt;/i&gt;&lt;/b&gt; verifique se está ativa a opção &lt;b&gt;&lt;i&gt;qgis-grass-plugin&lt;/i&gt;&lt;/b&gt;. Esta opção permite ativar o plugin GRASS GIS para trabalhar dentro do QGIS;&lt;/li&gt;
+&lt;li&gt;Por fim, clique no botão &lt;b&gt;&lt;i&gt;Seguinte&lt;/i&gt;&lt;/b&gt; e aguarde enquanto o instalador procede à instalação do QGIS;&lt;/li&gt;
+&lt;li&gt;No final de todo o processo, clique em &lt;b&gt;&lt;i&gt;Concluir&lt;/i&gt;&lt;/b&gt;. No menu &lt;b&gt;&lt;i&gt;Iniciar&gt;Programas&gt;OSGeo4W&lt;/i&gt;&lt;/b&gt; escolha a opção &lt;b&gt;&lt;i&gt;QGIS Desktop 2.X&lt;/i&gt;&lt;/b&gt;. Se tudo correu bem, o QGIS será iniciado.&lt;/li&gt;
+</code></pre>
+
+<p></ul>
+<div class="post-img"></p>
+
+<pre><code>&lt;a href="http://qgis.pt/blog/images/posts/setup_osgeo4w_image002.png" rel="prettyPhoto" title=""&gt;
+    <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/setup_osgeo4w_image002.png" width="500"  alt="Iniciar o QGIS">
+&lt;/a&gt;
+</code></pre>
+
+<p></div></p>
+
+<p><h4>Atualizar o QGIS com o OSGeo4W</h4>
+<p>Para atualizar o QGIS, deve-se iniciar o Setup do OSGeo4W existente no menu <b><i>Iniciar>Programas>OSGeo4W</i></b>. Aceite todas as opções até à secção de pacotes de instalação. Uma vez aqui, deve-se verificar se existem atualizações ao QGIS. Se existirem, basta selecioná-las e prosseguir com a instalação.</p>
+<div class="post-img"></p>
+
+<pre><code>&lt;a href="http://qgis.pt/blog/images/posts/setup_osgeo4w_image003.png" rel="prettyPhoto" title=""&gt;
+    <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/setup_osgeo4w_image003.png" width="500"  alt="Atualização do QGIS">
+&lt;/a&gt;
+</code></pre>
+
+<p></div></p>
+
+<p><h4>Desinstalar o OSGeo4W</h4>
+<p>Os pacotes de software podem ser desinstalados. Para isso deve-se correr de novo o Setup do OSGeo4W e na seção <b><i>Desktop Default</i></b> seleccionar de modo a fazer <b>Uninstall</b> nos pacotes desejados.
+Atualmente não existem formas de desinstalar o OSGeo4W. No entanto, se for necessário o fazer, deve desinstalar todos os pacotes da forma descrita anteriormente e apagar a pasta existente em C:\OSGeo4W.</p>
+<div class="post-img"></p>
+
+<pre><code>&lt;a href="http://qgis.pt/blog/images/posts/setup_osgeo4w_image004.png" rel="prettyPhoto" title=""&gt;
+    <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/setup_osgeo4w_image004.png" width="500"  alt="Desinstalação de software">
+&lt;/a&gt;
+</code></pre>
+
+<p></div></p>
+
+<p><p>Através deste instalador, podemos afirmar que o utilizador QGIS estará sempre em dia com as atualizações/correções que vão sendo feitas ao QGIS.</p></p>
+
+<p><p>Esperamos que este post o possa ajudar no que diz respeito à instalação e atualização do QGIS.
+<br /></p>
+]]></content>
+  </entry>
+  
+</feed>

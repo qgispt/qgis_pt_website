@@ -9,8 +9,20 @@
         <lastmod>2014-05-17T15:26:10+01:00</lastmod>
     </url>
     <url>
+        <loc>http://qgis.pt/2014/06/18/instalacao-do-qgis-via-osgeo4w/</loc>
+        <lastmod>2014-06-18T18:30:03+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://qgis.pt/2014/06/18/2o-encontro-de-utilizadores-qgis-portugal/</loc>
+        <lastmod>2014-06-18T21:10:23+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://qgis.pt/2014/06/18/accoes-em-python-no-qgis/</loc>
+        <lastmod>2014-06-18T21:04:55+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://qgis.pt/</loc>
-        <lastmod>2014-05-17T15:26:10+01:00</lastmod>
+        <lastmod>2014-06-18T21:10:23+01:00</lastmod>
     </url>
     <url>
         <loc>http://qgis.pt/robots.txt</loc>
@@ -18,6 +30,6 @@
     </url>
     <url>
         <loc>http://qgis.pt/archives/</loc>
-        <lastmod>2014-05-17T15:26:10+01:00</lastmod>
+        <lastmod>2014-06-18T21:10:23+01:00</lastmod>
     </url>
 </urlset>

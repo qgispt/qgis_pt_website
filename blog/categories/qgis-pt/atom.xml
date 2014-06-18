@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: QGIS-PT | QGIS-PT]]></title>
+  <link href="http://qgis.pt/categories/qgis-pt/atom.xml" rel="self"/>
+  <link href="http://qgis.pt/"/>
+  <updated>2014-06-18T21:10:36+01:00</updated>
+  <id>http://qgis.pt/</id>
+  <author>
+    <name><![CDATA[Grupo de Utilizadores QGIS PT]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[2º Encontro De Utilizadores QGIS Portugal]]></title>
+    <link href="http://qgis.pt/2014/06/18/2o-encontro-de-utilizadores-qgis-portugal/"/>
+    <updated>2014-06-18T18:51:00+01:00</updated>
+    <id>http://qgis.pt/2014/06/18/2o-encontro-de-utilizadores-qgis-portugal</id>
+    <content type="html"><![CDATA[<p>O 2º Encontro de Utilizadores QGIS Portugal ocorreu no passado dia 2 de Junho na Faculdade de Ciências e Tecnologia da Universidade de Coimbra e
+<!-- more --> contou com cerca de 140 participantes. Enquanto organizadores achamos que o evento foi um sucesso apesar de se terem verificado algumas situações que poderão
+e deverão ser melhoradas na próxima edição. Fizemos um pedido à comunidade participante do evento que respondesse a um breve questionário para podermos avaliar
+o seu sucesso. Como comunidade aberta e transparente que somos, apresentamos os resultados obtidos através da resposta de 55 participantes do evento.</p>
+
+
+
+
+<div class="post-img">
+    <h3>Estatísticas gerais sobre o encontro</h3>
+    <a href="http://qgis.pt/blog/images/posts/stat_2014_geral.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/stat_2014_geral.png" width="500"  alt="Estatísticas gerais sobre o encontro">
+    </a>
+</div>
+
+
+
+
+<div class="post-img">
+    <h3>Estatísticas sobre os workshops</h3>
+    <a href="http://qgis.pt/blog/images/posts/stat_2014_workshops.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/stat_2014_workshops.png" width="500"  alt="Estatísticas sobre os workshops">
+    </a>
+</div>
+
+
+
+
+<p>Diversos utilizadores sugeriram também que as apresentações ficassem disponíveis <i>online</i>. A organização contactou todos os oradores que prontamente autorizaram a publicação
+das suas apresentações.</p>
+
+
+
+
+<table class="table table-striped">
+    <tr>
+        <th>Apresentação</th>
+        <th>Autor</th>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/presentation/grupo_utilizadores.html" target="_blank">Grupo de Utilizadores QGIS PT - apresentação e objectivos</a></td>
+        <td>Grupo de Utilizadores QGIS</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/faunalia_qgis_day_2014.pdf" target="_blank">QGIS, um caso de sucesso: modelo de desenvolvimento (sustentável)</a></td>
+        <td>Giovanni Manghi, Faunalia</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/cmpinhel.pdf" target="_blank">Caso de Estudo: CM de Pinhel</td>
+        <td>Pedro Venâncio</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/mosorio.pdf" target="_blank">Experiências da utilização do QGIS no ensino de Arqueologia na FLUC</a></td>
+        <td>Prof. Marcos Osório (FLUC)</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/cmsabugal.pdf" target="_blank">Caso de Estudo: CM de Sabugal + <a href="http://qgis.pt/apresentacoes_qgis2014/cmsabugal.mp4" target="_blank">video</a></a></td>
+        <td>Telmo Salgado</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/jgaspar.pdf" target="_blank">Traduzir a documentação de QGIS, todos podem contribuir!</a> + <a href="http://qgis.pt/apresentacoes_qgis2014/jgaspar.avi" target="_blank">video</a></td>
+        <td>João Gaspar</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/edia.pdf" target="_blank">Caso de Estudo: EDIA</a></td>
+        <td>Duarte Carreira</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/jag.pdf" target="_blank">Tratamento de rasters de grande dimensão com a biblioteca GDAL e QGIS</a></td>
+        <td>Prof. José Alberto Gonçalves (UP)</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/cmmealhada.pdf" target="_blank">Caso de Estudo: CM Mealhada</a></td>
+        <td>Hugo Fonseca</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/isa.pdf" target="_blank">Experiência de uso do QGIS no ensino no ISA</a></td>
+        <td>Prof. Graça Abrantes (ISA)</td>
+</table>
+
+
+<table class="table table-striped">
+    <tr>
+        <th>Workshop</th>
+        <th>Autor</th>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/workshops_qgis2014/ws_introducao_qgis_day_2014.pdf" target="_blank">Introdução ao QGIS e suas funcionalidades</a></td>
+        <td>Giovanni Manghi</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/workshops_qgis2014/ws_processing_qgis_day_2014.pdf" target="_blank">Processamento e análise com QGIS</a> + <a href="http://qgis.pt/workshops_qgis2014/workshop_processing_qgis_day_2014.zip" target="_blank">dados</a></td>
+        <td>Pedro Venâncio</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/presentation/ws_qgis_server.html" target="_blank">WebGIS e serviços OGC (WMS, WFS, WCS) com QGIS Desktop/Server</a> + <a href="http://qgis.pt/workshops_qgis2014/workshop_server_qgis_day_2014.zip" target="_blank">dados</a></td>
+        <td>Hugo Martins</td>
+    </tr>
+</table>
+
+
+
+
+<p>Não poderíamos deixar de agradecer uma vez mais o apoio dos nossos patrocionadores (Faculdade de Coimbra e Faunalia) sem os quais teria sido impossível realizar este encontro. Não menos importantes
+foram todos os utilizadores que estiveram presentes e que contribuiram para um dia fantástico de partilha de conhecimentos e <i>networking</i>. E porque nunca é demais realçar os objectivos atingidos, expressamos 
+também a nossa gratidão a todos os que decidiram efectuar um donativo ao projecto QGIS: conseguimos reunir <b>570€</b> que estão neste momento a ser utilizados para o <i>bugfixing</i> da próxima versão do QGIS (2.4)!</p>
+
+
+
+
+<p><b>A todos o nosso obrigado!</b> Contamos com as vossas opiniões, sugestões e colaboração na construção desta comunidade.</p>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -4,7 +4,7 @@
   <title><![CDATA[QGIS-PT]]></title>
   <link href="http://qgis.pt/atom.xml" rel="self"/>
   <link href="http://qgis.pt/"/>
-  <updated>2014-05-17T16:00:21+01:00</updated>
+  <updated>2014-06-18T21:10:36+01:00</updated>
   <id>http://qgis.pt/</id>
   <author>
     <name><![CDATA[Grupo de Utilizadores QGIS PT]]></name>
@@ -12,6 +12,363 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Acções Em Python No QGIS]]></title>
+    <link href="http://qgis.pt/2014/06/18/accoes-em-python-no-qgis/"/>
+    <updated>2014-06-18T20:31:10+01:00</updated>
+    <id>http://qgis.pt/2014/06/18/accoes-em-python-no-qgis</id>
+    <content type="html"><![CDATA[<p>Este artigo demonstra como se podem rapidamente usar Acções para criar um projecto com tarefas desenvolvidas à medida em Python.</p>
+<!-- more -->
+
+<h3>Introdução às Acçções em Python</h3>
+<p>Acções no QGIS permitem que o utilizador defina, para um tema, tarefas que serão despoletadas pelo utilizador. A grande utilidade das acções é que usam os valores dos 
+atributos dos vectores desse tema para executar a tarefa. Assim, podemos definir uma acção que abre um documento cujo nome é obtido de um atributo. Podemos, por exemplo, abrir a 
+fotografia de uma caixa de visita numa rede de águas. As acções podem ser despoletadas quando o utilizador usa a janela de identificação, a tabela de atributos, ou o botão de acções. 
+Mais informação pode ser obtida no <a href="http://docs.qgis.org/2.2/pt_PT/docs/user_manual/working_with_vector/vector_properties.html#actions-menu" target="_blank">manual de utilizador</a>.</p>
+
+<p>Este artigo não é um tutorial aprofundado sobre acções do QGIS, pretende apenas demonstrar um caso de utilização de acções programadas em Python. Acções em Python são apenas uma 
+das formas de criar acções. Outros tipos de acções que não usam programação são também possíveis.</p>
+
+<p>Para começar a explorar a forma de criar acções, pode ver um conjunto de acções pré-definidas que estão incluídas no QGIS. Para isso, basta abrir as propriedades de um tema, e 
+clicar na secção Acções. Aqui, pode clicar no botão “Adicionar acções pré-definidas”.</p>
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/2_acoes_highlight.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/2_acoes_highlight.png" width="500"  alt="Criação de novas acções">
+    </a>
+</div>
+
+<p>Esta é uma forma de aprender rapidamente como se criam acções. Uma das acções permite abrir uma página na web com o endereço criado a partir de um campo da tabela de atributos. 
+Outra, mais interessante para o nosso artigo, é composta por uma linha de código Python que mostra o número do registo automático ao clicar sobre um elemento desse tema:</p>
+
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/3_acoes_id_elemento.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/3_acoes_id_elemento.png" width="500"  alt="Acção para obter o ID do registo">
+    </a>
+</div>
+
+<p>Como em todas as acções, esta estará disponível em 3 locais: janela de identificação, janela de atributos, e ao clicar no mapa quando activamos a acção no menu de acções. 
+Esta última possibilidade é a mais útil neste caso, porque permite ao clicar no mapa obter uma janela com apenas a informação que precisamos, ao invés da janela de identificação 
+genérica com todos os atributos.</p>
+
+
+<h3>Caso Prático</h3>
+<p>Avançando… o problema que se pretende resolver é o seguinte: 
+tendo um tema de cadastro e uma tabela de proprietários, como selecionar na tabela um proprietário e visualizar os seus prédios no tema, de forma simples para utilizadores que não 
+conhecem QGIS?</p>
+
+<p>Claro que o QGIS é mais que capaz de resolver esta questão, usando as funções de selecção por atributo e até a fantástica nova capacidade de definir relações de 1 para muitos. 
+Mais informação pode ser obtida aqui:</p>
+<ul>
+    <li><a href="http://docs.qgis.org/2.2/pt_PT/docs/user_manual/working_with_vector/editing_geometry_attributes.html#selecting-features-in-an-attribute-table" target="_blank">Seleccionando elementos na tabela de atributos</a></li>
+    <li><a href="http://blog.vitu.ch/10112013-1201/qgis-relations" target="_blank">QGIS Relations</a></li>
+    <li><a href="http://docs.qgis.org/2.2/pt_PT/docs/user_manual/working_with_vector/editing_geometry_attributes.html#creating-one-to-many-relations" target="_blank">Creating one to many relations</a></li>
+</ul>
+
+<p>Mas estes mecanismos exigem conhecimento de utilização de QGIS e até de SIG, pelo que não serviam ao nosso propósito. Era necessário criar mecanismos simples de pesquisa e cruzar 
+resultados entre uma tabela e um tema.</p>
+
+<h3>Primeira acção Python</h3>
+<p>A primeira acção que se criou permitia ao utilizador clicar sobre uma linha na tabela de proprietários e selecionar todos os registos com o mesmo proprietário. É preciso explicar 
+que esta tabela continha linhas para todos os prédios de cada proprietário. Ou seja, o mesmo proprietário surge tantas vezes quantos os prédios que este detém.</p>
+
+<p>Nas propriedades da tabela de proprietários, na secção de Acções, vamos adicionar uma nova acção Python, e adicionar o código mostrado na imagem seguinte.</p>
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/4_acao1_selecionarNIFcomoeste.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/4_acao1_selecionarNIFcomoeste.png" width="500"  alt="Acçção para seleccionar todos os registos com o mesmo proprietário">
+    </a>
+</div>
+
+<p>Naturalmente, o código é um pouco difícil de ler… e a sintaxe é um pouco diferente - é necessário terminar cada linha com “;”.</p>
+
+<p>Mas o mais interessante é que quando o utilizador abrir a tabela de atributos e clicar com o botão direito sobre um registo vai ter agora uma nova opção chamada “Seleciona NIFs 
+como este”. O QGIS irá passar o valor do campo “NumContrib” para este código e executá-lo. O código irá selecionar todos os registos da tabela com este NIF, permitindo ao utilizador 
+executar uma selecção sem ter de conhecer a sintaxe de selecção do QGIS, nem qual o campo a usar… passa a ser uma ferramenta rápida e de uso imediato:</p>
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/5_acao1_selecionarNIFcomoeste_interface.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/5_acao1_selecionarNIFcomoeste_interface.png" width="500"  alt="Acção para selecionar todos os atributos com um determinado NIF a partir da tabela de atributos">
+    </a>
+</div>
+
+<p>E ao clicar na opção, vamos ver todos os registos com o mesmo NIF serem selecionados:</p>
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/6_acao1_selecionarNIFcomoeste_interface2.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/6_acao1_selecionarNIFcomoeste_interface2.png" width="500"  alt="Resultado da acção para selecção de registos com um mesmo NIF">
+    </a>
+</div>
+
+<p>Então, o que mais poderemos fazer para ajudar a consultar a informação? Adicionámos as seguintes acções:</p>
+<ul>
+    <li>&#8220;&#8221;Mostra Prédios” - seleciona no tema de cadastro todos os prédios correspondentes à selecção na tabela de proprietários (note-se que nesta tabela estão listados todos os prédios detidos por todos os proprietários);</li>
+    <li>“Seleciona Nomes como este” - seleciona todos os registos na tabela com o mesmo nome do registo onde se clicou;</li>
+    <li>“Pesquisa NIF” - permitir que o utilizador introduza um NIF para pesquisar na tabela. Pode depois usar a opção para mostrar os prédios correspondentes no mapa;</li>
+    <li>“Pesquisa Nome” - permitir que o utilizador introduza um nome para pesquisar na tabela. Pode depois também ver os prédios correspondentes no mapa; </li>
+</ul>
+
+<p>O resultado de ter estas acções definidas, é que ao clicar na tabela com o botão direito surge-nos este menu:</p>
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/7_acoes__interface_menu.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/7_acoes__interface_menu.png" width="500"  alt="Várias acções no menu de contexto na tabela de atributos">
+    </a>
+</div>
+
+<p>Uma utilização típica seria pesquisar por nome e ver os prédios no mapa. O código da pesquisa por nome foi feito de forma a pesquisar todos os nomes que incluam o texto 
+introduzido pelo utilizador. Assim, um exemplo de utilização seria começar pela pesquisa de todos os prédios cujo proprietário tem no nome o texto “maria de fátima”:</p>
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/8_acao_pesquisanome_1.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/8_acao_pesquisanome_1.png" width="500"  alt="Acção de selecção de prédios a partir do nome do proprietário">
+    </a>
+</div>
+
+<p>Obtendo-se 57 registos. E depois bastará selecionar a opção “Mostra Prédios” para ver esses prédios no mapa:</p>
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/9_acao_pesquisanome_2.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/9_acao_pesquisanome_2.png" width="500"  alt="Resultado da execução da acção de selecção de prédios pelo nome do proprietário">
+    </a>
+</div>
+
+<h3>Como comunicar com o utilizador usando Acções Python</h3>
+<p>Há alguns truques interessantes nestas acções, sobretudo de como interagir com o utilizador… Como mostrar uma janela com uma mensagem?
+Podemos usar um widget do Qt, dos mais simples. E a nossa mensagem pode até ser construída com os campos da tabela. Por exemplo:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">QtGui</span><span class="o">.</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">information</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="s">&quot;Prédio&quot;</span><span class="p">,</span> <span class="s">&quot;O código do prédio é [% Codigo %]&quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+<p>Como mostrar uma janela para o utilizador introduzir um valor? Podemos usar directamente no código um widget de introdução de texto do Qt:</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">texto</span><span class="p">,</span><span class="n">ok</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QInputDialog</span><span class="o">.</span><span class="n">getText</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="s">&quot;Titulo da janela&quot;</span><span class="p">,</span> <span class="s">&quot;Introduza um valor: &quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+<p>Este widget mostra uma janela com o título que indicamos e uma caixa para introdução de texto, com uma mensagem indicada por nós. Note-se que temos de testar se é clicado o botão OK ou o botão de Cancelar…</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">if</span> <span class="n">ok</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">texto</span>
+</span><span class='line'>  <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">return</span> <span class="bp">False</span>
+</span></code></pre></td></tr></table></div></figure>
+
+<h3>Colocar o código num Módulo Python</h3>
+<p>Quando o código da acção começa a crescer, a janela de definição da acção torna-se improductiva, e seria preferível usar o nosso editor favorito de Python. É possível criar um 
+ficheiro de Python com todo o código das nossas acções e usá-lo depois no QGIS - em vez de usar todo o código na definição da acção, basta carregar o nosso módulo e invocar uma das 
+suas funções:</p>
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/11_acoes_modulo_exemplo1.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/11_acoes_modulo_exemplo1.png" width="500"  alt="Importação de acções programadas num ficheiro externo">
+    </a>
+</div>
+
+<p>Como se pode ver, o código ficou muito simples:</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">acoes</span><span class="p">;</span> <span class="n">acoes</span><span class="o">.</span><span class="n">selecNomePredio</span><span class="p">(</span><span class="err">‘</span><span class="p">[</span><span class="o">%</span> <span class="err">“</span><span class="n">Nome</span><span class="err">”</span> <span class="o">%</span><span class="p">]</span><span class="err">’</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+<p>Todo o código foi colocado num ficheiro guardado na mesma pasta do nosso projecto. Neste exemplo, o ficheiro chama-se “acoes.py”. Este ficheiro não tem nada de especial, 
+apenas contém funções Python normais, que podemos invocar a partir do QGIS. Apenas temos de importar alguns módulos do QGIS, e se necessário do próprio Qt para podermos usar os 
+seus widgets:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">qgis.utils</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">PyQt4</span> <span class="kn">import</span> <span class="n">QtGui</span>
+</span></code></pre></td></tr></table></div></figure>
+
+<p>Por outro lado, para garantir que não temos problemas com os caracteres portugueses, será melhor assegurar que o módulo é executado usando a codificação utf-8. Em Windows 
+isto não acontece normalmente, e por isso temos de forçar o uso de utf-8 com o seguinte código logo no topo do ficheiro:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># -*- coding: UTF-8 -*-</span>
+</span><span class='line'><span class="c">#assegurar que não temos problemas com o encoding de strings</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">sys</span>
+</span><span class='line'><span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>
+</span><span class='line'><span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s">&quot;utf-8&quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+<p>E é tudo. Obviamente que a solução mais evoluída é construir um plugin Python que permite usar as nossas funções independentemente do projecto que usamos, e centralizar a sua 
+actualização. Mas para algo rápido e simples, as acções Python têm muito para oferecer.</p>
+
+<p>Bom trabalho!</p>
+
+<br />
+<img class="gravatar img-circle" src="http://www.gravatar.com/avatar/ad2bd7f23b8cd33f2412acdc462b6a13></img>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[2º Encontro De Utilizadores QGIS Portugal]]></title>
+    <link href="http://qgis.pt/2014/06/18/2o-encontro-de-utilizadores-qgis-portugal/"/>
+    <updated>2014-06-18T18:51:00+01:00</updated>
+    <id>http://qgis.pt/2014/06/18/2o-encontro-de-utilizadores-qgis-portugal</id>
+    <content type="html"><![CDATA[<p>O 2º Encontro de Utilizadores QGIS Portugal ocorreu no passado dia 2 de Junho na Faculdade de Ciências e Tecnologia da Universidade de Coimbra e
+<!-- more --> contou com cerca de 140 participantes. Enquanto organizadores achamos que o evento foi um sucesso apesar de se terem verificado algumas situações que poderão
+e deverão ser melhoradas na próxima edição. Fizemos um pedido à comunidade participante do evento que respondesse a um breve questionário para podermos avaliar
+o seu sucesso. Como comunidade aberta e transparente que somos, apresentamos os resultados obtidos através da resposta de 55 participantes do evento.</p>
+
+<div class="post-img">
+    <h3>Estatísticas gerais sobre o encontro</h3>
+    <a href="http://qgis.pt/blog/images/posts/stat_2014_geral.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/stat_2014_geral.png" width="500"  alt="Estatísticas gerais sobre o encontro">
+    </a>
+</div>
+
+<div class="post-img">
+    <h3>Estatísticas sobre os workshops</h3>
+    <a href="http://qgis.pt/blog/images/posts/stat_2014_workshops.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/stat_2014_workshops.png" width="500"  alt="Estatísticas sobre os workshops">
+    </a>
+</div>
+
+<p>Diversos utilizadores sugeriram também que as apresentações ficassem disponíveis <i>online</i>. A organização contactou todos os oradores que prontamente autorizaram a publicação
+das suas apresentações.</p>
+
+<table class="table table-striped">
+    <tr>
+        <th>Apresentação</th>
+        <th>Autor</th>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/presentation/grupo_utilizadores.html" target="_blank">Grupo de Utilizadores QGIS PT - apresentação e objectivos</a></td>
+        <td>Grupo de Utilizadores QGIS</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/faunalia_qgis_day_2014.pdf" target="_blank">QGIS, um caso de sucesso: modelo de desenvolvimento (sustentável)</a></td>
+        <td>Giovanni Manghi, Faunalia</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/cmpinhel.pdf" target="_blank">Caso de Estudo: CM de Pinhel</td>
+        <td>Pedro Venâncio</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/mosorio.pdf" target="_blank">Experiências da utilização do QGIS no ensino de Arqueologia na FLUC</a></td>
+        <td>Prof. Marcos Osório (FLUC)</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/cmsabugal.pdf" target="_blank">Caso de Estudo: CM de Sabugal + <a href="http://qgis.pt/apresentacoes_qgis2014/cmsabugal.mp4" target="_blank">video</a></a></td>
+        <td>Telmo Salgado</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/jgaspar.pdf" target="_blank">Traduzir a documentação de QGIS, todos podem contribuir!</a> + <a href="http://qgis.pt/apresentacoes_qgis2014/jgaspar.avi" target="_blank">video</a></td>
+        <td>João Gaspar</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/edia.pdf" target="_blank">Caso de Estudo: EDIA</a></td>
+        <td>Duarte Carreira</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/jag.pdf" target="_blank">Tratamento de rasters de grande dimensão com a biblioteca GDAL e QGIS</a></td>
+        <td>Prof. José Alberto Gonçalves (UP)</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/cmmealhada.pdf" target="_blank">Caso de Estudo: CM Mealhada</a></td>
+        <td>Hugo Fonseca</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/apresentacoes_qgis2014/isa.pdf" target="_blank">Experiência de uso do QGIS no ensino no ISA</a></td>
+        <td>Prof. Graça Abrantes (ISA)</td>
+</table>
+<table class="table table-striped">
+    <tr>
+        <th>Workshop</th>
+        <th>Autor</th>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/workshops_qgis2014/ws_introducao_qgis_day_2014.pdf" target="_blank">Introdução ao QGIS e suas funcionalidades</a></td>
+        <td>Giovanni Manghi</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/workshops_qgis2014/ws_processing_qgis_day_2014.pdf" target="_blank">Processamento e análise com QGIS</a> + <a href="http://qgis.pt/workshops_qgis2014/workshop_processing_qgis_day_2014.zip" target="_blank">dados</a></td>
+        <td>Pedro Venâncio</td>
+    </tr>
+    <tr>
+        <td><a href="http://qgis.pt/presentation/ws_qgis_server.html" target="_blank">WebGIS e serviços OGC (WMS, WFS, WCS) com QGIS Desktop/Server</a> + <a href="http://qgis.pt/workshops_qgis2014/workshop_server_qgis_day_2014.zip" target="_blank">dados</a></td>
+        <td>Hugo Martins</td>
+    </tr>
+</table>
+
+<p>Não poderíamos deixar de agradecer uma vez mais o apoio dos nossos patrocionadores (Faculdade de Coimbra e Faunalia) sem os quais teria sido impossível realizar este encontro. Não menos importantes
+foram todos os utilizadores que estiveram presentes e que contribuiram para um dia fantástico de partilha de conhecimentos e <i>networking</i>. E porque nunca é demais realçar os objectivos atingidos, expressamos 
+também a nossa gratidão a todos os que decidiram efectuar um donativo ao projecto QGIS: conseguimos reunir <b>570€</b> que estão neste momento a ser utilizados para o <i>bugfixing</i> da próxima versão do QGIS (2.4)!</p>
+
+<p><b>A todos o nosso obrigado!</b> Contamos com as vossas opiniões, sugestões e colaboração na construção desta comunidade.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Instalação Do QGIS via OSGeo4W]]></title>
+    <link href="http://qgis.pt/2014/06/18/instalacao-do-qgis-via-osgeo4w/"/>
+    <updated>2014-06-18T18:22:27+01:00</updated>
+    <id>http://qgis.pt/2014/06/18/instalacao-do-qgis-via-osgeo4w</id>
+    <content type="html"><![CDATA[<p>Este post aborda o processo de instalação do QGIS em ambiente Windows utilizando o instalador OSGeo4W.<p>
+<!-- more -->Efetue o download do instalador segundo a versão do seu sistema operativo (32/64bits) utilizando o seguinte <a href="http://trac.osgeo.org/osgeo4w/" target="_blank">link</a>.<p>
+
+<h4>Etapas de instalação</h4>
+<p>Deve-se executar o instalador e escolher como tipo de instalação a opção <b><i>Advanced install</i></b>. Nas seguintes opções, deverá proceder segundo as instruções abaixo:</p>
+<ul>
+    <li>Selecionar a opção <b><i>Install from internet</i></b>;</li>
+	<li>Aceitar a diretoria <b><i>C:\OSGeo4w</i></b> como o local de instalação do software;</li>
+	<li>Aceitar o local proposto para guardar os ficheiros de instalação;</li>
+	<li>Definir o tipo de ligação para que o instalador possa aceder à internet. Atenção à eventual existência de um proxy na sua ligação à internet;</li>
+	<li>Assim que os pacotes de instalação são acedidos, como mostra a imagem abaixo, são mostradas as várias opções de categoria a instalar;</li>
+</ul>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/setup_osgeo4w_image001.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/setup_osgeo4w_image001.png" width="500"  alt="Diversas categorias de software">
+    </a>
+</div>
+<ul>
+    <li>Clique no botão + da opção <b><i>Commandline_Utilities</i></b> e depois em cima de <b>Skip</b> para a opção <b><i>setup:OSGeo4W Installer/Updater</i></b>. Esta opção permitirá criar no menu OSGeo4W uma entrada designada por Setup, a qual permitirá depois aceder de forma rápida a este instalador;</li>
+	<li>Clique novamente no botão + da opção <b><i>Desktop</i></b> e selecione <b><i>qgis:QGIS Desktop</i></b> para instalar a versão corrente do QGIS. Se desejar, pode-se também instalar a versão que está em desenvolvimento, ativando para isso a opção <b><i>qgis-dev:QGIS nightly build of the master</i></b>;</li>
+	<li>Na secção <b><i>Libs</i></b> verifique se está ativa a opção <b><i>qgis-grass-plugin</i></b>. Esta opção permite ativar o plugin GRASS GIS para trabalhar dentro do QGIS;</li>
+	<li>Por fim, clique no botão <b><i>Seguinte</i></b> e aguarde enquanto o instalador procede à instalação do QGIS;</li>
+	<li>No final de todo o processo, clique em <b><i>Concluir</i></b>. No menu <b><i>Iniciar>Programas>OSGeo4W</i></b> escolha a opção <b><i>QGIS Desktop 2.X</i></b>. Se tudo correu bem, o QGIS será iniciado.</li>
+</ul>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/setup_osgeo4w_image002.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/setup_osgeo4w_image002.png" width="500"  alt="Iniciar o QGIS">
+    </a>
+</div>
+
+<h4>Atualizar o QGIS com o OSGeo4W</h4>
+<p>Para atualizar o QGIS, deve-se iniciar o Setup do OSGeo4W existente no menu <b><i>Iniciar>Programas>OSGeo4W</i></b>. Aceite todas as opções até à secção de pacotes de instalação. Uma vez aqui, deve-se verificar se existem atualizações ao QGIS. Se existirem, basta selecioná-las e prosseguir com a instalação.</p> 
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/setup_osgeo4w_image003.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/setup_osgeo4w_image003.png" width="500"  alt="Atualização do QGIS">
+    </a>
+</div>
+
+<h4>Desinstalar o OSGeo4W</h4>
+<p>Os pacotes de software podem ser desinstalados. Para isso deve-se correr de novo o Setup do OSGeo4W e na seção <b><i>Desktop Default</i></b> seleccionar de modo a fazer <b>Uninstall</b> nos pacotes desejados.
+Atualmente não existem formas de desinstalar o OSGeo4W. No entanto, se for necessário o fazer, deve desinstalar todos os pacotes da forma descrita anteriormente e apagar a pasta existente em C:\OSGeo4W.</p> 
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/setup_osgeo4w_image004.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/setup_osgeo4w_image004.png" width="500"  alt="Desinstalação de software">
+    </a>
+</div>
+
+<p>Através deste instalador, podemos afirmar que o utilizador QGIS estará sempre em dia com as atualizações/correções que vão sendo feitas ao QGIS.</p>
+
+<p>Esperamos que este post o possa ajudar no que diz respeito à instalação e atualização do QGIS. 
+<br />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Colaborar No Nosso Github]]></title>
