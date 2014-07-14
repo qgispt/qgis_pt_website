@@ -1,24 +1,122 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[QGIS-PT]]></title>
-  <link href="http://qgis.pt/atom.xml" rel="self"/>
-  <link href="http://qgis.pt/"/>
-  <updated>2014-07-14T15:13:20+01:00</updated>
-  <id>http://qgis.pt/</id>
-  <author>
-    <name><![CDATA[Grupo de Utilizadores QGIS PT]]></name>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/png" href="http://qgis.pt/images/favicon.png">
+    <title>QGIS-PT</title>
+    <meta name="author" content="Grupo de Utilizadores QGIS PT">
+
     
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+    <meta name="description" content="Transformação De Coordenadas E Utilização Das Grelhas NTv2 No QGIS 13 de Julho, 2014 A crescente evolução dos Sistemas de Informação Geográfica, e a &hellip;">
+    
+
+    <!-- http://t.co/dKP3o1e -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="canonical" href="http://qgis.pt/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis">
+    <!-- CUSTOM CSS -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700,700italic" rel="stylesheet" type='text/css'>
+    <link href="http://qgis.pt/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://qgis.pt/libs/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+    <link href="http://qgis.pt/styles/style.css" rel="stylesheet">
+    <link href="http://qgis.pt/styles/blog.css" rel="stylesheet">
+    <!--<link href="http://localhost/styles/style.css" rel="stylesheet">-->
+    
+    <link href="/blog/atom.xml" rel="alternate" title="QGIS-PT" type="application/atom+xml">
+    
+</head>
+
+<body   >
+  <!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://qgis.pt"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="http://qgis.org/pt_PT/site/forusers/download.html" target="_blank">Download</a></li>
+                <li><a href="http://qgis.org/pt_PT/docs/index.html" target="_blank">Documentação</a></li>
+                <li><a href="http://qgis.pt/participar.html">Como participar</a></li>
+                <!--<li><a href="http://qgis.pt/eventos.html">Eventos</a></li>-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">QGIS PT <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://qgis.pt/traducao.html">Tradução</a></li>
+                        <!--<li><a href="">Casos de estudo</a></li>
+                        <li><a href="">Estilos e simbologia</a></li>
+                        <li><a href="">Modelos de processamento</a></li>-->
+                    </ul>
+                </li>
+                <li class="active"><a href="/blog">Blog</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" data-subscription="rss">
+                <li>
+                    <a class="rss" title="Subscrever via RSS" rel="subscribe-rss" href="/blog/atom.xml" target="_blank"></a>
+                </li>
+                
+            </ul>
+            
+            <form class="navbar-form navbar-right search-box" role="search" action="https://www.google.com/search" method="get">
+                <div class="form-group">
+                    <input type="hidden" name="q" value="site:qgis.pt/blog" />
+                    <input type="text" class="form-control search-glow" name="q" results="0" placeholder="Pesquisar">
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+
+  <div id="main" class="container">
+    <div id="content" class="row">
+      <div class="col-sm-9">
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h2 class="entry-title-static">Transformação De Coordenadas E Utilização Das Grelhas NTv2 No QGIS</h2>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
 
   
-  <entry>
-    <title type="html"><![CDATA[Transformação De Coordenadas E Utilização Das Grelhas NTv2 No QGIS]]></title>
-    <link href="http://qgis.pt/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis/"/>
-    <updated>2014-07-13T23:47:03+01:00</updated>
-    <id>http://qgis.pt/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis</id>
-    <content type="html"><![CDATA[<p>A crescente evolução dos Sistemas de Informação Geográfica, e a sua “democratização”, tanto pela via da simplificação, como pelo desenvolvimento de software aberto para SIG de 
+
+
+
+<div class="blog-time" datetime="2014-07-13T23:47:03+01:00" pubdate data-updated="true">13 de Julho, 2014</div>
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>A crescente evolução dos Sistemas de Informação Geográfica, e a sua “democratização”, tanto pela via da simplificação, como pelo desenvolvimento de software aberto para SIG de 
    grande qualidade, de onde se destaca o QGIS,<!-- more --> tem permitido a um número cada vez maior de utilizadores, oriundos das mais diversas áreas do conhecimento, trabalhar com informação 
    geográfica. Muitos desses novos utilizadores, quiçá a maioria, não possuem conhecimentos de Ciências Cartográficas ou Geodesia, e enfrentam grandes dificuldades na utilização dos 
    Sistemas de Coordenadas.</p>
@@ -771,688 +869,195 @@ identificada por um conjunto de coordenadas.</p>
 
 <br />
 <img class="gravatar img-circle" src="http://www.gravatar.com/avatar/8248cd896ad16c4ef53d0558d8e62a18></img>
-]]></content>
-  </entry>
+</div>
+
+
+  <div class="post-metadata">
+    <p class="meta">
+      
   
-  <entry>
-    <title type="html"><![CDATA[Acções Em Python No QGIS]]></title>
-    <link href="http://qgis.pt/2014/06/18/accoes-em-python-no-qgis/"/>
-    <updated>2014-06-18T20:31:10+01:00</updated>
-    <id>http://qgis.pt/2014/06/18/accoes-em-python-no-qgis</id>
-    <content type="html"><![CDATA[<p>Este artigo demonstra como se podem rapidamente usar Acções para criar um projecto com tarefas desenvolvidas à medida em Python.</p>
-<!-- more -->
 
-<h3>Introdução às Acçções em Python</h3>
-<p>Acções no QGIS permitem que o utilizador defina, para um tema, tarefas que serão despoletadas pelo utilizador. A grande utilidade das acções é que usam os valores dos 
-atributos dos vectores desse tema para executar a tarefa. Assim, podemos definir uma acção que abre um documento cujo nome é obtido de um atributo. Podemos, por exemplo, abrir a 
-fotografia de uma caixa de visita numa rede de águas. As acções podem ser despoletadas quando o utilizador usa a janela de identificação, a tabela de atributos, ou o botão de acções. 
-Mais informação pode ser obtida no <a href="http://docs.qgis.org/2.2/pt_PT/docs/user_manual/working_with_vector/vector_properties.html#actions-menu" target="_blank">manual de utilizador</a>.</p>
+<span class="byline author vcard">Publicado pelo utilizador: <span class="fn">Pedro Venâncio</span></span>
 
-<p>Este artigo não é um tutorial aprofundado sobre acções do QGIS, pretende apenas demonstrar um caso de utilização de acções programadas em Python. Acções em Python são apenas uma 
-das formas de criar acções. Outros tipos de acções que não usam programação são também possíveis.</p>
+      <br />
+      
 
-<p>Para começar a explorar a forma de criar acções, pode ver um conjunto de acções pré-definidas que estão incluídas no QGIS. Para isso, basta abrir as propriedades de um tema, e 
-clicar na secção Acções. Aqui, pode clicar no botão “Adicionar acções pré-definidas”.</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/2_acoes_highlight.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/2_acoes_highlight.png" width="500"  alt="Criação de novas acções">
-    </a>
-</div>
-
-<p>Esta é uma forma de aprender rapidamente como se criam acções. Uma das acções permite abrir uma página na web com o endereço criado a partir de um campo da tabela de atributos. 
-Outra, mais interessante para o nosso artigo, é composta por uma linha de código Python que mostra o número do registo automático ao clicar sobre um elemento desse tema:</p>
-
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/3_acoes_id_elemento.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/3_acoes_id_elemento.png" width="500"  alt="Acção para obter o ID do registo">
-    </a>
-</div>
-
-<p>Como em todas as acções, esta estará disponível em 3 locais: janela de identificação, janela de atributos, e ao clicar no mapa quando activamos a acção no menu de acções. 
-Esta última possibilidade é a mais útil neste caso, porque permite ao clicar no mapa obter uma janela com apenas a informação que precisamos, ao invés da janela de identificação 
-genérica com todos os atributos.</p>
-
-
-<h3>Caso Prático</h3>
-<p>Avançando… o problema que se pretende resolver é o seguinte: 
-tendo um tema de cadastro e uma tabela de proprietários, como selecionar na tabela um proprietário e visualizar os seus prédios no tema, de forma simples para utilizadores que não 
-conhecem QGIS?</p>
-
-<p>Claro que o QGIS é mais que capaz de resolver esta questão, usando as funções de selecção por atributo e até a fantástica nova capacidade de definir relações de 1 para muitos. 
-Mais informação pode ser obtida aqui:</p>
-<ul>
-    <li><a href="http://docs.qgis.org/2.2/pt_PT/docs/user_manual/working_with_vector/editing_geometry_attributes.html#selecting-features-in-an-attribute-table" target="_blank">Seleccionando elementos na tabela de atributos</a></li>
-    <li><a href="http://blog.vitu.ch/10112013-1201/qgis-relations" target="_blank">QGIS Relations</a></li>
-    <li><a href="http://docs.qgis.org/2.2/pt_PT/docs/user_manual/working_with_vector/editing_geometry_attributes.html#creating-one-to-many-relations" target="_blank">Creating one to many relations</a></li>
-</ul>
-
-<p>Mas estes mecanismos exigem conhecimento de utilização de QGIS e até de SIG, pelo que não serviam ao nosso propósito. Era necessário criar mecanismos simples de pesquisa e cruzar 
-resultados entre uma tabela e um tema.</p>
-
-<h3>Primeira acção Python</h3>
-<p>A primeira acção que se criou permitia ao utilizador clicar sobre uma linha na tabela de proprietários e selecionar todos os registos com o mesmo proprietário. É preciso explicar 
-que esta tabela continha linhas para todos os prédios de cada proprietário. Ou seja, o mesmo proprietário surge tantas vezes quantos os prédios que este detém.</p>
-
-<p>Nas propriedades da tabela de proprietários, na secção de Acções, vamos adicionar uma nova acção Python, e adicionar o código mostrado na imagem seguinte.</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/4_acao1_selecionarNIFcomoeste.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/4_acao1_selecionarNIFcomoeste.png" width="500"  alt="Acçção para seleccionar todos os registos com o mesmo proprietário">
-    </a>
-</div>
-
-<p>Naturalmente, o código é um pouco difícil de ler… e a sintaxe é um pouco diferente - é necessário terminar cada linha com “;”.</p>
-
-<p>Mas o mais interessante é que quando o utilizador abrir a tabela de atributos e clicar com o botão direito sobre um registo vai ter agora uma nova opção chamada “Seleciona NIFs 
-como este”. O QGIS irá passar o valor do campo “NumContrib” para este código e executá-lo. O código irá selecionar todos os registos da tabela com este NIF, permitindo ao utilizador 
-executar uma selecção sem ter de conhecer a sintaxe de selecção do QGIS, nem qual o campo a usar… passa a ser uma ferramenta rápida e de uso imediato:</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/5_acao1_selecionarNIFcomoeste_interface.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/5_acao1_selecionarNIFcomoeste_interface.png" width="500"  alt="Acção para selecionar todos os atributos com um determinado NIF a partir da tabela de atributos">
-    </a>
-</div>
-
-<p>E ao clicar na opção, vamos ver todos os registos com o mesmo NIF serem selecionados:</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/6_acao1_selecionarNIFcomoeste_interface2.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/6_acao1_selecionarNIFcomoeste_interface2.png" width="500"  alt="Resultado da acção para selecção de registos com um mesmo NIF">
-    </a>
-</div>
-
-<p>Então, o que mais poderemos fazer para ajudar a consultar a informação? Adicionámos as seguintes acções:</p>
-<ul>
-    <li>&#8220;&#8221;Mostra Prédios” - seleciona no tema de cadastro todos os prédios correspondentes à selecção na tabela de proprietários (note-se que nesta tabela estão listados todos os prédios detidos por todos os proprietários);</li>
-    <li>“Seleciona Nomes como este” - seleciona todos os registos na tabela com o mesmo nome do registo onde se clicou;</li>
-    <li>“Pesquisa NIF” - permitir que o utilizador introduza um NIF para pesquisar na tabela. Pode depois usar a opção para mostrar os prédios correspondentes no mapa;</li>
-    <li>“Pesquisa Nome” - permitir que o utilizador introduza um nome para pesquisar na tabela. Pode depois também ver os prédios correspondentes no mapa; </li>
-</ul>
-
-<p>O resultado de ter estas acções definidas, é que ao clicar na tabela com o botão direito surge-nos este menu:</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/7_acoes__interface_menu.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/7_acoes__interface_menu.png" width="500"  alt="Várias acções no menu de contexto na tabela de atributos">
-    </a>
-</div>
-
-<p>Uma utilização típica seria pesquisar por nome e ver os prédios no mapa. O código da pesquisa por nome foi feito de forma a pesquisar todos os nomes que incluam o texto 
-introduzido pelo utilizador. Assim, um exemplo de utilização seria começar pela pesquisa de todos os prédios cujo proprietário tem no nome o texto “maria de fátima”:</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/8_acao_pesquisanome_1.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/8_acao_pesquisanome_1.png" width="500"  alt="Acção de selecção de prédios a partir do nome do proprietário">
-    </a>
-</div>
-
-<p>Obtendo-se 57 registos. E depois bastará selecionar a opção “Mostra Prédios” para ver esses prédios no mapa:</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/9_acao_pesquisanome_2.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/9_acao_pesquisanome_2.png" width="500"  alt="Resultado da execução da acção de selecção de prédios pelo nome do proprietário">
-    </a>
-</div>
-
-<h3>Como comunicar com o utilizador usando Acções Python</h3>
-<p>Há alguns truques interessantes nestas acções, sobretudo de como interagir com o utilizador… Como mostrar uma janela com uma mensagem?
-Podemos usar um widget do Qt, dos mais simples. E a nossa mensagem pode até ser construída com os campos da tabela. Por exemplo:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">QtGui</span><span class="o">.</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">information</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="s">&quot;Prédio&quot;</span><span class="p">,</span> <span class="s">&quot;O código do prédio é [% Codigo %]&quot;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-<p>Como mostrar uma janela para o utilizador introduzir um valor? Podemos usar directamente no código um widget de introdução de texto do Qt:</p>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">texto</span><span class="p">,</span><span class="n">ok</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QInputDialog</span><span class="o">.</span><span class="n">getText</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="s">&quot;Titulo da janela&quot;</span><span class="p">,</span> <span class="s">&quot;Introduza um valor: &quot;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-<p>Este widget mostra uma janela com o título que indicamos e uma caixa para introdução de texto, com uma mensagem indicada por nós. Note-se que temos de testar se é clicado o botão OK ou o botão de Cancelar…</p>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">if</span> <span class="n">ok</span><span class="p">:</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">texto</span>
-</span><span class='line'>  <span class="k">else</span><span class="p">:</span>
-</span><span class='line'>    <span class="k">return</span> <span class="bp">False</span>
-</span></code></pre></td></tr></table></div></figure>
-
-<h3>Colocar o código num Módulo Python</h3>
-<p>Quando o código da acção começa a crescer, a janela de definição da acção torna-se improductiva, e seria preferível usar o nosso editor favorito de Python. É possível criar um 
-ficheiro de Python com todo o código das nossas acções e usá-lo depois no QGIS - em vez de usar todo o código na definição da acção, basta carregar o nosso módulo e invocar uma das 
-suas funções:</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/11_acoes_modulo_exemplo1.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/11_acoes_modulo_exemplo1.png" width="500"  alt="Importação de acções programadas num ficheiro externo">
-    </a>
-</div>
-
-<p>Como se pode ver, o código ficou muito simples:</p>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">acoes</span><span class="p">;</span> <span class="n">acoes</span><span class="o">.</span><span class="n">selecNomePredio</span><span class="p">(</span><span class="err">‘</span><span class="p">[</span><span class="o">%</span> <span class="err">“</span><span class="n">Nome</span><span class="err">”</span> <span class="o">%</span><span class="p">]</span><span class="err">’</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-<p>Todo o código foi colocado num ficheiro guardado na mesma pasta do nosso projecto. Neste exemplo, o ficheiro chama-se “acoes.py”. Este ficheiro não tem nada de especial, 
-apenas contém funções Python normais, que podemos invocar a partir do QGIS. Apenas temos de importar alguns módulos do QGIS, e se necessário do próprio Qt para podermos usar os 
-seus widgets:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">qgis.utils</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">PyQt4</span> <span class="kn">import</span> <span class="n">QtGui</span>
-</span></code></pre></td></tr></table></div></figure>
-
-<p>Por outro lado, para garantir que não temos problemas com os caracteres portugueses, será melhor assegurar que o módulo é executado usando a codificação utf-8. Em Windows 
-isto não acontece normalmente, e por isso temos de forçar o uso de utf-8 com o seguinte código logo no topo do ficheiro:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># -*- coding: UTF-8 -*-</span>
-</span><span class='line'><span class="c">#assegurar que não temos problemas com o encoding de strings</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">sys</span>
-</span><span class='line'><span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>
-</span><span class='line'><span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s">&quot;utf-8&quot;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-<p>E é tudo. Obviamente que a solução mais evoluída é construir um plugin Python que permite usar as nossas funções independentemente do projecto que usamos, e centralizar a sua 
-actualização. Mas para algo rápido e simples, as acções Python têm muito para oferecer.</p>
-
-<p>Bom trabalho!</p>
-
-<br />
-<img class="gravatar img-circle" src="http://www.gravatar.com/avatar/ad2bd7f23b8cd33f2412acdc462b6a13></img>
-]]></content>
-  </entry>
+<span class="categories">Categorias: 
   
-  <entry>
-    <title type="html"><![CDATA[2º Encontro De Utilizadores QGIS Portugal]]></title>
-    <link href="http://qgis.pt/2014/06/18/2o-encontro-de-utilizadores-qgis-portugal/"/>
-    <updated>2014-06-18T18:51:00+01:00</updated>
-    <id>http://qgis.pt/2014/06/18/2o-encontro-de-utilizadores-qgis-portugal</id>
-    <content type="html"><![CDATA[<p>O 2º Encontro de Utilizadores QGIS Portugal ocorreu no passado dia 2 de Junho na Faculdade de Ciências e Tecnologia da Universidade de Coimbra e
-<!-- more --> contou com cerca de 140 participantes. Enquanto organizadores achamos que o evento foi um sucesso apesar de se terem verificado algumas situações que poderão
-e deverão ser melhoradas na próxima edição. Fizemos um pedido à comunidade participante do evento que respondesse a um breve questionário para podermos avaliar
-o seu sucesso. Como comunidade aberta e transparente que somos, apresentamos os resultados obtidos através da resposta de 55 participantes do evento.</p>
-
-<div class="post-img">
-    <h3>Estatísticas gerais sobre o encontro</h3>
-    <a href="http://qgis.pt/blog/images/posts/stat_2014_geral.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/stat_2014_geral.png" width="500"  alt="Estatísticas gerais sobre o encontro">
-    </a>
-</div>
-
-<div class="post-img">
-    <h3>Estatísticas sobre os workshops</h3>
-    <a href="http://qgis.pt/blog/images/posts/stat_2014_workshops.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/stat_2014_workshops.png" width="500"  alt="Estatísticas sobre os workshops">
-    </a>
-</div>
-
-<p>Diversos utilizadores sugeriram também que as apresentações ficassem disponíveis <i>online</i>. A organização contactou todos os oradores que prontamente autorizaram a publicação
-das suas apresentações.</p>
-
-<table class="table table-striped">
-    <tr>
-        <th>Apresentação</th>
-        <th>Autor</th>
-    </tr>
-    <tr>
-        <td><a href="http://qgis.pt/presentation/grupo_utilizadores.html" target="_blank">Grupo de Utilizadores QGIS PT - apresentação e objectivos</a></td>
-        <td>Grupo de Utilizadores QGIS</td>
-    </tr>
-    <tr>
-        <td><a href="http://qgis.pt/apresentacoes_qgis2014/faunalia_qgis_day_2014.pdf" target="_blank">QGIS, um caso de sucesso: modelo de desenvolvimento (sustentável)</a></td>
-        <td>Giovanni Manghi, Faunalia</td>
-    </tr>
-    <tr>
-        <td><a href="http://qgis.pt/apresentacoes_qgis2014/cmpinhel.pdf" target="_blank">Caso de Estudo: CM de Pinhel</td>
-        <td>Pedro Venâncio</td>
-    </tr>
-    <tr>
-        <td><a href="http://qgis.pt/apresentacoes_qgis2014/mosorio.pdf" target="_blank">Experiências da utilização do QGIS no ensino de Arqueologia na FLUC</a></td>
-        <td>Prof. Marcos Osório (FLUC)</td>
-    </tr>
-    <tr>
-        <td><a href="http://qgis.pt/apresentacoes_qgis2014/cmsabugal.pdf" target="_blank">Caso de Estudo: CM de Sabugal + <a href="http://qgis.pt/apresentacoes_qgis2014/cmsabugal.mp4" target="_blank">video</a></a></td>
-        <td>Telmo Salgado</td>
-    </tr>
-    <tr>
-        <td><a href="http://qgis.pt/apresentacoes_qgis2014/jgaspar.pdf" target="_blank">Traduzir a documentação de QGIS, todos podem contribuir!</a> + <a href="http://qgis.pt/apresentacoes_qgis2014/jgaspar.avi" target="_blank">video</a></td>
-        <td>João Gaspar</td>
-    </tr>
-    <tr>
-        <td><a href="http://qgis.pt/apresentacoes_qgis2014/edia.pdf" target="_blank">Caso de Estudo: EDIA</a></td>
-        <td>Duarte Carreira</td>
-    </tr>
-    <tr>
-        <td><a href="http://qgis.pt/apresentacoes_qgis2014/jag.pdf" target="_blank">Tratamento de rasters de grande dimensão com a biblioteca GDAL e QGIS</a></td>
-        <td>Prof. José Alberto Gonçalves (UP)</td>
-    </tr>
-    <tr>
-        <td><a href="http://qgis.pt/apresentacoes_qgis2014/cmmealhada.pdf" target="_blank">Caso de Estudo: CM Mealhada</a></td>
-        <td>Hugo Fonseca</td>
-    </tr>
-    <tr>
-        <td><a href="http://qgis.pt/apresentacoes_qgis2014/isa.pdf" target="_blank">Experiência de uso do QGIS no ensino no ISA</a></td>
-        <td>Prof. Graça Abrantes (ISA)</td>
-</table>
-<table class="table table-striped">
-    <tr>
-        <th>Workshop</th>
-        <th>Autor</th>
-    </tr>
-    <tr>
-        <td><a href="http://qgis.pt/workshops_qgis2014/ws_introducao_qgis_day_2014.pdf" target="_blank">Introdução ao QGIS e suas funcionalidades</a></td>
-        <td>Giovanni Manghi</td>
-    </tr>
-    <tr>
-        <td><a href="http://qgis.pt/workshops_qgis2014/ws_processing_qgis_day_2014.pdf" target="_blank">Processamento e análise com QGIS</a> + <a href="http://qgis.pt/workshops_qgis2014/workshop_processing_qgis_day_2014.zip" target="_blank">dados</a></td>
-        <td>Pedro Venâncio</td>
-    </tr>
-    <tr>
-        <td><a href="http://qgis.pt/presentation/ws_qgis_server.html" target="_blank">WebGIS e serviços OGC (WMS, WFS, WCS) com QGIS Desktop/Server</a> + <a href="http://qgis.pt/workshops_qgis2014/workshop_server_qgis_day_2014.zip" target="_blank">dados</a></td>
-        <td>Hugo Martins</td>
-    </tr>
-</table>
-
-<p>Não poderíamos deixar de agradecer uma vez mais o apoio dos nossos patrocionadores (Faculdade de Ciências e Tecnologia da Universidade de Coimbra e Faunalia) sem os quais teria sido impossível realizar este encontro. Não menos importantes
-foram todos os utilizadores que estiveram presentes e que contribuiram para um dia fantástico de partilha de conhecimentos e <i>networking</i>. E porque nunca é demais realçar os objectivos atingidos, expressamos 
-também a nossa gratidão a todos os que decidiram efectuar um donativo ao projecto QGIS: conseguimos reunir <b>570€</b> que estão neste momento a ser utilizados para o <i>bugfixing</i> da próxima versão do QGIS (2.4)!</p>
-
-<p><b>A todos o nosso obrigado!</b> Contamos com as vossas opiniões, sugestões e colaboração na construção desta comunidade.</p>
-]]></content>
-  </entry>
+    <a class='category' href='/blog/categories/desktop/'>Desktop</a>, <a class='category' href='/blog/categories/grelhas-ntv2/'>Grelhas NTv2</a>, <a class='category' href='/blog/categories/transformacao-de-coordenadas/'>Transformação de Coordenadas</a>
   
-  <entry>
-    <title type="html"><![CDATA[Instalação Do QGIS via OSGeo4W]]></title>
-    <link href="http://qgis.pt/2014/06/18/instalacao-do-qgis-via-osgeo4w/"/>
-    <updated>2014-06-18T18:22:27+01:00</updated>
-    <id>http://qgis.pt/2014/06/18/instalacao-do-qgis-via-osgeo4w</id>
-    <content type="html"><![CDATA[<p>Este post aborda o processo de instalação do QGIS em ambiente Windows utilizando o instalador OSGeo4W.<p>
-<!-- more -->Efetue o download do instalador segundo a versão do seu sistema operativo (32/64bits) utilizando o seguinte <a href="http://trac.osgeo.org/osgeo4w/" target="_blank">link</a>.<p>
+</span>
 
-<h4>Etapas de instalação</h4>
-<p>Deve-se executar o instalador e escolher como tipo de instalação a opção <b><i>Advanced install</i></b>. Nas seguintes opções, deverá proceder segundo as instruções abaixo:</p>
-<ul>
-    <li>Selecionar a opção <b><i>Install from internet</i></b>;</li>
-	<li>Aceitar a diretoria <b><i>C:\OSGeo4w</i></b> como o local de instalação do software;</li>
-	<li>Aceitar o local proposto para guardar os ficheiros de instalação;</li>
-	<li>Definir o tipo de ligação para que o instalador possa aceder à internet. Atenção à eventual existência de um proxy na sua ligação à internet;</li>
-	<li>Assim que os pacotes de instalação são acedidos, como mostra a imagem abaixo, são mostradas as várias opções de categoria a instalar;</li>
-</ul>
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/setup_osgeo4w_image001.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/setup_osgeo4w_image001.png" width="500"  alt="Diversas categorias de software">
-    </a>
-</div>
-<ul>
-    <li>Clique no botão + da opção <b><i>Commandline_Utilities</i></b> e depois em cima de <b>Skip</b> para a opção <b><i>setup:OSGeo4W Installer/Updater</i></b>. Esta opção permitirá criar no menu OSGeo4W uma entrada designada por Setup, a qual permitirá depois aceder de forma rápida a este instalador;</li>
-	<li>Clique novamente no botão + da opção <b><i>Desktop</i></b> e selecione <b><i>qgis:QGIS Desktop</i></b> para instalar a versão corrente do QGIS. Se desejar, pode-se também instalar a versão que está em desenvolvimento, ativando para isso a opção <b><i>qgis-dev:QGIS nightly build of the master</i></b>;</li>
-	<li>Na secção <b><i>Libs</i></b> verifique se está ativa a opção <b><i>qgis-grass-plugin</i></b>. Esta opção permite ativar o plugin GRASS GIS para trabalhar dentro do QGIS;</li>
-	<li>Por fim, clique no botão <b><i>Seguinte</i></b> e aguarde enquanto o instalador procede à instalação do QGIS;</li>
-	<li>No final de todo o processo, clique em <b><i>Concluir</i></b>. No menu <b><i>Iniciar>Programas>OSGeo4W</i></b> escolha a opção <b><i>QGIS Desktop 2.X</i></b>. Se tudo correu bem, o QGIS será iniciado.</li>
-</ul>
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/setup_osgeo4w_image002.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/setup_osgeo4w_image002.png" width="500"  alt="Iniciar o QGIS">
-    </a>
-</div>
 
-<h4>Atualizar o QGIS com o OSGeo4W</h4>
-<p>Para atualizar o QGIS, deve-se iniciar o Setup do OSGeo4W existente no menu <b><i>Iniciar>Programas>OSGeo4W</i></b>. Aceite todas as opções até à secção de pacotes de instalação. Uma vez aqui, deve-se verificar se existem atualizações ao QGIS. Se existirem, basta selecioná-las e prosseguir com a instalação.</p> 
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/setup_osgeo4w_image003.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/setup_osgeo4w_image003.png" width="500"  alt="Atualização do QGIS">
-    </a>
-</div>
-
-<h4>Desinstalar o OSGeo4W</h4>
-<p>Os pacotes de software podem ser desinstalados. Para isso deve-se correr de novo o Setup do OSGeo4W e na seção <b><i>Desktop Default</i></b> seleccionar de modo a fazer <b>Uninstall</b> nos pacotes desejados.
-Atualmente não existem formas de desinstalar o OSGeo4W. No entanto, se for necessário o fazer, deve desinstalar todos os pacotes da forma descrita anteriormente e apagar a pasta existente em C:\OSGeo4W.</p> 
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/setup_osgeo4w_image004.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/setup_osgeo4w_image004.png" width="500"  alt="Desinstalação de software">
-    </a>
-</div>
-
-<p>Através deste instalador, podemos afirmar que o utilizador QGIS estará sempre em dia com as atualizações/correções que vão sendo feitas ao QGIS.</p>
-
-<p>Esperamos que este post o possa ajudar no que diz respeito à instalação e atualização do QGIS. 
-<br />
-]]></content>
-  </entry>
+    </p>
+    
+      <div class="sharing">
   
-  <entry>
-    <title type="html"><![CDATA[Colaborar No Nosso Github]]></title>
-    <link href="http://qgis.pt/2014/05/01/colaborar-no-nosso-github/"/>
-    <updated>2014-05-01T15:29:16+01:00</updated>
-    <id>http://qgis.pt/2014/05/01/colaborar-no-nosso-github</id>
-    <content type="html"><![CDATA[<p>A melhor forma de colaborar directamente connosco e partilhar os seus conteúdos com a comunidade de utilizadores QGIS-PT é através da utilização do <a href="http://git-scm.com/"target="_blank">Git</a> e da 
-   plataforma <a href="https://github.com/" target="_blank">Github</a>. <!-- more --> O <i>Git</i> é um sistema distribuído de controlo de versões de código aberto desenhado para lidar com diferentes tipos de ficheiros e podendo ser
-   utilizado em projectos de pequena a grande dimensão. O <i>Github</i> é um serviço de alojamento <i>web</i> para projectos que recorrem ao <i>Git</i> como ferramenta de controlo de versões. Este tutorial
-   pertende demonstrar os passos que deverá seguir para colaborar connosco utilizando estas ferramentas de uma forma simples e eficaz.
-</p>
-
-<p>Deverá começar por instalar o <i>software Git</i>. Para isso consulte a informação disponível em <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git" target="_blank">http://git-scm.com/book/en/Getting-Started-Installing-Git</a>.
-   Aqui encontrará toda a informação de que necessita para instalar o <i>Git</i> no seu sistema operativo (seja este Linux, MacOS ou Windows).
-</p>
-<p>Para poder começar a utilizar o <i>Github</i> deverá efectuar o seu registo em  <a href="https://github.com/" target="_blank">https://github.com</a>, introduzindo um nome de utilizador, o seu email e 
-   a sua password.
-</p>
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/register_github.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/register_github.png" width="500"  alt="Efectuar registo no Github">
-    </a>
-</div>
-
-<p>Terminados estes passos, está agora em condições de colaborar nos nossos repositórios sem grande esforço. Se consultar o <a href="https://github.com/qgispt" target="_blank">Github</a> do grupo de utilizadores
-   QGIS-PT deverá encontrar vários repositórios. Neste tutorial iremos utilizar o repositório chamado <b>blog</b> e demonstrar como submeter as suas contribuições <i>upstream</i>. Faça <i>login</i> no seu <i>Github</i>
-   recentemente criado (se é que ainda não fez). A primeira coisa que deverá fazer é efectuar um <i>fork</i> do repositório <b>blog</b> para o seu <i>Github</i>. Para isso, escreva <i><b>@qgispt</b></i> na 
-   caixa de pesquisa que se encontra no topo do <i>site</i>.
-</p>
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/search_qgispt.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/search_qgispt.png" width="500"  alt="Pesquisar pelo o Github do QGIS-PT">
-    </a>
-</div>
-
-<p>Ao seleccionar a opção que lhe é mostrada irá ser redireccionado para o <i>Github</i> do grupo. Na lista de repositórios apresentada, seleccione o repositório <b>blog</b>.</p>
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/blog_repo.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/blog_repo.png" width="500"  alt="Selecção do repositório do Blog">
-    </a>
-</div>
-
-<p>De seguida carregue no botão <i><b>Fork</b></i> e aguarde enquanto o repositório é replicado no seu <i>Github</i>.</p>
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/fork.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/fork.png" width="500"  alt="Fork do repositório do Blog">
-    </a>
-</div>
-
-<p>Deverá agora visualizar uma réplica do repositório <b>blog</b> no seu <i>Github</i>. Tome nota do endereço <i>https</i> que é mostrado no lado direito da página (nota: se estiver à vontade com a 
-utilização de <i>ssh</i> poderá usar o endereço apropriado e configurar o seu <i>Github</i> com a sua chave pública).</p>
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/git_address.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/git_address.png" width="500"  alt="Endereço do nosso Fork">
-    </a>
-</div>
-
-<p>Neste tutorial iremos utilizar a linha de comandos do sistema operativo para fazermos uma cópia do nosso <i>fork</i> para o computador onde estamos a trabalhar. Os utilizadores com Windows têm
-   também uma interface gráfica disponível que é instalada conjuntamente com o <i>Git</i> e poderão, se assim o desejarem, replicar os próximos passos com essa interface. Abra o o seu terminal/consola DOS
-   e navegue até à directoria onde deseja criar a cópia local do seu <i>fork</i> (neste tutorial essa directoria será <i>~/Documents/QGISPT</i>). De seguida efectue os seguintes passos substituindo a entrada
-   <i>o_seu_nome_de_utilizador</i> pelo valor apropriado:
-</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> ~/Documents/QGISPT
-</span><span class='line'>git clone https://github.com/o_seu_nome_de_utilizador/blog.git
-</span><span class='line'><span class="nb">cd </span>blog
-</span><span class='line'>git remote add upstream https://github.com/o_seu_nome_de_utilizador/blog.git
-</span></code></pre></td></tr></table></div></figure>
-
-<p>Neste momento tem tudo configurado e pronto para começar a produzir conteúdos no seu computador e mais tarde submetê-los para o <i>Github</i>. Repare que existe agora uma nova directoria chamada <b>blog</b>
-   dentro da directoria que especificou anteriormente (neste caso <i>~/Documents/QGISPT</i>) com todos os conteúdos existentes no repositório. Suponha agora que desejaria criar uma nova pasta
-   dentro do repositório e colocar lá um ficheiro de sua autoria. Usando as ferramentas do seu sistema operativo iria criar uma nova directoria (neste caso iremos chamá-la de <b>exemplos</b>).
-</p>
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/nova_pasta.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/nova_pasta.png" width="500"  alt="Criação de nova pasta">
-    </a>
-</div>
-
-<p>Dentro desta pasta, iria em seguida colocar o seu novo ficheiro. Neste exemplo foi colocado um novo ficheiro chamado <i>traducao.html</i>. Depois de ter terminado a edição do seu ficheiro (ou vários ficheiros)
-   poderá verificar o estado do seu repositório da seguinte forma:
-</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git status
-</span></code></pre></td></tr></table></div></figure>
-
-<p>Este comando deverá devolver um <i>output</i> semelhante ao seguinte:</p>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># On branch master</span>
-</span><span class='line'><span class="c"># Untracked files:</span>
-</span><span class='line'><span class="c">#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
-</span><span class='line'><span class="c">#</span>
-</span><span class='line'><span class="c">#	exemplos/traducao.html</span>
-</span><span class='line'><span class="c"># nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-<p>Ao analisar este <i>output</i> rapidamente se apercebe que existe um ficheiro que ainda não foi adicionado ao seu <i>Git</i> (repare na secção <i>Untracked files</i>). Para adicionar este ficheiro
-   ao seu <i>Git</i> deverá então efectuar o seguinte:
-</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add exemplos/traducao.html
-</span></code></pre></td></tr></table></div></figure>
-
-<p>Volte a emitir o comando <i>git status</i> e irá reparar, que desta vez, o <i>Git</i> já sabe que existe um novo ficheiro para ser adicionado.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># On branch master</span>
-</span><span class='line'><span class="c"># Changes to be committed:</span>
-</span><span class='line'><span class="c">#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</span>
-</span><span class='line'><span class="c">#</span>
-</span><span class='line'><span class="c">#	new file:   exemplos/traducao.html</span>
-</span><span class='line'><span class="c">#</span>
-</span></code></pre></td></tr></table></div></figure>
-
-<p>Na terminologia própria do <i>Git</i> diz-se que o ficheiro foi adicionado à <i>staging area</i>. No entanto este ficheiro ainda não foi realmente submetido e gravado no <i>Git</i> para se começar 
-   gravar todas as alterações nele efectuadas. Para o fazer deverá executar o seguinte comando:
-</p>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git commit -m <span class="s1">&#39;Ficheiro traducao adicionado à lista de exemplos&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-<p>Depois de emitir este comando deverá visualizar uma mensagem semelhante à seguinte:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># 1 file changed, 109 insertions(+)</span>
-</span><span class='line'><span class="c"># create mode 100644 exemplos/traducao.html</span>
-</span></code></pre></td></tr></table></div></figure>
-
-<p>Repare que o <i>Git</i> sabe que ocorreram alterações num único ficheiro e que foram adicionadas 109 novas linhas. Neste momento, todas as suas alterações foram gravadas no seu <i>Git</i> local. Quer
-   isto dizer que se visitar o seu <i>Github</i> estas alterações ainda não estarão lá presentes. Para que possa carregar as suas alterações para o seu <i>fork</i> na <i>web</i> deverá então emitir o seguinte
-   comando e introduzir o seu nome de utilizador e palavra-passe quando solicitado:
-</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin master
-</span></code></pre></td></tr></table></div></figure>
-
-<p>Se tudo correr bem, não verá qualquer mensagem de erro e as suas alterações deverão ter sido propagadas para o seu <i>Github</i>. Confirme que tal aconteceu visitando-o <i>online</i>.</p>
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/push.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/push.png" width="500"  alt="Confirmação que alterações foram propagadas para o Github">
-    </a>
-</div>
-
-<p>Neste momento as suas alterações já estão na <i>web</i> mas apenas no seu <i>fork</i>. O passo em falta é colocar essas alterações no repositório do grupo de utilizadores. Para o fazer deverá efectuar
-   um <i>Pull request</i> através do <i>Github</i>. No seu <i>Github</i> navegue até ao <i>fork</i> e carregue no botão <i><b>Pull Request</b></i> que se encontra no topo direito da secção que mostra a 
-   lista dos ficheiros e pastas disponíveis.
-</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/pull.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/pull.png" width="500"  alt="Início do Pull Request">
-    </a>
-</div>
-
-<p>Deverá então surgir uma nova página mostrando todas as suas alterações. Confirme que tudo está correcto e carregue no botão <i>Create Pull Request</i>.</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/pull_1.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/pull_1.png" width="500"  alt="Validação e criação do Pull Request">
-    </a>
-</div>
-
-<p>Finalmente, introduza um título para o seu <i>Pull Request</i> e, se desejar, introduza também algum comentário adicional. Carregue no botão <i><b>Send Pull Request</b></i>.</p>
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/pull_2.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/pull_2.png" width="500"  alt="Enviar Pull Request">
-    </a>
-</div>
-
-<p>Neste momento um email será enviado automaticamente para os gestores do <i>Github</i> do grupo de utilizadores a informar que existe uma nova contribuição. Assim que possível, estes irão incluir
-   as suas alterações no repositório central para que fiquem disponíveis para todos.
-</p>
-
-<p>Como nota final, uma vez que já efectuou a configuração do <i>fork</i> no seu <i>Github</i> e já ficou com uma cópia local deste repositório no seu computador, da próxima vez que quiser efectuar uma
-   alteração a um ficheiro já existente ou criar uma nova pasta/ficheiro não tem que repetir todos os passos previamente mencionados. Apenas terá que seguir as instruções anteriores a partir do primeiro comando
-   <i><b>git status</b></i>. Não se esqueça que, da mesma forma que fez as suas alterações, poderão existir outros utilizadores a criar novos conteúdos e a alterar conteúdos já existentes. Para que o seu 
-   repositório local (isto é, o repositório <i>Git</i> que está na sua máquina) esteja sempre actualizado é boa prática que sempre que decida começar uma nova contribuição efectue primeiramente o seguinte 
-   comando:
-</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git fetch upstream
-</span></code></pre></td></tr></table></div></figure>
-
-<p>Desta forma irá garantir que está em total sincronia com o repositório oficial do grupo de utilizadores.</p>
-
-<p>Esperamos que este tutorial vos ajude e clarifique os procedimentos que deverão adoptar para contribuirem para a nossa comunidade. Qualquer dúvida que tenham não hesitem em contactar-nos na <i>mailing list</i>, 
-   ou através da interface de comentários disponibilizada em baixo.
-</p>
-
-<br />
-<img class="gravatar img-circle" src="http://www.gravatar.com/avatar/5ac74272f140db2ce94bdc51869e3168></img>
-]]></content>
-  </entry>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://qgis.pt/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis/" data-via="" data-counturl="http://qgis.pt/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis/" >Tweet</a>
   
-  <entry>
-    <title type="html"><![CDATA[Tradução De Conteúdos QGIS Com Transifex]]></title>
-    <link href="http://qgis.pt/2014/04/20/traducao-de-conteudos-qgis-com-transifex/"/>
-    <updated>2014-04-20T22:01:46+01:00</updated>
-    <id>http://qgis.pt/2014/04/20/traducao-de-conteudos-qgis-com-transifex</id>
-    <content type="html"><![CDATA[<p>Este tutorial pretende demonstrar como é fácil contribuir para o projecto QGIS através da tradução do <a href="http://qgis.org/pt_PT/site/" target="_blank">website</a> e da 
-   <a href="http://www.qgis.org/pt_PT/docs/index.html" target="_blank">documentação</a>. <!-- more -->O transifex é uma plataforma usada por vários projectos <i>open source</i> e comerciais para traduzir
-   os seus conteúdos e desta forma chegar a mais público. Esta plataforma torna possível traduzir através da internet sem que tenha de instalar qualquer tipo de software.<p>
-
-<h4>Registar-se</h4>
-<p>Para iniciar, deverá registar-se no Transifex. Para tal, efectue o seu registo em <a href="https://www.transifex.com/signin/?next=/" target="_blank">https://www.transifex.com/signin/?next=/</a>.</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/login.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/login.png" width="500"  alt="Entrada do site Transifex">
-    </a>
-</div>
-
-<p>Nesta página tem duas formas de registo:</p>
-<ul>
-    <li><b>Registar-se gratuitamente</b>, onde o utilzador pode inserir os seus dados manualmente (neste caso irá receber um email de verificação na sua conta)</li>
-    <li><b>Autenticação Social</b>, onde o utilizador pode recorrer à informação de redes sociais para autenticar o seu registo (Facebook, Twitter, google e Linkedin)<l/i>
-</ul>
-
-<h4>Integrar os projectos QGIS</h4>
-<p>Após o registo, clique na parte superior do site na opção <i>Explorar</i> e escreva na caixa QGIS, que a pesquisa mostrará dois resultados relevantes. Um referente ao <i>QGIS Website</i> e 
-   outro ao <i>QGIS Documentation</i></p>
-   
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/explorar.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/explorar.png" width="500"  alt="Resultado da pesquisa pela palavra QGIS">
-    </a>
-</div>
-
-<p>Tratam-se de dois projectos de tradução “independentes”. O <i>QGIS Website</i> serve para traduzir o site oficial do QGIS (<a href="www.qgis.org" target="_blank">www.qgis.org</a>) e,  por outro lado,
-   o <i>QGIS Documentation</i> para traduzir toda a documentação do QGIS (manual do utilizador, manual de formação, livro de receita PyQgis, etc&#8230;). Daqui para a frente iremos mostrar um exemplo de 
-   tradução para o <i>QGIS Documentation</i>. Os procedimentos são em tudo iguais para o <i>QGIS Website</i>. Ao entrar no projecto <i>QGIS Documentation</i> será exibida uma página com todos os idiomas
-   com tradução iniciada. Clique na linha que diz <i>Portuguese (Portugal)</i>.</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/Idioma.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/Idioma.png" width="500"  alt="Selecção do Idioma Português (Portugal)">
-    </a>
-</div>
-
-<p>Todos os idiomas têm gestores que são responsáveis pela autorização de novos tradutores, para isso, deverá clicar primeiro no botão <i>Integrar Equipa</i> para solicitar a sua integração. O botão 
-   <i>Discussões</i> serve para, depois de estar integrado na equipa, falar com os membros e tirar dúvidas sobre termos ou dúvidas relativos à tradução.</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/Integrar_equipa.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/Integrar_equipa.png" width="500"  alt="Selecção do botão Integrar equipa">
-    </a>
-</div>
-
-
-<p>Após autorização dos gestores, poderá clicar num dos documentos (recursos) e começar a tradução. Antes de ir directamente para a tradução do recurso, aparecerá uma janela com várias opções, 
-   basta clicar no <i>Traduzir Agora</i> para começar a traduzir. A figura seguinte mostra um exemplo de um recurso aberto pronto a ser traduzido. A parte superior mostra o texto original e a parte 
-   inferior mostra a caixa onde colocará a sua tradução.</p>
-   
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/Recurso.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/Recurso.png" width="500"  alt="Recurso a ser traduzido">
-    </a>
-</div>
-
-<p>Na lista de textos à esquerda, irão ocorrer três situações, um visto verde, dois vistos verdes ou então um círculo. Quando o item tem um visto verde, significa que esse item já foi traduzido,
-   se tiver dois vistos verdes significa que o item foi traduzido e revisto por um coordenador, e finalmente o círculo significa que o item ainda não foi traduzido.</p>
-
-<p>Para facilitar a rapidez do processo da tradução o Transifex disponibiliza um motor de pesquisa de termos que podem facilitar a tradução da sua cadeia de texto e atalhos de teclado para uma rápida
-   navegação.</p>
-
-<p>Tem também ainda os seguintes separadores na parte inferior da cadeia de texto que podem ajudá-lo na tradução:</p>
-
-<ul>
-    <li><b>Sugestões</b> - Este separador, funciona quando a web aplicação encontra cadeias de texto ou semelhantes e atribui uma percentagem(%) de coincidência de tradução relativo ao que está a traduzir</li>
-    <li><b>Histórico</b> - Este separador regista termos que são iguais ou semelhantes que foram usados no passado e que podem ser aplicados à cadeia de texto que está a traduzir</li>
-    <li><b>Glossário</b> - Aqui consegue ver, os termos usados pelos tradutores, e pode também inserir novos termos para que as traduções sejam mais rápidas e facilitar outros tradutores na tradução
-        das cadeias de texto (este separador será explicado detalhadamente mais à frente)</li>
-    <li><b>Notas</b> - Aqui pode deixar as suas sugestões, ou outro tipo de observações relativo ao processo de tradução de uma cadeia de texto que será visível pelos outros tradutores</li>
-</ul>
-
-<p>Após efectuar a sua tradução tem duas opções, <i>Gravar</i> ou <i>Save All</i>. A primeira opção permite apenas guardar a cadeia de texto que acabou de traduzir, enquanto que a segunda opção serve
-   em casos que traduz muitas cadeias de texto e no fim guarda todas.</p>
-   
-<p>O Transifex permite ainda ter um glossário para que possamos introduzir termos que se repetem e classificá-los como nome, pronome, verbo, adjectivo, de forma ajudar a optimizar a sua tradução e ajudar
-   a clarificar os outros tradutores em caso de dúvidas na tradução. Para poder aceder ao glossário, quando está na tradução, clique no separador <i>Glossário</i>, e de seguida, clique em
-   <i>Abrir Glossário</i>. A forma do glossário é apresentada na figura seguinte.</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/glossario.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/glossario.png" width="500"  alt="Interface do Glossário">
-    </a>
-</div>
-
-<p>Ao clicarmos no <i>Adicionar Termo</i>, irá aparecer a seguinte janela.</p>
-
-<div class="post-img">
-    <a href="http://qgis.pt/blog/images/posts/adicionartermo.png" rel="prettyPhoto" title="">
-        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/adicionartermo.png" width="500"  alt="Adicionar Termo no glossário">
-    </a>
-</div>
-
-<p>Nesta interface, pode adicionar o <i>Termo</i> em inglês que quer referir, no campo <i>Parte do Discurso</i> irá adicionar o tipo (Nome, Pronome, Adjectivo, Verbo, Advérbio, Preposição, 
-   Conjunção, Interjeição). Para finalizar, na caixa <i>Tradução</i>, insira o texto em português e clique em <i>Gravar</i>.</p>
-
-<p>Esperamos que este tutorial facilite a sua contribuição para a tradução do QGIS. Caso tenha dúvidas, não hesite em usar a <i>mailing list qgis-pt</i> para as esclarecer.</p>
-
-<br />
-<img class="gravatar img-circle" src="http://www.gravatar.com/avatar/0edb9f3a1e5191476215ce32183d80a4></img>
-]]></content>
-  </entry>
   
-</feed>
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+  <div class="fb-like" data-send="true" data-width="450" data-layout="button_count" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <hr>
+  </div>
+  <ul class="pager">
+    
+      <li class="previous"><a class="basic-alignment left" href="/blog/2014/06/18/accoes-em-python-no-qgis/" title="Previous Post: Acções em Python no QGIS">&laquo; Acções em Python no QGIS</a></li>
+    
+    
+  </ul>
+ 
+</article>
+
+  <section class="disqus">
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="col-sm-3">
+  
+    <section>
+    <a href="/blog/archives" class="btn btn-success btn-lg" style="width: 100%; margin-top: 18px;">Arquivo</a>
+</section>
+<section class="well blog-section">
+  <h1>PUBLICAÇÕES RECENTES</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis/">Transformação De Coordenadas E Utilização Das Grelhas NTv2 No QGIS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/18/accoes-em-python-no-qgis/">Acções Em Python No QGIS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/18/2o-encontro-de-utilizadores-qgis-portugal/">2º Encontro De Utilizadores QGIS Portugal</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/18/instalacao-do-qgis-via-osgeo4w/">Instalação Do QGIS via OSGeo4W</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/01/colaborar-no-nosso-github/">Colaborar No Nosso Github</a>
+      </li>
+    
+  </ul>
+</section>
+<section class="well blog-section">
+  <h1>CATEGORIAS</h1>
+    <span id="tag-cloud"><a class='tag' href='/blog/categories/accoes'>Acções</a> <a class='tag' href='/blog/categories/colaboracao'>Colaboração</a> <a class='tag' href='/blog/categories/desktop'>Desktop</a> <a class='tag' href='/blog/categories/eventos'>Eventos</a> <a class='tag' href='/blog/categories/github'>Github</a> <a class='tag' href='/blog/categories/grelhas-ntv2'>Grelhas NTv2</a> <a class='tag' href='/blog/categories/instalacao'>Instalação</a> <a class='tag' href='/blog/categories/osgeo4w'>OSGeo4W</a> <a class='tag' href='/blog/categories/python'>Python</a> <a class='tag' href='/blog/categories/qgis-pt'>QGIS-PT</a> <a class='tag' href='/blog/categories/traducao'>Tradução</a> <a class='tag' href='/blog/categories/transformacao-de-coordenadas'>Transformação de Coordenadas</a> <a class='tag' href='/blog/categories/transifex'>Transifex</a> </span>
+</section>
+
+
+  
+</aside>
+
+
+      <div class="col-md-12 powered">Blog desenvolvido com <a href="http://octopress.org/" target="_blank">Octopress</a></div>
+
+
+    </div>
+  </div>
+  <footer><div class="container">
+    <div class="row">
+        <div class="copyright">
+            <b>Grupo de Utilizadores QGIS PT, 2014</b>
+            <br>
+            <p>Se não for mencionado o contrário, todos os conteúdos licenciados sobre licença <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons Atribuição-Compartilha Igual 3.0 (CC BY-SA)</a></p>
+        </div>
+        <div class="social">
+            <a class="footer-btn facebook" href="https://www.facebook.com/QGISPT" target="_blank"></a>
+            <a class="footer-btn google-plus" href="https://plus.google.com/102851374948205667454/posts" target="_blank"></a>
+            <a class="footer-btn twitter" href="https://twitter.com/QGISPT" target="_blank"></a>
+            <a class="footer-btn github" href="https://github.com/qgispt" target="_blank"></a>
+            <a class="footer-btn mailing-list" href="http://osgeo-org.1560.x6.nabble.com/QGIS-pt-f5128248.html" target="_blank"></a>
+        </div>
+    </div>
+</div>
+
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'qgispt';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_config = function(){
+            console.log(this.callbacks);
+            this.callbacks.onReady =[function(){
+                var footer = $('footer');
+                footer.css('position', 'inherit');
+                var innerHeight = $(window).height();
+                if (footer.position().top < innerHeight - 106){
+                    footer.css('position', 'fixed');
+                    footer.css('width', '100%');
+                }
+            }];
+        }
+        var disqus_identifier = 'http://qgis.pt/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis/';
+        var disqus_url = 'http://qgis.pt/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+<!-- Core JavaScript -->
+<script src="http://qgis.pt/libs/jquery.min.js"></script>
+<script src="http://qgis.pt/libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://qgis.pt/libs/prettyPhoto/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://qgis.pt/utils.js"></script>
+<script src="http://qgis.pt/analytics.js"></script>
+
+
+</body>
+</html>
