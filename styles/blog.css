@@ -473,3 +473,12 @@ figure.code figcaption a:hover { text-decoration: underline }
 .code {
 	margin-top: 20px !important;
 }
+
+.img-leg {
+	text-align: center;
+	font-size: 14px;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+}
