@@ -1,0 +1,9 @@
+.idea
+_gh_pages
+node_modules
+/CHANGELOG.md
+/.gitignore
+/Gruntfile.js
+/README.md
+/bower.json
+/package.json
