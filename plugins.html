@@ -37,7 +37,7 @@
 		    e preencha os detalhes assim como mostrado na seguinte imagem:
 		</p>
 		<p style="text-align:center;">
-		    <img src="images/plugin_repo1.png" alt="QGIS"/>
+		    <img src="images/plugin_repo1.png" alt="QGIS" title="QGIS"/>
     	        </p> 
     	</div>
     </div>
@@ -46,7 +46,69 @@
     	<div class="row">
     		<div id="objectivos-grupo" class="section">
 				<h1>Extensões disponíveis</h1>
-				<h3 style="text-align:left;">Tranformações de Datum para caixa de ferramentas Processing</h3> 
+				<h3>Tranformações de Datum para caixa de ferramentas Processing</h3>
+	        <p style="text-align:center;">
+		    <img src="images/pttransform.png" alt="Tranformações de Datum para caixa de ferramentas Processing" title="Tranformações de Datum para caixa de ferramentas Processing"/>
+    	        </p>		
+		<p>
+		    Esta extensão foi criada para tornar o mais simples possível a tarefa da transformação de dados vectoriais e raster
+		    em sistemas de coordenadas obsoletos (Datum 73, Datum Lisboa e ED50) para o novo sistema de coordenadas oficial para Portugal
+		    continental (ETRS89-PTTM06), utilizando o <a href="http://qgis.pt/blog/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis/"><b>metodo das grelhas de tranformação de Datum (NTv2)</b></a>.
+		</p>
+		<p>
+		    As grelha suportadas são as disponibilizadas pelo <b>Prof. José Alberto Gonçalves (UP)</b> e pela <b>Direção-Geral do Território (DGT)</b>:
+		</p>
+		<p>
+		    <a href="http://www.fc.up.pt/pessoas/jagoncal/coordenadas/" target="_blank"><i><b>http://www.fc.up.pt/pessoas/jagoncal/coordenadas/</b></i></a>
+		</p>
+		<p>
+		    <a href="http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/grelhas_em_ntv2/" target="_blank"><i><b>http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/grelhas_em_ntv2/</b></i></a>
+		</p>
+	        <br>
+		<p>
+		    As grelhas são disponibilizadas/instaladas em conjunto com a extensão e portanto não é pedida nenhuma
+		    configuração manual por parte do utilizador. A extensão foi criada para ser o mais simples possível para o utilizador: 
+		    as ferramentas são organizadas por tipo de dados (vectores ou raster) e por sistemas de coordenadas 
+		    dos dados de origem (Datum 73, Datum Lisboa ou ED50):
+		</p>
+		<p style="text-align:center;">
+		    <img src="images/pttransform_menu.png" alt="Tranformações de Datum menu" title="Tranformações de Datum menu"/>
+    	        </p>
+		<p>
+		    A seguir o utilizador simplismente escolhe o input e a grelha para usar:
+		</p>
+		<p style="text-align:center;">
+		    <img src="images/pttransform_gui.png" alt="Tranformações de Datum interface" title="Tranformações de Datum interface"/>
+    	        </p>
+	        <br>    	        
+    	        <p>
+		    <b>Notas:</b>
+		<ul>
+		  <li>O desenvolvimento do plugin foi suportado pelo <b>Grupo utilizadores QGIS PT</b> e realizado pelo mesmo grupo, pela <a href="http://www.faunalia.eu/pt/" target="_blank"><b>Faunalia</b></a> e <b>Alexander Bruy</b></li>
+		  <li>Como qualquer outra ferramenta da <i>toolbox Processing</i> de QGIS, tambem estas ferramentas podem funcionar em modalidade <i>batch</i>, tornando muito simples
+		  a tarefa da tranformação de coordeandas de conjuntos de dados grandes</li>
+		  <li>Repositório do código fonte: <a href="https://github.com/qgispt/processing_pttransform" target="_blank">https://github.com/qgispt/processing_pttransform</a></li>
+		  <li>Bug tracker: <a href="https://github.com/qgispt/processing_pttransform/issues" target="_blank">https://github.com/qgispt/processing_pttransform/issues</a></li>
+		  <li>A extensão requer QGIS versão 2.4 ou master (a próxima versão 2.6) para funcionar.</li>
+		  <li>É necessário verificar que na pasta <i>.qgis2/python/plugins</i> <b>não</b> seja presente uma pasta "processing". Se for presente é 
+		  necessário apagar a mesma antes de instalar a extensão.</li>
+		</ul>
+    	        </p>
+    	        <p>    	        
+		    <b>Problemas conhecidos:</b>
+		<ul>
+		  <li>Nas ferramentas de transformação de raster há um bug conhecido no
+		      QGIS 2.4, mas já resolvido no QGIS master: se a opção "<i>open output file after
+		      running algorithm</i>" for activa então o raster será carregado com o sistema de coordenadas
+		      errado (o dos dados de input). Se o raster for carregado manualmente no QGIS o problema não
+		      se apresenta.</li>
+		  <li>Nalguns casos no QGIS 2.4 poderá aparecer um aviso (não um erro) sem uma aparente razão real: <i>Layers do not all use the same CRS.
+		      This can cause unexpected results. Do you want to continue?</i>. O aviso pode-se <b>ignorar</b> e de qualquer forma o problema 
+		      já foi resolvido no QGIS master.</li>
+		  <li>Os paths dos ficheiros de input/output <b>não</b> devem conter caracteres especiais (espaços, acentos, tildes, etc.).</li>
+		  <li>As ferramentas de transformação de vectores funcionam de momento utilizando como input só o formato Shapefile.</li>
+		</ul>		
+    	        </p>
 	    	</div>
     	</div>
     </div>    
