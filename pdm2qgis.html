@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+         <!--#include file="head.html" -->
+
+  <body>
+    <!-- Fixed navbar -->
+             <!--#include file="navbar.html" -->
+    
+    <!-- Content -->
+    
+    <div class="container adjust-margin">
+    	<div class="row">
+    		<div class="section">
+	    		<h1>Projecto Norma PDM2QGIS</h1>
+	    	</div>
+    	</div>
+    	<div class="row traducao">
+    		<h2 style="text-align:left">Descrição</h2>
+    		<p>Aplicação da <a href="http://www.dgotdu.pt/detail.aspx?channelID=DA3E4280-CE46-4850-84AD-AE9FDC067797&contentId=FD4565E1-7D54-4990-A1FF-AEB96759833F" target="_blank">Norma Técnica sobre Modelo de Dados para o Plano Director Municipal</a> no QGIS.</p>
+		<h2 style="text-align:left">Objectivos</h2>
+		<p>Facilitar o trabalho das Câmara Municipais na adaptação do QGIS para a elaboração/revisão dos Planos Directores Municipais, através de:</p>
+		<ul style="text-align:left">
+		  <li>Construção da simbologia oficial tal como explanada nas Norma Técnica;</li>
+		  <li>Criação dos scripts necessários para construção da base de dados;</li>
+		  <li>Cumprir ao máximo os requisitos da Norma Técnica sobre o Modelo de dados para o PDM [1];</li>
+		  <li>Utilizar formatos abertos, que potenciem a interoperabilidade entre diversas ferramentas;</li>
+		  <li>Utilizar recursos abertos que possam ser usados livremente para os fins pretendidos. Um exemplo claro é a utilização de símbolos cartográficos que tenham licenças que permitam a sua utilização. Neste aspecto a Norma Técnica é limitadora, uma vez que exige simbologia própria do ArcGIS e Geomedia para alguns objectos;</li>
+		  <li>Utilizar ferramentas de código aberto que possam ser adaptadas e mantidas se for necessário;</li>
+		  <li>Facilitar o acesso em múltiplas plataformas (web, móvel, linux, windows, mac OS);</li>
+		  <li>Facilitar o acesso por parte de utilizadores menos experientes.</li>
+		</ul>
+		<h2 style="text-align:left">Tecnologias</h2>
+		<h3 style="text-align:left">Base de dados</h3>
+		<p>Pretende-se utilizar um Sistema de Gestão de Base de Dados (SGBD) geo-relacional. Todas as opções em análise são suportadas pelo QGIS.</p>
+		<h4 style="text-align:left">PostGIS (<a href="http://postgis.net/" target="_blank">http://postgis.net/</a>)</h4>
+		<ul style="text-align:left">  
+		  <li>SGBD robusto;</li>
+		  <li>Arquitectura cliente/servidor;</li>
+		  <li>Apropriado para instalações em larga escala, com utilização concorrente;</li>
+		  <li>A instalação e configuração é mais complexa do que as restantes ferramentas;</li>
+		  <li>Implementa inúmeras funções espaciais;</li>
+		  <li>Implementa o modelo Simple Features do OGC;</li>
+		  <li>Permite guardar simbologia SLD e QGS directamente na base de dados.</li>
+		</ul>
+		<h4 style="text-align:left">Spatialite (<a href="https://www.gaia-gis.it/fossil/libspatialite/home" target="_blank">https://www.gaia-gis.it/fossil/libspatialite/home</a>)</h4>
+		<ul style="text-align:left">  
+		  <li>Baseado em SQLite;</li>
+		  <li>Um único ficheiro;</li>
+		  <li>Uma espécie de PostGIS para tótós, implementando a maioria das funções espaciais, mas mais fácil de instalar;</li>
+		  <li>Suportado também em Android;</li>
+		  <li>Permite guardar simbologia SLD e QGS directamente na base de dados (XmlBlob).</li>
+		</ul> 
+		<h4 style="text-align:left">GeoPackage (<a href="http://www.geopackage.org/)" target="_blank">http://www.geopackage.org/)</a>)</h4>
+		<ul style="text-align:left">  
+		  <li>Standard OGC para intercâmbio de dados;</li>
+		  <li>Pretende substituir (finalmente) o shapefile;</li>
+		  <li>Baseado em SQLite, tal como o Spatialite, mas é mais simples de criar;</li>
+		  <li>Standard recente, mas que já é suportado pela OGR, ESRI, GeoTools;</li>
+		</ul> 
+		<h3 style="text-align:left">Simbologia</h3>
+		<p>Ambas as opções em análise são suportadas pelo QGIS.</p>
+		<h4 style="text-align:left">QGIS Layer Style format</h4>
+		<ul style="text-align:left">  
+		  <li>Formato nativo do QGIS;</li>
+		  <li>Muitas opções de representação gráfica.</li>
+		</ul>
+		<h4 style="text-align:left">OGC Styled Layer Descriptor (SLD)</h4>
+		<ul style="text-align:left">  
+		  <li>Standard OGC para representação gráfica de elementos;</li>
+		  <li>Utilizado em muitos software SIG, proeminentemente no GeoServer.</li>
+		</ul> 	
+		<h2 style="text-align:left">Para informações:</h2>
+		<ul style="text-align:left">  
+		  <li><a href="mailto:qgis.portugal@gmail.com?Subject=PDM2QGIS" target="_top">qgis.portugal@gmail.com</a></li>
+		  <li><a href="https://github.com/qgispt/NormaPDM2QGIS" target="_blank">https://github.com/qgispt/NormaPDM2QGIS</a></li>
+		</ul>		
+    	</div>
+    </div>
+       
+    <!-- Footer -->
+         <!--#include file="footer.html" -->
+
+  </body>
+</html>
