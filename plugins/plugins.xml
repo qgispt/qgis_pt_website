@@ -5,7 +5,7 @@
     <description>Easy datum transformation from obsolete mainland Portugal CRSs (Datum 73, Datum Lisboa and ED50) to the new official CRS (ETRS89-PTTM06) using NTv2 datum transformation grids</description>
     <version>0.1.0</version>
     <qgis_minimum_version>2.4.0</qgis_minimum_version>
-    <homepage>http://qgis.pt/transformacoes_datum.html</homepage>
+    <homepage>http://qgis.pt/plugins.html</homepage>
     <file_name>processing_pttransform.zip</file_name>
     <author_name>Alexander Bruy, Pedro Venâncio, Giovanni Manghi</author_name>
     <download_url>http://www.qgis.pt/plugins/processing_pttransform.zip</download_url>
