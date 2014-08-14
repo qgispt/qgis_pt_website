@@ -290,6 +290,27 @@ footer > .container > .row {
 	margin-top: 10px;
 }
 
+.footer-faunalia {
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 90px;
+	height: 75px;
+	display: inline-block;
+	border-radius: 5px;
+	margin-left: 5px;
+	margin-top: -15px;
+	background-color: rgb(130, 130, 130);
+	transition: all 0.2s ease 0s;
+}
+
+.faunaliafooter {
+	background-image: url(../images/faunalia.png);
+}
+
+.faunaliafooter:hover {
+	background-color: rgb(255, 255, 255);
+}
+
 .footer-btn {
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -407,7 +428,6 @@ footer > .container > .row {
 
 .faunalia {
 	background-image: url(../images/sponsors/faunalia.png);
-	width: 125px;
 }
 
 .uc {
