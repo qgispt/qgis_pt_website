@@ -290,11 +290,18 @@ footer > .container > .row {
 	margin-top: 10px;
 }
 
+.faunalia-btn {
+	float: right;
+	width: 115px;
+	margin-top: 10px;
+}
+
 .footer-faunalia {
+	/*margin-top: 2px !important;*/
 	background-position: center center;
 	background-repeat: no-repeat;
-	width: 90px;
-	height: 75px;
+	width: 108px;
+	height: 50px;
 	display: inline-block;
 	border-radius: 5px;
 	margin-left: 5px;
@@ -361,6 +368,10 @@ footer > .container > .row {
 
 .mailing-list:hover {
 	background-color: rgb(92, 184, 92);
+}
+
+.hosting {
+	margin-top: 5px;
 }
 
 .qgis-text {
@@ -667,4 +678,15 @@ div#redes-sociais:before {
 	margin-right: 10px;
 	margin-top: 4px;
 	box-shadow: 0px 0px 8px rgba(100, 100, 100, 0.5);
+}
+
+.wrap-url {
+	white-space: pre;           /* CSS 2.0 */
+	white-space: pre-wrap;      /* CSS 2.1 */
+	white-space: pre-line;      /* CSS 3.0 */
+	white-space: -pre-wrap;     /* Opera 4-6 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -hp-pre-wrap;  /* HP Printers */
+	word-wrap: break-word;      /* IE 5+ */
 }

@@ -24,11 +24,21 @@
         <loc>
             http://qgis.pt/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis/
         </loc>
-        <lastmod>2014-07-14T15:13:07+01:00</lastmod>
+        <lastmod>2014-08-14T19:55:39+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://qgis.pt/2014/08/14/qgis-e-o-software-estatistico-r/</loc>
+        <lastmod>2014-08-14T20:14:25+01:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://qgis.pt/2014/08/14/utilizacao-de-ferramentas-opensource-para-a-caracterizacao-de-uma-paisagem-o-modulo-lecos-do-qgis/
+        </loc>
+        <lastmod>2014-08-14T20:14:14+01:00</lastmod>
     </url>
     <url>
         <loc>http://qgis.pt/</loc>
-        <lastmod>2014-07-14T15:13:07+01:00</lastmod>
+        <lastmod>2014-08-14T20:14:25+01:00</lastmod>
     </url>
     <url>
         <loc>http://qgis.pt/robots.txt</loc>
@@ -36,6 +46,6 @@
     </url>
     <url>
         <loc>http://qgis.pt/archives/</loc>
-        <lastmod>2014-07-14T15:13:07+01:00</lastmod>
+        <lastmod>2014-08-14T20:14:25+01:00</lastmod>
     </url>
 </urlset>

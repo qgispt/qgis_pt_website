@@ -1,0 +1,526 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/png" href="http://qgis.pt/images/favicon.png">
+    <title>QGIS-PT</title>
+    <meta name="author" content="Grupo de Utilizadores QGIS PT">
+
+    
+    <meta name="description" content="QGIS E O Software Estatístico R 14 de Agosto, 2014 Caros Utilizadores, graças a interoperabilidade do QGIS actualmente podemos associar o QGIS com o &hellip;">
+    
+
+    <!-- http://t.co/dKP3o1e -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="canonical" href="http://qgis.pt/2014/08/14/qgis-e-o-software-estatistico-r">
+    <!-- CUSTOM CSS -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700,700italic" rel="stylesheet" type='text/css'>
+    <link href="http://qgis.pt/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://qgis.pt/libs/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+    <link href="http://qgis.pt/styles/style.css" rel="stylesheet">
+    <link href="http://qgis.pt/styles/blog.css" rel="stylesheet">
+    <!--<link href="http://localhost/styles/style.css" rel="stylesheet">-->
+    
+    <link href="/blog/atom.xml" rel="alternate" title="QGIS-PT" type="application/atom+xml">
+    
+</head>
+
+<body   >
+  <!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://qgis.pt"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="http://qgis.org/pt_PT/site/forusers/download.html" target="_blank">Download</a></li>
+                <li><a href="http://qgis.org/pt_PT/docs/index.html" target="_blank">Documentação</a></li>
+                <li><a href="http://qgis.pt/participar.html">Como participar</a></li>
+                <!--<li><a href="http://qgis.pt/eventos.html">Eventos</a></li>-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">QGIS PT <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://qgis.pt/traducao.html">Tradução</a></li>
+                        <li><a href="http://qgis.pt/plugins.html">Módulos para QGIS</a></li>
+                        <li><a href="http://qgis.pt/pdm2qgis.html">Norma PDM2QGIS</a></li>
+                        <!--<li><a href="">Casos de estudo</a></li>
+                        <li><a href="">Estilos e simbologia</a></li>
+                        <li><a href="">Modelos de processamento</a></li>-->
+                    </ul>
+                </li>
+                <li class="active"><a href="/blog">Blog</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" data-subscription="rss">
+                <li>
+                    <a class="rss" title="Subscrever via RSS" rel="subscribe-rss" href="/blog/atom.xml" target="_blank"></a>
+                </li>
+                
+            </ul>
+            
+            <form class="navbar-form navbar-right search-box" role="search" action="https://www.google.com/search" method="get">
+                <div class="form-group">
+                    <input type="hidden" name="q" value="site:qgis.pt/blog" />
+                    <input type="text" class="form-control search-glow" name="q" results="0" placeholder="Pesquisar">
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+
+  <div id="main" class="container">
+    <div id="content" class="row">
+      <div class="col-sm-9">
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h2 class="entry-title-static">QGIS E O Software Estatístico R</h2>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<div class="blog-time" datetime="2014-08-14T16:05:24+01:00" pubdate data-updated="true">14 de Agosto, 2014</div>
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>
+    Caros Utilizadores, graças a interoperabilidade do QGIS actualmente podemos associar o QGIS com o software estatístico open source R. O R é muito versátil e é expansível para outras 
+    linguagens sendo normalmente utilizado em estatística e análise de dados (data mining). <!-- more -->
+</p>
+<p>
+    O objectivo deste artigo é explicar a sua instalação, configuração com o QGIS, compreensão da nomenclatura e a demonstração de um pequeno exemplo. Espero que seja útil para a vossa 
+    rotina diária.
+</p>
+<p>Este artigo foi elaborado tendo como base o SO Windows 7 64-bits com o Instalador OSGeo4W 32-bits QGIS Chugiak 2.4  e o software R 3.1.1.</p>
+
+
+<h3>Instalação</h3>
+<p>
+    Para começarmos a usar o R com o QGIS é necessário fazer a sua transferência. Pode efectuá-la através de um dos vários <i>mirrors</i> (servidores) disponíveis do projecto. Para este artigo, 
+    usámos o servidor da Faculdade de <a href="http://cran.dcc.fc.up.pt/" target="_blank">Ciências da Universidade do Porto</a>. Estando neste página escolha o link que diz 
+    <a href="http://cran.dcc.fc.up.pt/bin/windows/" target="_blank">Download for Windows</a> (a opção base). Em seguida, use o link base e transfira o R clicando no link 
+    <a href="http://cran.dcc.fc.up.pt/bin/windows/base/R-3.1.1-win.exe" target="_blank">Download R 3.1.1 for Windows</a> (Figura 1).
+</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura1_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura1_r.jpg" width="500"  alt="Área de transferência do software R">
+    </a>
+</div>
+<p class="img-leg">Figura 1 - Área de transferência do software R</p>
+
+<h3>Configuração com o QGIS</h3>
+<p>
+    Após a instalação do R no seu computador, é necessário que indique ao QGIS onde é o directório do R. Para isso, tem de ir ao menu Processamento > Opções e configuração (Figura 2).
+</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura2_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura2_r.jpg" width="200"  alt="Menu Processamento">
+    </a>
+</div>
+<p class="img-leg">Figura 2 - Menu Processamento</p>
+
+
+<p>
+    Aparecerá uma janela de diálogo denominada de opções de processamento, onde deverá expandir a opção de <b>Fornecedores</b>, e em seguida as opções do separador R scripts (Figura 3). 
+</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura3_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura3_r.jpg" width="500"  alt="Opções e Configurações do Menu Processamento">
+    </a>
+</div>
+<p class="img-leg">Figura 3 - Opções e Configurações do Menu Processamento</p>
+
+<p>O caminho padrão usado normalmente é o <i>C:\Program Files\R\R-3.1.1\</i></p>
+
+<p>
+    Após inserir o directório poderá dizer ao QGIS se pretende ou não usar a versão de 64 bits. Para finalizar clique na opção <b>Activate</b>. No caso do <i>R scripts folder</i> (pasta dos 
+    seus scripts R) deixe o directório padrão.
+</p>
+
+<p>
+    Concluída esta configuração, conseguirá ver no menu processamento as ferramentas relacionadas com o R. Dentro dessas ferramentas existem alguns <i>scripts</i> criados por utilizadores 
+    e que vêm por defeito na instalação do QGIS. Para criar o seu próprio script R, vá a <b>R Scripts</b>, clique em <b>Tools</b> e <b>Create New Script R</b> (Figura 4).
+</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura4_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura4_r.jpg" width="300"  alt="Janela de criação do Script R">
+    </a>
+</div>
+<p class="img-leg">Figura 4 - Janela de criação do Script R</p>
+
+<p>
+    Ao clicar na ferramenta <b>Create New Script R</b>, aparecerá uma janela de diálogo onde poderá começar a escrever o seu código. Na figura 5, é apresentada a janela de diálogo do 
+    <i>script</i> e os seus respectivos botões.
+</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura5_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura5_r.jpg" width="500"  alt="Janela de diálogo do Script">
+    </a>
+</div>
+<p class="img-leg">Figura 5 - Janela de diálogo do Script (1 – Guardar ; 2 – Guardar como; 3 – Editar ajuda do script; 4 – Correr Algoritmo; 5 – Cortar; 6 – Copiar; 7- Botões de Desfazer e Refazer)</p>
+
+
+<p>
+    Uma das coisas interessantes deste menu processamento, é a possibilidade de criarmos um separador ajuda que vai acompanhado com o <i>script</i> depois de ser guardado. Isto 
+    permite aos outros utilizadores perceberem qual a finalidade do <i>script</i> (Figura6).
+</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura6_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura6_r.jpg" width="500"  alt="Janela Ajuda do Script">
+    </a>
+</div>
+<p class="img-leg">Figura 6 - Janela Ajuda do Script</p>
+
+<h3>Criar a ponte entre o QGIS e o Script R</h3>
+<p>
+    Actualmente existe um conjunto de código base para que os scripts sejam interpretados no QGIS e no menu Processamento, e que iremos descrever a seguir:
+    <ul>
+        <li><b>#</b> → Serve para declarar um comentário (útil para programadores que querem perceber o código)</li>
+        <li><b>##</b> → Declara uma variável (todas as linhas começam com duplo cardinal)</li>
+        <li><b>##QGIS-PT=group</b> → Declaração do grupo onde se insere o algoritmo</li>
+        <li><b>##nome_variavel=vector</b> → Declaração de uma variável tipo vector, se no seu caso for um raster basta substituir vector por raster</li>
+        <li><b>##atributo_da_tabela=Field Layer</b> → Declaração de uma variável que usa um atributo de uma camada</li>
+    </ul>
+</p>
+<p>
+    Podemos também indicar que tipo de variável esperamos:
+    <ul>
+        <li><b>##nome_variavel=string</b> → Declaração da variável como sendo uma cadeia de texto</li>
+        <li><b>##nome_variavel=number</b> → Declaração da variável como sendo do tipo número</li>
+        <li><b>##nome_variavel=boolean</b> → Declaração da variável como sendo do tipo booleano</li>
+        <li><b>library(&#8216;gdal&#8217;)</b> → Declara que packages R são necessários para correr o script R. <i>Nota</i>: se um pacote exigido pelo <i>script</i>não estiver instalado na directoria do R,
+               o QGIS vai automaticamente descarregá-lo à internet (através do software R). Se não tiver permissões de administrador na pasta do R ou não tiver uma ligação à internet poderá 
+               não conseguir instalar os pacotes necessários e ocorrerá um erro de escução do <i>script</i>, podendo resultar em saídas em branco.</li>
+    </ul>
+</p>
+
+<p>
+    Agora é necessário definir que tipo de ficheiro de saída que desejamos:
+    <ul>
+        <li><b>##showplots</b> → Esta declaração permite gerar gráficos recorrendo às funções R (ex.: plot(), hist(), etc&#8230;)</li>
+        <li><b>##ficheiro_saida=output vector</b> → Esta declaração permite que o ficheiro de saída seja uma camada vectorial, poderá também alterar o vector por raster se desejar que 
+               a saída seja uma camada raster</li>
+    </ul>
+</p>
+
+<p>Após estas declarações definidas poderá inserir o seu código R, com as suas respectivas variáveis e poderá guardar o seu <i>script</i>. Resumidamente, o script tem o seguinte corpo:</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'><span class="c1">##nome_grupo_algoritmos= group</span>
+</span><span class='line'><span class="c1">##nome_variavel = vector ou raster</span>
+</span><span class='line'>
+</span><span class='line'>library<span class="p">(</span><span class="s">&#39;pacote R a ser usado para correr o script&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>Código do Script R
+</span><span class='line'>
+</span><span class='line'><span class="c1">##showplots</span>
+</span><span class='line'><span class="c1">##ficheiro_saida= ouput vector</span>
+</span></code></pre></td></tr></table></div></figure>
+
+<h3>Exemplo de criação de um <i>script</i></h3>
+<p>
+    Foi criado um simples script R para que os utilizadores tenham uma ideia do fluxo de trabalho. Para este exemplo foram usadas as Áreas Ardidas no período de 2000 a 2008 disponibilizadas
+    pelo ICNF em formato <i>shapefile</i>.
+</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'><span class="c1">##QGIS_PT=group</span>
+</span><span class='line'><span class="c1">##camada= vector</span>
+</span><span class='line'><span class="c1">##showplots</span>
+</span><span class='line'><span class="c1">##ano= field camada</span>
+</span><span class='line'><span class="c1">##hectares= field camada</span>
+</span><span class='line'>plot<span class="p">(</span>camada<span class="p">[[</span>ano<span class="p">]],</span> camada<span class="p">[[</span>hectares<span class="p">]],</span> main<span class="o">=</span><span class="s">&quot;Areas Ardidas&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;Ano&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;hectares&quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura7_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura7_r.jpg" width="500"  alt="Saída Gráfica">
+    </a>
+</div>
+<p class="img-leg">Figura 7 - Saída Gráfica</p>
+
+<p>
+    Outro aspecto interessante, é a possibilidade de integrar os nossos <i>scripts</i> R no modelador gráfico e criar uma cadeia de algoritmos com os <i>scripts</i> previamente criados (Figura 8).
+</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura8_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura8_r.jpg" width="500"  alt="Integração no modelador gráfico do Menu Processamento">
+    </a>
+</div>
+<p class="img-leg">Figura 8 - Integração no modelador gráfico do Menu Processamento</p>
+
+<p>Podemos ainda, utilizar o nosso <i>script</i> R para o processamento em lote, como é mostrado na figura 8.</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura9_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura9_r.jpg" width="500"  alt="Processamento em Lote">
+    </a>
+</div>
+<p class="img-leg">Figura 9 - Processamento em Lote</p>
+
+<h3>Notas finais</h3>
+<p>É preciso perceber que este artigo é meramente um simples exemplo da potencialidade da integração do R com o QGIS.</p>
+<p>
+    Existem alguns <i>bugs</i> conhecidos para a versão 32-bits e 64-bits no Windows, nomeadamente o <i>R Output</i> em branco (mas geram os resultados correctos se forem guardados 
+    na pasta de destino). Os <i>bugs</i> podem ser seguidos em <a href="http://hub.qgis.org/issues/7643" target="_blank">http://hub.qgis.org/issues/7643</a> e em 
+    <a href="http://hub.qgis.org/issues/9203" target="_blank">http://hub.qgis.org/issues/9203</a>.
+</p>
+<p>Verifque se os pacotes do R estão no directório apropriado, pois se isso não acontecer (ex.: permissão de pasta), o QGIS não vai conseguir executar <i>scripts</i> de R e notificá-lo-á como estando em falta.</p>
+
+<h3>Fontes consultadas</h3>
+<p>[1] <a class="wrap-url" href="https://conservationecology.wordpress.com/2013/08/14/port-your-r-scripts-to-qgis-using-sextante/" target="_blank">https://conservationecology.wordpress.com/2013/08/14/port-your-r-scripts-to-qgis-using-sextante/</a></p>
+<p>[2] <a class="wrap-url" href="http://www.geotribu.net/node/719" target="_blank">http://www.geotribu.net/node/719</a> (Um obrigado à Alexandra Glória por ter ajudado na tradução para português)</p>
+<p>[3] <a class="wrap-url" href="http://www.r-bloggers.com/getting-raster-histogram-in-qgis-using-sextante-and-r/" target="_blank">http://www.r-bloggers.com/getting-raster-histogram-in-qgis-using-sextante-and-r/</a></p>
+<p>[4] <a class="wrap-url" href="http://cran.r-project.org/doc/manuals/r-release/R-intro.html" target="_blank">http://cran.r-project.org/doc/manuals/r-release/R-intro.html</a></p>
+<p>[5] <a class="wrap-url" href="http://www.icnf.pt/portal/florestas/dfci/Resource/doc/cart/ar-ard-00-08" target="_blank">http://www.icnf.pt/portal/florestas/dfci/Resource/doc/cart/ar-ard-00-08</a></p>
+<br />
+<img class="gravatar img-circle" src="http://www.gravatar.com/avatar/0edb9f3a1e5191476215ce32183d80a4></img>
+
+</div>
+
+
+  <div class="post-metadata">
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Publicado pelo utilizador: <span class="fn">João Gaspar</span></span>
+
+      <br />
+      
+
+<span class="categories">Categorias: 
+  
+    <a class='category' href='/blog/categories/estatistica/'>Estatística</a>, <a class='category' href='/blog/categories/r/'>R</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://qgis.pt/2014/08/14/qgis-e-o-software-estatistico-r/" data-via="" data-counturl="http://qgis.pt/2014/08/14/qgis-e-o-software-estatistico-r/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+  <div class="fb-like" data-send="true" data-width="450" data-layout="button_count" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <hr>
+  </div>
+  <ul class="pager">
+    
+      <li class="previous"><a class="basic-alignment left" href="/blog/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis/" title="Previous Post: Transformação de Coordenadas e utilização das grelhas NTv2 no QGIS">&laquo; Transformação de Coordenadas e utilização das grelhas NTv2 no QGIS</a></li>
+    
+    
+      <li class="next"><a class="basic-alignment right" href="/blog/2014/08/14/utilizacao-de-ferramentas-opensource-para-a-caracterizacao-de-uma-paisagem-o-modulo-lecos-do-qgis/" title="Next Post: Utilização de ferramentas opensource para a caracterização de uma paisagem. O módulo LecoS do QGIS">Utilização de ferramentas opensource para a caracterização de uma paisagem. O módulo LecoS do QGIS &raquo;</a></li>
+    
+  </ul>
+ 
+</article>
+
+  <section class="disqus">
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="col-sm-3">
+  
+    <section>
+    <a href="/blog/archives" class="btn btn-success btn-lg" style="width: 100%; margin-top: 18px;">Arquivo</a>
+</section>
+<section class="well blog-section">
+  <h1>PUBLICAÇÕES RECENTES</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/14/utilizacao-de-ferramentas-opensource-para-a-caracterizacao-de-uma-paisagem-o-modulo-lecos-do-qgis/">Utilização De Ferramentas Opensource Para a Caracterização De Uma Paisagem. O Módulo LecoS Do QGIS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/14/qgis-e-o-software-estatistico-r/">QGIS E O Software Estatístico R</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis/">Transformação De Coordenadas E Utilização Das Grelhas NTv2 No QGIS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/18/accoes-em-python-no-qgis/">Acções Em Python No QGIS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/18/2o-encontro-de-utilizadores-qgis-portugal/">2º Encontro De Utilizadores QGIS Portugal</a>
+      </li>
+    
+  </ul>
+</section>
+<section class="well blog-section">
+  <h1>CATEGORIAS</h1>
+    <span id="tag-cloud"><a class='tag' href='/blog/categories/accoes'>Acções</a> <a class='tag' href='/blog/categories/colaboracao'>Colaboração</a> <a class='tag' href='/blog/categories/desktop'>Desktop</a> <a class='tag' href='/blog/categories/estatistica'>Estatística</a> <a class='tag' href='/blog/categories/eventos'>Eventos</a> <a class='tag' href='/blog/categories/github'>Github</a> <a class='tag' href='/blog/categories/grelhas-ntv2'>Grelhas NTv2</a> <a class='tag' href='/blog/categories/instalacao'>Instalação</a> <a class='tag' href='/blog/categories/lecos'>LecoS</a> <a class='tag' href='/blog/categories/osgeo4w'>OSGeo4W</a> <a class='tag' href='/blog/categories/paisagem'>Paisagem</a> <a class='tag' href='/blog/categories/processamento'>Processamento</a> <a class='tag' href='/blog/categories/python'>Python</a> <a class='tag' href='/blog/categories/qgis-pt'>QGIS-PT</a> <a class='tag' href='/blog/categories/r'>R</a> <a class='tag' href='/blog/categories/traducao'>Tradução</a> <a class='tag' href='/blog/categories/transformacao-de-coordenadas'>Transformação de Coordenadas</a> <a class='tag' href='/blog/categories/transifex'>Transifex</a> </span>
+</section>
+
+
+  
+</aside>
+
+
+      <div class="col-md-12 powered">Blog desenvolvido com <a href="http://octopress.org/" target="_blank">Octopress</a></div>
+
+
+    </div>
+  </div>
+  <footer><div class="container">
+    <div class="row">
+        <div class="copyright">
+            <b>Grupo de Utilizadores QGIS PT, 2014</b>
+            <br>
+            <p>Se não for mencionado o contrário, todos os conteúdos licenciados sobre licença <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons Atribuição-Compartilha Igual 3.0 (CC BY-SA)</a></p>
+        </div>
+        <div class="social">
+            <a class="footer-btn facebook" href="https://www.facebook.com/QGISPT" target="_blank"></a>
+            <a class="footer-btn google-plus" href="https://plus.google.com/102851374948205667454/posts" target="_blank"></a>
+            <a class="footer-btn twitter" href="https://twitter.com/QGISPT" target="_blank"></a>
+            <a class="footer-btn github" href="https://github.com/qgispt" target="_blank"></a>
+            <a class="footer-btn mailing-list" href="http://osgeo-org.1560.x6.nabble.com/QGIS-pt-f5128248.html" target="_blank"></a>
+        </div>
+    </div>
+    <div class="row hosting">
+        <div class="copyright">
+            <b>Alojamento do site e dos serviços:</b>
+            <br>
+            <p><a href="http://www.faunalia.eu/pt/" target="_blank"><b>Faunalia</b></a> - Sistemas de Informação Geográfica exclusivamente <b><i>Open Source</i></b></p>
+        </div>
+        <div class="faunalia-btn">
+            <a class="footer-faunalia faunaliafooter" href="http://www.faunalia.eu/pt/" target="_blank"></a>
+        </div>
+    </div>
+</div>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'qgispt';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_config = function(){
+            console.log(this.callbacks);
+            this.callbacks.onReady =[function(){
+                var footer = $('footer');
+                footer.css('position', 'inherit');
+                var innerHeight = $(window).height();
+                if (footer.position().top < innerHeight - 106){
+                    footer.css('position', 'fixed');
+                    footer.css('width', '100%');
+                }
+            }];
+        }
+        var disqus_identifier = 'http://qgis.pt/2014/08/14/qgis-e-o-software-estatistico-r/';
+        var disqus_url = 'http://qgis.pt/2014/08/14/qgis-e-o-software-estatistico-r/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+<!-- Core JavaScript -->
+<script src="http://qgis.pt/libs/jquery.min.js"></script>
+<script src="http://qgis.pt/libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://qgis.pt/libs/prettyPhoto/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://qgis.pt/utils.js"></script>
+<script src="http://qgis.pt/analytics.js"></script>
+
+
+</body>
+</html>

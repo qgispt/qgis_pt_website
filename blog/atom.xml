@@ -4,7 +4,7 @@
   <title><![CDATA[QGIS-PT]]></title>
   <link href="http://qgis.pt/atom.xml" rel="self"/>
   <link href="http://qgis.pt/"/>
-  <updated>2014-07-14T15:13:20+01:00</updated>
+  <updated>2014-08-14T20:23:04+01:00</updated>
   <id>http://qgis.pt/</id>
   <author>
     <name><![CDATA[Grupo de Utilizadores QGIS PT]]></name>
@@ -12,6 +12,272 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Utilização De Ferramentas Opensource Para a Caracterização De Uma Paisagem. O Módulo LecoS Do QGIS]]></title>
+    <link href="http://qgis.pt/2014/08/14/utilizacao-de-ferramentas-opensource-para-a-caracterizacao-de-uma-paisagem-o-modulo-lecos-do-qgis/"/>
+    <updated>2014-08-14T20:03:25+01:00</updated>
+    <id>http://qgis.pt/2014/08/14/utilizacao-de-ferramentas-opensource-para-a-caracterizacao-de-uma-paisagem-o-modulo-lecos-do-qgis</id>
+    <content type="html"><![CDATA[<p>Este trabalho resulta de parte do projecto final da Pós-Graduação Executiva em Sistemas de Informação Geográfica leccionado pela Geopoint. <!-- more --> Propôs-se estudar uma paisagem para usar o módulo Landscape Ecology (LecoS) no Qgis 2.01 Dufour.</p>
+<p>A área de estudo é o Concelho de Coimbra, com uma área total de aproximadamente 31940ha, situada na região Centro de Portugal, com coordenadas geográficas 40°12&#8217;11.84&#8221;Norte e   8°24&#8217;37.15&#8221; Oeste. Atualmente dividida em 18 freguesias por força da nova reorganização administrativa, sendo estas maioritariamente de cariz urbano (Figura 1).</p>
+<p></p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/Map.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/Map.png" width="500"  alt="Figura 1 - Localização geográfica do Concelho de Coimbra">
+    </a>
+</div>
+<p></p>
+<p>A caracterização de uma paisagem é levada a cabo usando índices quantitativos designados por métricas da paisagem. Estes índices são depois utilizados para descrever as características estruturais da paisagem, para documentar a mudança ou a sua relação com a ocorrência de várias espécies ou grupo de espécies (Turner <i>et al.</i>, 2001; Olsen <i>et al.</i>, 2007; Fidalgo <i>et al.</i>, 2009). O número de métricas é enorme, podendo ser calculado ao nível da paisagem, da classe e da mancha (Turner <i>et al.</i>, 2001; Fidalgo <i>et al.</i>, 2009).</p>
+<p>As métricas podem ser calculadas a partir da Corine Land Cover, da Carta de Ocupação do solo (COS 90 e COS2006) ou de mapas de Uso/Ocupação do solo por nós produzidas. Segundo Martin Jung (2012), o Landscape Ecology Stistics (LecoS) é um módulo do Qgis que serve para calcular métricas da paisagem em camadas raster. O resultado pode ficar disponível em formato <i>CSV</i>.</p>
+<p></p>
+<h3>Metodologia</h3>
+<p>Para calcular as métricas da paisagem utilizaram-se as coberturas da Corine Land Cover (CLC) dos anos 1990 e 2006. Para o efeito houve a necessidade de transformar as coberturas em formato raster através da ferramenta r.to.raster do módulo GRASS GIS das ferramentas de processamento, tendo em conta a classificação do nível 1 da Corine Land Cover e posteriormente utilizou-se o módulo LecoS do QGIS usando o modelador gráfico (Figura 2).</p>
+<p></p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/Metricas_1990.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/Metricas_1990.png" width="500"  alt="Figura 2 - Modelo para o cálculo das métricas da paisagem no ano 1990.">
+    </a>
+</div>
+<p></p>
+<p>As métricas calculadas foram a Área de cada uso do solo (Land Cover), a Proporção que cada uso tem na paisagem (Landscape Proportion), a densidade de orlas (Edge density),  Número de manchas (Number of Patches), Área da mancha maior, Área da mancha mais pequena, distância média entre manchas (Mean patch distance) e o tamanho efectivo da malha (effective meshsize) (Tabela 1). Quanto às medidas de diversidade da paisagem calculadas foram o índice de Shannon, Uniformidade e o Índice de Simpson.</p>
+<p></p>
+<h3>Resultados</h3>
+<p>Da análise efectuada às métricas da paisagem calculadas constata-se que houve um aumento do grau de antropização e por consequência uma maior fragmentação de usos entre 1990 e 2006. O número de manchas de Florestas e meios naturais e semi-naturais e as Áreas Agricolas e Agro-Florestais diminuiram entre 1990 e 2006  (Tabela 1). Esta métrica pode dar-nos indicações sobre alguns processos ecológicos incrementando ou diminuindo relações entre populações e habitats (Viana e Aranha, 2008).</p>
+<p>De salientar também a distância média entre manchas, uma das medida que nos permite entender o grau de fragmentação da paisagem, a diminuição das Florestas e meio naturais e semi-naturais de 1990 para 2006 em detrimento do aumento dos territórios artificializados (Tabela 1).</p>
+<p></p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/Table_Landscape_Metrics.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/Table_Landscape_Metrics.jpg" width="500"  alt="Tabela 1 - Métricas da paisagem calculadas para as coberturas do uso do solo em 1990 e 2006.">
+    </a>
+</div>
+<p></p>
+<p>De 1990 para 2006 aumentou a diversidade, no entanto sabe-se que este resultado está directamente relacionado com a transferência entre os usos, nomeadamente a perda de áreas Agrícolas e Agro-Florestais e Florestas e meios naturais e semi-naturais. O mesmo aconteceu com a Uniformidade.</p>
+<p></p>
+<h3>Conclusões</h3>
+<p></p>
+<p>Foi possível determinar as métricas da paisagem recorrendo ao módulo <i>LecoS</i> constatando-se que a área de estudo apresenta problemas de fragmentação devido ao elevado grau de antropização.</p>
+<p>O QGIS revelou-se bastante intuitivo e muito prático no cálculo das métricas da paisagem não existindo qualquer tipo de constrangimento. É de facto uma solução robusta e viável comparativamente com os softwares proprietário.</p>
+<p>No futuro pretende-se aplicar este método a áreas que tenham problemas com espécies invasoras para estudar o seu comportamento na paisagem.</p>
+<p></p>
+<h4>Referências</h4>
+<p>[1] Fidalgo, B., R. Salas, et al. (2009). &#8220;Estimation of plant diversity in a forested mosaic landscape: the role of landscape, habitat and patch features.&#8221; Revista Latinoamericana de Recursos Naturales 5 (2): 65-73.</p>
+<p>[2] Viana, Hélder; Aranha, José (2008) - Estudo da alteração da cobertura do solo no Parque Nacional da Peneda Gerês (1995 e 2007). Análise temporal dos padrões espaciais e avaliação quantitativa da estrutura da paisagem. X Encontro de Utilizadores de Sistemas de Informação Geográfica, 14 a 16 de Maio de 2008 – Oeiras.</p>
+<p>[3] Martin Jung (2012) LecoS - A QGIS plugin to conduct landscape ecology statistics, <a class="wrap-url" href="http://www.w3schools.com/" target="_blank">http://plugins.qgis.org/plugins/LecoS.</a></p>
+<p>[4] Olsen, L., V. Dale, et al. (2007). &#8220;Landscape patterns as indicators of ecological change at Fort Benning, Georgia, USA.&#8221; Landscape and urban planning 79: 137-149.</p>
+<p>[5] Turner, M. G., R. Gardner, et al. (2001). Landscape ecology in theory and practice: pattern and process. New York.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[QGIS E O Software Estatístico R]]></title>
+    <link href="http://qgis.pt/2014/08/14/qgis-e-o-software-estatistico-r/"/>
+    <updated>2014-08-14T16:05:24+01:00</updated>
+    <id>http://qgis.pt/2014/08/14/qgis-e-o-software-estatistico-r</id>
+    <content type="html"><![CDATA[<p>
+    Caros Utilizadores, graças a interoperabilidade do QGIS actualmente podemos associar o QGIS com o software estatístico open source R. O R é muito versátil e é expansível para outras 
+    linguagens sendo normalmente utilizado em estatística e análise de dados (data mining). <!-- more -->
+</p>
+<p>
+    O objectivo deste artigo é explicar a sua instalação, configuração com o QGIS, compreensão da nomenclatura e a demonstração de um pequeno exemplo. Espero que seja útil para a vossa 
+    rotina diária.
+</p>
+<p>Este artigo foi elaborado tendo como base o SO Windows 7 64-bits com o Instalador OSGeo4W 32-bits QGIS Chugiak 2.4  e o software R 3.1.1.</p>
+
+
+<h3>Instalação</h3>
+<p>
+    Para começarmos a usar o R com o QGIS é necessário fazer a sua transferência. Pode efectuá-la através de um dos vários <i>mirrors</i> (servidores) disponíveis do projecto. Para este artigo, 
+    usámos o servidor da Faculdade de <a href="http://cran.dcc.fc.up.pt/" target="_blank">Ciências da Universidade do Porto</a>. Estando neste página escolha o link que diz 
+    <a href="http://cran.dcc.fc.up.pt/bin/windows/" target="_blank">Download for Windows</a> (a opção base). Em seguida, use o link base e transfira o R clicando no link 
+    <a href="http://cran.dcc.fc.up.pt/bin/windows/base/R-3.1.1-win.exe" target="_blank">Download R 3.1.1 for Windows</a> (Figura 1).
+</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura1_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura1_r.jpg" width="500"  alt="Área de transferência do software R">
+    </a>
+</div>
+<p class="img-leg">Figura 1 - Área de transferência do software R</p>
+
+<h3>Configuração com o QGIS</h3>
+<p>
+    Após a instalação do R no seu computador, é necessário que indique ao QGIS onde é o directório do R. Para isso, tem de ir ao menu Processamento > Opções e configuração (Figura 2).
+</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura2_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura2_r.jpg" width="200"  alt="Menu Processamento">
+    </a>
+</div>
+<p class="img-leg">Figura 2 - Menu Processamento</p>
+
+
+<p>
+    Aparecerá uma janela de diálogo denominada de opções de processamento, onde deverá expandir a opção de <b>Fornecedores</b>, e em seguida as opções do separador R scripts (Figura 3). 
+</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura3_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura3_r.jpg" width="500"  alt="Opções e Configurações do Menu Processamento">
+    </a>
+</div>
+<p class="img-leg">Figura 3 - Opções e Configurações do Menu Processamento</p>
+
+<p>O caminho padrão usado normalmente é o <i>C:\Program Files\R\R-3.1.1\</i></p>
+
+<p>
+    Após inserir o directório poderá dizer ao QGIS se pretende ou não usar a versão de 64 bits. Para finalizar clique na opção <b>Activate</b>. No caso do <i>R scripts folder</i> (pasta dos 
+    seus scripts R) deixe o directório padrão.
+</p>
+
+<p>
+    Concluída esta configuração, conseguirá ver no menu processamento as ferramentas relacionadas com o R. Dentro dessas ferramentas existem alguns <i>scripts</i> criados por utilizadores 
+    e que vêm por defeito na instalação do QGIS. Para criar o seu próprio script R, vá a <b>R Scripts</b>, clique em <b>Tools</b> e <b>Create New Script R</b> (Figura 4).
+</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura4_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura4_r.jpg" width="300"  alt="Janela de criação do Script R">
+    </a>
+</div>
+<p class="img-leg">Figura 4 - Janela de criação do Script R</p>
+
+<p>
+    Ao clicar na ferramenta <b>Create New Script R</b>, aparecerá uma janela de diálogo onde poderá começar a escrever o seu código. Na figura 5, é apresentada a janela de diálogo do 
+    <i>script</i> e os seus respectivos botões.
+</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura5_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura5_r.jpg" width="500"  alt="Janela de diálogo do Script">
+    </a>
+</div>
+<p class="img-leg">Figura 5 - Janela de diálogo do Script (1 – Guardar ; 2 – Guardar como; 3 – Editar ajuda do script; 4 – Correr Algoritmo; 5 – Cortar; 6 – Copiar; 7- Botões de Desfazer e Refazer)</p>
+
+
+<p>
+    Uma das coisas interessantes deste menu processamento, é a possibilidade de criarmos um separador ajuda que vai acompanhado com o <i>script</i> depois de ser guardado. Isto 
+    permite aos outros utilizadores perceberem qual a finalidade do <i>script</i> (Figura6).
+</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura6_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura6_r.jpg" width="500"  alt="Janela Ajuda do Script">
+    </a>
+</div>
+<p class="img-leg">Figura 6 - Janela Ajuda do Script</p>
+
+<h3>Criar a ponte entre o QGIS e o Script R</h3>
+<p>
+    Actualmente existe um conjunto de código base para que os scripts sejam interpretados no QGIS e no menu Processamento, e que iremos descrever a seguir:
+    <ul>
+        <li><b>#</b> → Serve para declarar um comentário (útil para programadores que querem perceber o código)</li>
+        <li><b>##</b> → Declara uma variável (todas as linhas começam com duplo cardinal)</li>
+        <li><b>##QGIS-PT=group</b> → Declaração do grupo onde se insere o algoritmo</li>
+        <li><b>##nome_variavel=vector</b> → Declaração de uma variável tipo vector, se no seu caso for um raster basta substituir vector por raster</li>
+        <li><b>##atributo_da_tabela=Field Layer</b> → Declaração de uma variável que usa um atributo de uma camada</li>
+    </ul>
+</p>
+<p>
+    Podemos também indicar que tipo de variável esperamos:
+    <ul>
+        <li><b>##nome_variavel=string</b> → Declaração da variável como sendo uma cadeia de texto</li>
+        <li><b>##nome_variavel=number</b> → Declaração da variável como sendo do tipo número</li>
+        <li><b>##nome_variavel=boolean</b> → Declaração da variável como sendo do tipo booleano</li>
+        <li><b>library(&#8216;gdal&#8217;)</b> → Declara que packages R são necessários para correr o script R. <i>Nota</i>: se um pacote exigido pelo <i>script</i>não estiver instalado na directoria do R,
+               o QGIS vai automaticamente descarregá-lo à internet (através do software R). Se não tiver permissões de administrador na pasta do R ou não tiver uma ligação à internet poderá 
+               não conseguir instalar os pacotes necessários e ocorrerá um erro de escução do <i>script</i>, podendo resultar em saídas em branco.</li>
+    </ul>
+</p>
+
+<p>
+    Agora é necessário definir que tipo de ficheiro de saída que desejamos:
+    <ul>
+        <li><b>##showplots</b> → Esta declaração permite gerar gráficos recorrendo às funções R (ex.: plot(), hist(), etc&#8230;)</li>
+        <li><b>##ficheiro_saida=output vector</b> → Esta declaração permite que o ficheiro de saída seja uma camada vectorial, poderá também alterar o vector por raster se desejar que 
+               a saída seja uma camada raster</li>
+    </ul>
+</p>
+
+<p>Após estas declarações definidas poderá inserir o seu código R, com as suas respectivas variáveis e poderá guardar o seu <i>script</i>. Resumidamente, o script tem o seguinte corpo:</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'><span class="c1">##nome_grupo_algoritmos= group</span>
+</span><span class='line'><span class="c1">##nome_variavel = vector ou raster</span>
+</span><span class='line'>
+</span><span class='line'>library<span class="p">(</span><span class="s">&#39;pacote R a ser usado para correr o script&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>Código do Script R
+</span><span class='line'>
+</span><span class='line'><span class="c1">##showplots</span>
+</span><span class='line'><span class="c1">##ficheiro_saida= ouput vector</span>
+</span></code></pre></td></tr></table></div></figure>
+
+<h3>Exemplo de criação de um <i>script</i></h3>
+<p>
+    Foi criado um simples script R para que os utilizadores tenham uma ideia do fluxo de trabalho. Para este exemplo foram usadas as Áreas Ardidas no período de 2000 a 2008 disponibilizadas
+    pelo ICNF em formato <i>shapefile</i>.
+</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='r'><span class='line'><span class="c1">##QGIS_PT=group</span>
+</span><span class='line'><span class="c1">##camada= vector</span>
+</span><span class='line'><span class="c1">##showplots</span>
+</span><span class='line'><span class="c1">##ano= field camada</span>
+</span><span class='line'><span class="c1">##hectares= field camada</span>
+</span><span class='line'>plot<span class="p">(</span>camada<span class="p">[[</span>ano<span class="p">]],</span> camada<span class="p">[[</span>hectares<span class="p">]],</span> main<span class="o">=</span><span class="s">&quot;Areas Ardidas&quot;</span><span class="p">,</span>xlab<span class="o">=</span><span class="s">&quot;Ano&quot;</span><span class="p">,</span>ylab<span class="o">=</span><span class="s">&quot;hectares&quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura7_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura7_r.jpg" width="500"  alt="Saída Gráfica">
+    </a>
+</div>
+<p class="img-leg">Figura 7 - Saída Gráfica</p>
+
+<p>
+    Outro aspecto interessante, é a possibilidade de integrar os nossos <i>scripts</i> R no modelador gráfico e criar uma cadeia de algoritmos com os <i>scripts</i> previamente criados (Figura 8).
+</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura8_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura8_r.jpg" width="500"  alt="Integração no modelador gráfico do Menu Processamento">
+    </a>
+</div>
+<p class="img-leg">Figura 8 - Integração no modelador gráfico do Menu Processamento</p>
+
+<p>Podemos ainda, utilizar o nosso <i>script</i> R para o processamento em lote, como é mostrado na figura 8.</p>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/figura9_r.jpg" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/figura9_r.jpg" width="500"  alt="Processamento em Lote">
+    </a>
+</div>
+<p class="img-leg">Figura 9 - Processamento em Lote</p>
+
+<h3>Notas finais</h3>
+<p>É preciso perceber que este artigo é meramente um simples exemplo da potencialidade da integração do R com o QGIS.</p>
+<p>
+    Existem alguns <i>bugs</i> conhecidos para a versão 32-bits e 64-bits no Windows, nomeadamente o <i>R Output</i> em branco (mas geram os resultados correctos se forem guardados 
+    na pasta de destino). Os <i>bugs</i> podem ser seguidos em <a href="http://hub.qgis.org/issues/7643" target="_blank">http://hub.qgis.org/issues/7643</a> e em 
+    <a href="http://hub.qgis.org/issues/9203" target="_blank">http://hub.qgis.org/issues/9203</a>.
+</p>
+<p>Verifque se os pacotes do R estão no directório apropriado, pois se isso não acontecer (ex.: permissão de pasta), o QGIS não vai conseguir executar <i>scripts</i> de R e notificá-lo-á como estando em falta.</p>
+
+<h3>Fontes consultadas</h3>
+<p>[1] <a class="wrap-url" href="https://conservationecology.wordpress.com/2013/08/14/port-your-r-scripts-to-qgis-using-sextante/" target="_blank">https://conservationecology.wordpress.com/2013/08/14/port-your-r-scripts-to-qgis-using-sextante/</a></p>
+<p>[2] <a class="wrap-url" href="http://www.geotribu.net/node/719" target="_blank">http://www.geotribu.net/node/719</a> (Um obrigado à Alexandra Glória por ter ajudado na tradução para português)</p>
+<p>[3] <a class="wrap-url" href="http://www.r-bloggers.com/getting-raster-histogram-in-qgis-using-sextante-and-r/" target="_blank">http://www.r-bloggers.com/getting-raster-histogram-in-qgis-using-sextante-and-r/</a></p>
+<p>[4] <a class="wrap-url" href="http://cran.r-project.org/doc/manuals/r-release/R-intro.html" target="_blank">http://cran.r-project.org/doc/manuals/r-release/R-intro.html</a></p>
+<p>[5] <a class="wrap-url" href="http://www.icnf.pt/portal/florestas/dfci/Resource/doc/cart/ar-ard-00-08" target="_blank">http://www.icnf.pt/portal/florestas/dfci/Resource/doc/cart/ar-ard-00-08</a></p>
+<br />
+<img class="gravatar img-circle" src="http://www.gravatar.com/avatar/0edb9f3a1e5191476215ce32183d80a4></img>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Transformação De Coordenadas E Utilização Das Grelhas NTv2 No QGIS]]></title>
@@ -754,20 +1020,20 @@ identificada por um conjunto de coordenadas.</p>
    
 <h3>Referências</h3>
 <p>[1] Matos, J. (2008). “Fundamentos de Informação Geográfica” . 5ª Edição. Lisboa: Lidel</p>
-<p>[2] <a href="http://www3.nfb.ca/animation/objanim/en/films/film.php?sort=title&id=14229" target="_blank">http://www3.nfb.ca/animation/objanim/en/films/film.php?sort=title&id=14229</a></p>
-<p>[3] <a href="http://www.esa.int/spaceinimages/Images/2011/03/New_GOCE_geoid " target="_blank">http://www.esa.int/spaceinimages/Images/2011/03/New_GOCE_geoid </a></p>
-<p>[4]<a href="http://www.aprh.pt/rgci/glossario/elipsoide-de-referencia.html." target="_blank">http://www.aprh.pt/rgci/glossario/elipsoide-de-referencia.html.</a></p>
-<p>[5] Gonçalves, J., 2008. Adopção de Sistemas de Referenciação Geográfica Globais. ESIG2008 (<a href="http://www.fc.up.pt/pessoas/jagoncal/coordenadas/paper_esig2008.pdf" target="_blank">http://www.fc.up.pt/pessoas/jagoncal/coordenadas/paper_esig2008.pdf</a>)</p>
-<p>[6] Fernandes, M., 2008. Cartografia - programa, conteúdos e métodos de ensino. FLUP (<a href="http://ler.letras.up.pt/uploads/ficheiros/5901.pdf" target="_blank">http://ler.letras.up.pt/uploads/ficheiros/5901.pdf</a>)</p>
-<p>[7] Gonçalves, J., 2009. Conversões de Sistemas de Coordenadas Nacionais para ETRS89 Utilizando Grelhas. VI CNCG (<a href="http://www.fc.up.pt/pessoas/jagoncal/coordenadas/paper_cncg2009.pdf" target="_blank">http://www.fc.up.pt/pessoas/jagoncal/coordenadas/paper_cncg2009.pdf</a>)</p>
-<p>[8] Gonçalves, J., 2008. Conversões de coordenadas com o programa PROJ - Método de conversão com grelhas. SASIG2008 (<a href="http://www.fc.up.pt/pessoas/jagoncal/coordenadas/paper_sasig2009.pdf" target="_blank">http://www.fc.up.pt/pessoas/jagoncal/coordenadas/paper_sasig2009.pdf</a>)</p>
-<p>[9] <a href="http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/parametros_de_transformacao_de_coordenadas/" target="_blank">http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/parametros_de_transformacao_de_coordenadas/</a></p>
-<p>[10] <a href="http://nsnig.igeo.pt/eventos/comunicacoes/Caldas_da_Rainha/CNCG2009-AnaBernardes.pdf" target="_blank">http://nsnig.igeo.pt/eventos/comunicacoes/Caldas_da_Rainha/CNCG2009-AnaBernardes.pdf</a></p>
-<p>[11] <a href="http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/grelhas_em_ntv2/" target="_blank">http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/grelhas_em_ntv2/</a></p>
-<p>[12] <a href="http://www.epsg.org/" target="_blank">http://www.epsg.org/</a></p>
-<p>[13] <a href="http://epsg.io/" target="_blank">http://epsg.io/</a></p>
-<p>[14] <a href="http://www.fc.up.pt/pessoas/jagoncal/coordenadas/parte1.htm" target="_blank">http://www.fc.up.pt/pessoas/jagoncal/coordenadas/parte1.htm</a></p>
-<p>[15] <a href="http://qgis.pt/workshops_qgis2014/ws_processing_qgis_day_2014.pdf" target="_blank">http://qgis.pt/workshops_qgis2014/ws_processing_qgis_day_2014.pdf</a></p>
+<p>[2] <a class="wrap-url" href="http://www3.nfb.ca/animation/objanim/en/films/film.php?sort=title&id=14229" target="_blank">http://www3.nfb.ca/animation/objanim/en/films/film.php?sort=title&id=14229</a></p>
+<p>[3] <a class="wrap-url" href="http://www.esa.int/spaceinimages/Images/2011/03/New_GOCE_geoid " target="_blank">http://www.esa.int/spaceinimages/Images/2011/03/New_GOCE_geoid </a></p>
+<p>[4] <a class="wrap-url" href="http://www.aprh.pt/rgci/glossario/elipsoide-de-referencia.html." target="_blank">http://www.aprh.pt/rgci/glossario/elipsoide-de-referencia.html.</a></p>
+<p>[5] Gonçalves, J., 2008. Adopção de Sistemas de Referenciação Geográfica Globais. ESIG2008 (<a class="wrap-url" href="http://www.fc.up.pt/pessoas/jagoncal/coordenadas/paper_esig2008.pdf" target="_blank">http://www.fc.up.pt/pessoas/jagoncal/coordenadas/paper_esig2008.pdf</a>)</p>
+<p>[6] Fernandes, M., 2008. Cartografia - programa, conteúdos e métodos de ensino. FLUP (<a class="wrap-url" href="http://ler.letras.up.pt/uploads/ficheiros/5901.pdf" target="_blank">http://ler.letras.up.pt/uploads/ficheiros/5901.pdf</a>)</p>
+<p>[7] Gonçalves, J., 2009. Conversões de Sistemas de Coordenadas Nacionais para ETRS89 Utilizando Grelhas. VI CNCG (<a class="wrap-url" href="http://www.fc.up.pt/pessoas/jagoncal/coordenadas/paper_cncg2009.pdf" target="_blank">http://www.fc.up.pt/pessoas/jagoncal/coordenadas/paper_cncg2009.pdf</a>)</p>
+<p>[8] Gonçalves, J., 2008. Conversões de coordenadas com o programa PROJ - Método de conversão com grelhas. SASIG2008 (<a class="wrap-url" href="http://www.fc.up.pt/pessoas/jagoncal/coordenadas/paper_sasig2009.pdf" target="_blank">http://www.fc.up.pt/pessoas/jagoncal/coordenadas/paper_sasig2009.pdf</a>)</p>
+<p>[9] <a class="wrap-url"href="http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/parametros_de_transformacao_de_coordenadas/" target="_blank">http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/parametros_de_transformacao_de_coordenadas/</a></p>
+<p>[10] <a class="wrap-url" href="http://nsnig.igeo.pt/eventos/comunicacoes/Caldas_da_Rainha/CNCG2009-AnaBernardes.pdf" target="_blank">http://nsnig.igeo.pt/eventos/comunicacoes/Caldas_da_Rainha/CNCG2009-AnaBernardes.pdf</a></p>
+<p>[11] <a class="wrap-url" href="http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/grelhas_em_ntv2/" target="_blank">http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/grelhas_em_ntv2/</a></p>
+<p>[12] <a class="wrap-url" href="http://www.epsg.org/" target="_blank">http://www.epsg.org/</a></p>
+<p>[13] <a class="wrap-url" href="http://epsg.io/" target="_blank">http://epsg.io/</a></p>
+<p>[14] <a class="wrap-url" href="http://www.fc.up.pt/pessoas/jagoncal/coordenadas/parte1.htm" target="_blank">http://www.fc.up.pt/pessoas/jagoncal/coordenadas/parte1.htm</a></p>
+<p>[15] <a class="wrap-url" href="http://qgis.pt/workshops_qgis2014/ws_processing_qgis_day_2014.pdf" target="_blank">http://qgis.pt/workshops_qgis2014/ws_processing_qgis_day_2014.pdf</a></p>
 
 <br />
 <img class="gravatar img-circle" src="http://www.gravatar.com/avatar/8248cd896ad16c4ef53d0558d8e62a18></img>
