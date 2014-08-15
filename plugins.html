@@ -82,7 +82,7 @@
     <div class="container">
     	<div class="row">
     		<div id="objectivos-grupo" class="section">
-				<h1>Tranformações de Datum para Portugal</h1>
+				<h1>Tranformação s de Datum para Portugal</h1>
 		    	<img src="images/pttransform.png" alt="Tranformações de Datum para caixa de ferramentas Processing" title="Tranformações de Datum para caixa de ferramentas Processing"/>		
 		         <p>Este módulo foi criado para facilitar a tarefa de transformação de dados vectoriais e raster em sistemas de coordenadas obsoletos (Datum 73, Datum Lisboa e ED50) 
 		            para o novo sistema de coordenadas oficial de Portugal Continental (ETRS89-PTTM06), utilizando o <a href="http://qgis.pt/blog/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis/"><b>método das grelhas de tranformação de Datum (NTv2)</b></a>.
@@ -132,12 +132,12 @@
 	            	        
 		    <h3 style="text-align: justify;">Notas</h3>
 			<ul>
-				<li>O desenvolvimento do plugin foi suportado pelo <b>Grupo utilizadores QGIS PT</b>, tendo sido desenvolvido pelo grupo, pela <a href="http://www.faunalia.eu/pt/" target="_blank"><b>Faunalia</b></a> e <b>Alexander Bruy</b></li>
-				<li>Como qualquer outra ferramenta do <i>Processing</i> do QGIS, também estas ferramentas podem ser utulizadas em modalidade <i>batch</i>, tornando  a tarefa de transformação
-				do sistema de coordenadas para conjuntos de dados grandes, uma tarefa muito simples e eficiente</li>
+				<li>O desenvolvimento do módulo foi suportado pelo <b>Grupo utilizadores QGIS PT</b>, tendo sido desenvolvido pelo grupo, pela <a href="http://www.faunalia.eu/pt/" target="_blank"><b>Faunalia</b></a> e <b>Alexander Bruy</b></li>
+				<li>Como qualquer outra ferramenta do <i>Processing</i> do QGIS, também estas ferramentas podem ser utilizadas em modalidade <i>batch</i>, tornando  a tarefa de transformação
+				do sistema de coordenadas para conjuntos de dados grandes uma tarefa muito simples e eficiente</li>
 				<li>Repositório do código fonte: <a href="https://github.com/qgispt/processing_pttransform" target="_blank">https://github.com/qgispt/processing_pttransform</a></li>
 				<li>Bug tracker: <a href="https://github.com/qgispt/processing_pttransform/issues" target="_blank">https://github.com/qgispt/processing_pttransform/issues</a></li>
-				<li>A extensão requer QGIS versão 2.4 ou master (a próxima versão 2.6) para funcionar.</li>
+				<li>O módulo requer QGIS versão 2.4 ou master (a próxima versão 2.6) para funcionar.</li>
 				<li>É necessário verificar que na pasta <i>.qgis2/python/plugins</i> <b>não</b> exista uma pasta chamada "processing". Se esta esxistir é necessário apagá-la antes de instalar a extensão.</li>
 			</ul>
     	    <h3 style="text-align: justify;">Problemas conhecidos</h3>
@@ -150,7 +150,7 @@
 				<li>Nalguns casos no QGIS 2.4 poderá aparecer um aviso (não um erro) sem uma aparente razão real: <i>Layers do not all use the same CRS.
 				    This can cause unexpected results. Do you want to continue?</i>. Este aviso pode ser ignorado de momento e não está relacionado com o módulo. 
 				    À semelhança do <i>bug</i> anterior, também este já foi resolvido no QGIS master.</li>
-				<li>Os paths dos ficheiros de input/output <b>não</b> devem conter caracteres especiais (espaços, acentos, tildes, etc.).</li>
+				<li>Os paths dos ficheiros de input/output <b>não</b> devem conter caracteres especiais <b>(espaços, acentos, tildes, etc.)</b>.</li>
 				<li>De momento, as ferramentas de transformação de vectores apenas funcionam com ficheiros de entrada no formato Shapefile.</li>
 			</ul>
 			<br>		
