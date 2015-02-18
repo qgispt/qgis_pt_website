@@ -290,13 +290,13 @@ footer > .container > .row {
 	margin-top: 10px;
 }
 
-.faunalia-btn {
+.naturalgis-btn {
 	float: right;
 	width: 115px;
 	margin-top: 10px;
 }
 
-.footer-faunalia {
+.footer-naturalgis {
 	/*margin-top: 2px !important;*/
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -310,11 +310,11 @@ footer > .container > .row {
 	transition: all 0.2s ease 0s;
 }
 
-.faunaliafooter {
-	background-image: url(../images/faunalia.png);
+.naturalgisfooter {
+	background-image: url(../images/naturalgis.png);
 }
 
-.faunaliafooter:hover {
+.naturalgisfooter:hover {
 	background-color: rgb(255, 255, 255);
 }
 
@@ -437,8 +437,8 @@ footer > .container > .row {
 	margin-bottom: 15px;
 }
 
-.faunalia {
-	background-image: url(../images/sponsors/faunalia.png);
+.naturalgis {
+	background-image: url(../images/sponsors/naturalgis.png);
 }
 
 .uc {
