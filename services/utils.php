@@ -50,7 +50,7 @@
 	}
 	
 	function check_email_exists($email){
-		$sql = "SELECT uid FROM site.reg_encontros WHERE email = '{$email}'";
+		$sql = "SELECT uid FROM site.reg_encontros2015 WHERE email = '{$email}'";
 		$query = pg_query($sql);
 		if (pg_num_rows($query) > 0){
 			return false;
