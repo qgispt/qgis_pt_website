@@ -17,6 +17,7 @@
 	$so = testVar($safeArray['so'], $response);
 	$softsig = testVar($safeArray['softsig'], $response);
 	$knowhow = testVar($safeArray['knowhowqgis'], $response);
+	$almoco = testVar($safeArray['almoco'], $response);
 	
 	if (check_email_address($email) == false){
 		$response['message'] = 'O seu endereço de email não é válido.';
@@ -30,9 +31,9 @@
 	
 	$interesses = $safeArray['interesses'];
 	if (empty($interesses)){
-		$sql = "INSERT INTO site.reg_encontros2015 (encontro, nome, entidade, email, ws1, so, softsig, knowhowqgis, interesses, funcao) VALUES (2, '{$nome}', '{$entidade}', '{$email}', '{$ws1}', '{$so}', '{$softsig}', {$knowhow}, NULL, '{$funcao}')";
+		$sql = "INSERT INTO site.reg_encontros2015 (encontro, nome, entidade, email, ws1, so, softsig, knowhowqgis, interesses, funcao, almoco) VALUES (3, '{$nome}', '{$entidade}', '{$email}', '{$ws1}', '{$so}', '{$softsig}', {$knowhow}, NULL, '{$funcao}', '{$almoco}')";
 	} else {
-		$sql = "INSERT INTO site.reg_encontros2015 (encontro, nome, entidade, email, ws1, so, softsig, knowhowqgis, interesses, funcao) VALUES (2, '{$nome}', '{$entidade}', '{$email}', '{$ws1}', '{$so}', '{$softsig}', {$knowhow}, '{$interesses}', '{$funcao}')";
+		$sql = "INSERT INTO site.reg_encontros2015 (encontro, nome, entidade, email, ws1, so, softsig, knowhowqgis, interesses, funcao, almoco) VALUES (3, '{$nome}', '{$entidade}', '{$email}', '{$ws1}', '{$so}', '{$softsig}', {$knowhow}, '{$interesses}', '{$funcao}', '{$almoco}')";
 	}
 	
 	$query = pg_query($sql);
