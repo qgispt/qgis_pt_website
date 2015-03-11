@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
 		//TIMER EVENT
 		var current = new Date();
 		$('.time-to-event').countdown({
-			until: new Date(2014, 5, 2, 9, 30, 0),
+			until: new Date(2015, 5, 5, 9, 30, 0),
 			layout:'<div class="days"><span class="timer-text">{dn}</span> <br>Dias</div> <div class="hours"><span class="timer-text">{hn}</span> <br>Horas</div> <div class="minutes"><span class="timer-text">{mn}</span> <br>Minutos</div> <div class="seconds"><span class="timer-text">{sn}</span> <br>Segundos</div>'
 		});
 	}
