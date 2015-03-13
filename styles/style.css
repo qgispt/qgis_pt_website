@@ -438,7 +438,8 @@ footer > .container > .row {
 }
 
 .naturalgis {
-	background-image: url(../images/sponsors/naturalgis.png);
+	background-image: url(../images/sponsors/naturalgis_small.png);
+	width: 195px;
 }
 
 .ubi {

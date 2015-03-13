@@ -4,6 +4,7 @@ jQuery(document).ready(function() {
 	if (slideshow.size() != 0){
 		//SLIDESHOW
 		slideshow.backstretch([
+		 	"images/slideshow/covilha_3d.jpg",
 		 	"images/slideshow/old_map.jpg",
 		 	"images/slideshow/cascais_pi.jpg"
 		],{
