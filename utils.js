@@ -32,7 +32,7 @@ jQuery(document).ready(function() {
 		mapquest.addTo(map);
 
 		var marker = L.marker([40.27834, -7.511414]).addTo(map);
-		marker.bindPopup("<b>Morada</b><br>Calçada Fonte do Lameiro, 6201-001 Covilhã<br>3030-790 Coimbra<br><br><b>Coordenadas WGS84</b><br>GD: -7.511414; 40.27834<br>GMS: 7º 30' 41.09'' W; 40º 16' 42.02'' N").openPopup();
+		marker.bindPopup("<b>Morada</b><br>Calçada Fonte do Lameiro<br>6201-001 Covilhã<br><br><b>Coordenadas WGS84</b><br>GD: -7.511414; 40.27834<br>GMS: 7º 30' 41.09'' W; 40º 16' 42.02'' N").openPopup();
 	}
     
 	//MAKE SURE FOOTER IS AT THE BOTTOM OF THE PAGE ON LOAD AND RESIZE
