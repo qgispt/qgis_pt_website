@@ -53,7 +53,7 @@
                 <li><a href="http://qgis.org/pt_PT/site/forusers/download.html" target="_blank">Download</a></li>
                 <li><a href="http://qgis.org/pt_PT/docs/index.html" target="_blank">Documentação</a></li>
                 <li><a href="http://qgis.pt/participar.html">Como participar</a></li>
-                <!--<li><a href="http://qgis.pt/eventos.html">Eventos</a></li>-->
+                <li><a href="http://qgis.pt/eventos.html">Eventos</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">QGIS PT <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -126,6 +126,18 @@
 <p>Com efeito, uma das características fundamentais da Informação Geográfica é a sua georreferenciação ou, mais simplesmente, a associação a uma posição no espaço, 
 identificada por um conjunto de coordenadas.</p>
 
+<h3>Índice</h3>
+
+<ol>
+    <li><a href="#1">Introdução</a></li>
+    <li><a href="#2">Sistemas de Coordenadas no QGIS</a></li>
+    <li><a href="#3">Transformações de Coordenadas <i>On The Fly</i> no QGIS, usando as grelhas NTv2 de Portugal continental</a></li>
+    <li><a href="#4">Transformações de Coordenadas no QGIS usando as grelhas NTv2 de Portugal continental – Sistemas de Referência Personalizados</a></li>
+    <li><a href="#5">Referências</a></li>
+</ol>
+
+<p id="1">&nbsp;</p><p>&nbsp;</p>
+<h3>1. Introdução</h3>
 <p>Os sistemas de coordenadas utilizados para georreferenciação podem classificar-se em três classes fundamentais [1]:</p>
 <ol>
     <li>Sistemas de coordenadas cartesianos tridimensionais, geocêntricos, com sistemas de eixos com origem próximo do centro de massa da Terra e coordenadas X, Y, Z.</li>
@@ -373,8 +385,9 @@ identificada por um conjunto de coordenadas.</p>
 <p>Desta forma, conclui-se que, sempre que estejam disponíveis grelhas de transformação, esse método é preferível em relação aos métodos de Bursa-Wolf ou Molodensky. Ainda assim, o 
    QGIS suporta, como veremos de seguida, através das bibliotecas PROJ.4, todos esses métodos de transformação de coordenadas, pelo que a escolha do método a adoptar dependerá da vontade 
    de cada um e do rigor necessário para a aplicação em causa.</p>
-   
-<h3>Sistemas de Coordenadas no QGIS</h3>
+
+<p id="2">&nbsp;</p><p>&nbsp;</p>   
+<h3>2. Sistemas de Coordenadas no QGIS</h3>
 
 <p>Tal como a maioria dos softwares de SIG actualmente existentes, o QGIS lida com os sistemas de referência através das bibliotecas PROJ.4 e das bibliotecas GDAL. Por sua vez, estas 
    recorrem aos códigos EPSG (European Petroleum Survey Group, actualmente integrado no OGP Surveying and Positioning Committee) [12] [13], para identificar um grande número de sistemas de 
@@ -515,7 +528,8 @@ identificada por um conjunto de coordenadas.</p>
 <p>Contudo, como se viu na introdução, existem métodos mais precisos que outros e parâmetros que conduzem a resultados mais rigorosos que outros, para determinadas áreas do território. 
    Assim, nos capítulos seguintes vai apresentar-se a forma de configurar novos sistemas de referência no QGIS, nomeadamente utilizando as grelhas NTv2 de transformação de coordenadas.</p>
 
-<h3>Transformações de Coordenadas <i>On The Fly</i> no QGIS, usando as grelhas NTv2 de Portugal continental</h3>
+<p id="3">&nbsp;</p><p>&nbsp;</p>
+<h3>3. Transformações de Coordenadas <i>On The Fly</i> no QGIS, usando as grelhas NTv2 de Portugal continental</h3>
 
 <p>A partir da versão 2.2 do QGIS, foi introduzida uma nova ferramenta, designada Datum Transformation, que veio facilitar a utilização dos diversos métodos de transformação de coordenadas, 
    especialmente o método das grelhas, cuja implementação nos softwares de SIG é ainda recente.</p>
@@ -606,7 +620,8 @@ identificada por um conjunto de coordenadas.</p>
    <b><i>SRC Personalizados / Custom CRS</i></b>, isto é, têm de se criar novos sistemas de referência que incluam os parâmetros de transformação entre o datum local e um datum global, 
    neste caso, o WGS84.</p>
 
-<h3>Transformações de Coordenadas no QGIS usando as grelhas NTv2 de Portugal continental – Sistemas de Referência Personalizados</h3>
+<p id="4">&nbsp;</p><p>&nbsp;</p>
+<h3>4. Transformações de Coordenadas no QGIS usando as grelhas NTv2 de Portugal continental – Sistemas de Referência Personalizados</h3>
 
 <p>Esta segunda forma de transformação de coordenadas no QGIS permite a criação de layers no novo sistema de referência, usando um dos métodos apresentados anteriormente.</p>
 
@@ -851,8 +866,9 @@ identificada por um conjunto de coordenadas.</p>
 
 <p>Desta forma, o utilizador dispõe agora dos melhores métodos de transformação dos sistemas de coordenadas nacionais antigos para o ETRS89, e pode efectuar essas operações, com grande 
    facilidade, no QGIS.</p>
-   
-<h3>Referências</h3>
+
+<p id="5">&nbsp;</p><p>&nbsp;</p>   
+<h3>5. Referências</h3>
 <p>[1] Matos, J. (2008). “Fundamentos de Informação Geográfica” . 5ª Edição. Lisboa: Lidel</p>
 <p>[2] <a class="wrap-url" href="http://www3.nfb.ca/animation/objanim/en/films/film.php?sort=title&id=14229" target="_blank">http://www3.nfb.ca/animation/objanim/en/films/film.php?sort=title&id=14229</a></p>
 <p>[3] <a class="wrap-url" href="http://www.esa.int/spaceinimages/Images/2011/03/New_GOCE_geoid " target="_blank">http://www.esa.int/spaceinimages/Images/2011/03/New_GOCE_geoid </a></p>
@@ -991,7 +1007,7 @@ identificada por um conjunto de coordenadas.</p>
         <div class="copyright">
             <b>Alojamento do site e dos serviços:</b>
             <br>
-            <p><a href="http://www.naturalgis.pt/ target="_blank"><b>NaturalGIS</b></a> - Sistemas de Informação Geográfica exclusivamente <b><i>Open Source</i></b></p>
+            <p><a href="http://www.naturalgis.pt" target="_blank"><b>NaturalGIS</b></a> - Sistemas de Informação Geográfica exclusivamente <b><i>Open Source</i></b></p>
         </div>
         <div class="naturalgis-btn">
             <a class="footer-naturalgis naturalgisfooter" href="http://www.naturalgis.pt/" target="_blank"></a>

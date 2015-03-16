@@ -13,7 +13,6 @@
 	$funcao = testVar($safeArray['funcao'], $response);
 	$email = testVar($safeArray['email'], $response);
 	$ws1 = testVar($safeArray['ws1'], $response);
-	$ws2 = testVar($safeArray['ws2'], $response);
 	$so = testVar($safeArray['so'], $response);
 	$softsig = testVar($safeArray['softsig'], $response);
 	$knowhow = testVar($safeArray['knowhowqgis'], $response);

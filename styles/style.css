@@ -312,6 +312,7 @@ footer > .container > .row {
 
 .naturalgisfooter {
 	background-image: url(../images/naturalgis.png);
+	background-size: 100px;
 }
 
 .naturalgisfooter:hover {

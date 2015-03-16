@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
 	if (slideshow.size() != 0){
 		//SLIDESHOW
 		slideshow.backstretch([
-		 	"images/slideshow/covilha_3d.jpg",
+            "images/slideshow/covilha_3d.jpg",
 		 	"images/slideshow/old_map.jpg",
 		 	"images/slideshow/cascais_pi.jpg"
 		],{
@@ -21,7 +21,7 @@ jQuery(document).ready(function() {
 	
 	//EVENT MAP
 	if ($('#map').size() != 0){
-		var map = L.map('map', {scrollWheelZoom: false}).setView([40.186475, -8.412373], 13);
+		var map = L.map('map', {scrollWheelZoom: false}).setView([40.27834, -7.511414], 13);
 
 		var mapquestUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png';
 		var subDomains = ['otile1','otile2','otile3','otile4'];
@@ -31,10 +31,10 @@ jQuery(document).ready(function() {
 
 		mapquest.addTo(map);
 
-		var marker = L.marker([40.186475, -8.412373]).addTo(map);
-		marker.bindPopup("<b>Morada</b><br>Rua Sílvio Lima, Pólo II da Universidade de Coimbra<br>3030-790 Coimbra<br><br><b>Coordenadas WGS84</b><br>GD: -8.412373; 40.186475<br>GMS: 8º 24' 44.54'' W; 40º 11' 11.31'' N").openPopup();
+		var marker = L.marker([40.27834, -7.511414]).addTo(map);
+		marker.bindPopup("<b>Morada</b><br>Calçada Fonte do Lameiro, 6201-001 Covilhã<br>3030-790 Coimbra<br><br><b>Coordenadas WGS84</b><br>GD: -7.511414; 40.27834<br>GMS: 7º 30' 41.09'' W; 40º 16' 42.02'' N").openPopup();
 	}
-	
+    
 	//MAKE SURE FOOTER IS AT THE BOTTOM OF THE PAGE ON LOAD AND RESIZE
 	var footer = $('footer');
 	function setFooterPosition() {
@@ -148,21 +148,7 @@ jQuery(document).ready(function() {
 						}
 					}
 				},
-				ws2: {
-					validators: {
-						notEmpty:{
-							message: 'Este campo é obrigatório'
-						}
-					}
-				},
 				so: {
-					validators: {
-						notEmpty:{
-							message: 'Este campo é obrigatório'
-						}
-					}
-				},
-				softsig: {
 					validators: {
 						notEmpty:{
 							message: 'Este campo é obrigatório'
@@ -175,7 +161,14 @@ jQuery(document).ready(function() {
 							message: 'Este campo é obrigatório'
 						}
 					}
-				}
+				},
+                almoco: {
+                    validators: {
+                        notEmpty:{
+                            message: 'Este campo é obrigatório'
+                        }
+                    }
+                },
 			}
 		});
 		

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Transformação De Coordenadas | QGIS-PT]]></title>
   <link href="http://qgis.pt/categories/transformacao-de-coordenadas/atom.xml" rel="self"/>
   <link href="http://qgis.pt/"/>
-  <updated>2015-02-18T20:13:16+00:00</updated>
+  <updated>2015-03-16T21:22:58+00:00</updated>
   <id>http://qgis.pt/</id>
   <author>
     <name><![CDATA[Grupo de Utilizadores QGIS PT]]></name>
@@ -30,6 +30,31 @@
 identificada por um conjunto de coordenadas.</p>
 
 
+
+
+<h3>Índice</h3>
+
+
+
+
+<ol>
+    <li><a href="#1">Introdução</a></li>
+    <li><a href="#2">Sistemas de Coordenadas no QGIS</a></li>
+    <li><a href="#3">Transformações de Coordenadas <i>On The Fly</i> no QGIS, usando as grelhas NTv2 de Portugal continental</a></li>
+    <li><a href="#4">Transformações de Coordenadas no QGIS usando as grelhas NTv2 de Portugal continental – Sistemas de Referência Personalizados</a></li>
+    <li><a href="#5">Referências</a></li>
+</ol>
+
+
+
+
+<p id="1">&nbsp;</p>
+
+
+<p>&nbsp;</p>
+
+
+<h3>1. Introdução</h3>
 
 
 <p>Os sistemas de coordenadas utilizados para georreferenciação podem classificar-se em três classes fundamentais [1]:</p>
@@ -402,7 +427,15 @@ identificada por um conjunto de coordenadas.</p>
 
 
 
-<h3>Sistemas de Coordenadas no QGIS</h3>
+<p id="2">&nbsp;</p>
+
+
+<p>&nbsp;</p>
+
+
+<p></p>
+
+<h3>2. Sistemas de Coordenadas no QGIS</h3>
 
 
 
@@ -620,7 +653,13 @@ identificada por um conjunto de coordenadas.</p>
 
 
 
-<h3>Transformações de Coordenadas <i>On The Fly</i> no QGIS, usando as grelhas NTv2 de Portugal continental</h3>
+<p id="3">&nbsp;</p>
+
+
+<p>&nbsp;</p>
+
+
+<h3>3. Transformações de Coordenadas <i>On The Fly</i> no QGIS, usando as grelhas NTv2 de Portugal continental</h3>
 
 
 
@@ -744,7 +783,13 @@ identificada por um conjunto de coordenadas.</p>
 
 
 
-<h3>Transformações de Coordenadas no QGIS usando as grelhas NTv2 de Portugal continental – Sistemas de Referência Personalizados</h3>
+<p id="4">&nbsp;</p>
+
+
+<p>&nbsp;</p>
+
+
+<h3>4. Transformações de Coordenadas no QGIS usando as grelhas NTv2 de Portugal continental – Sistemas de Referência Personalizados</h3>
 
 
 
@@ -1008,7 +1053,15 @@ identificada por um conjunto de coordenadas.</p>
 
 
 
-<h3>Referências</h3>
+<p id="5">&nbsp;</p>
+
+
+<p>&nbsp;</p>
+
+
+<p></p>
+
+<h3>5. Referências</h3>
 
 
 <p>[1] Matos, J. (2008). “Fundamentos de Informação Geográfica” . 5ª Edição. Lisboa: Lidel</p>
@@ -1061,7 +1114,7 @@ identificada por um conjunto de coordenadas.</p>
 <br />
 
 
-<p><img class="gravatar img-circle" src="http://www.gravatar.com/avatar/d50a9c95f09513bc24d92fd26cc76c60></img></p>
+<p><img class="gravatar img-circle" src="http://www.gravatar.com/avatar/b5f074a76ec0f5ba99eb8e55d6893547></img></p>
 ]]></content>
   </entry>
   
