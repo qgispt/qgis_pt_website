@@ -1,152 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
-         <!--#include file="head.html" -->
 
-  <body>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Site do Grupo Utilizadores QGIS Portugal" name="description">
+    <meta content="Grupo Utilizadores QGIS Portugal" name="author">
+    <meta content="QGIS,Quantum GIS,SIG,GIS,Open Source,Software Livre,Software Aberto" name="keywords">
+    <link href="images/favicon.png" rel="shortcut icon" type="image/png">
+
+    <title>Grupo Utilizadores QGIS Portugal</title>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700,700italic" rel="stylesheet" type='text/css'><!-- Bootstrap core CSS -->
+    <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="libs/bootstrapvalidator/dist/css/bootstrapValidator.min.css" rel="stylesheet"><!-- Leaflet CSS -->
+    <link href="libs/leaflet/leaflet.css" rel="stylesheet"><!-- Custom styles -->
+    <link href="styles/style.css" rel="stylesheet">
+</head>
+
+<body>
     <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+    <div class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand navbar-brand-active" href="."></a>
+                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+                <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand navbar-brand-active" href="."></a>
             </div>
+
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="http://qgis.org/pt_PT/site/forusers/download.html" target="_blank">Download</a></li>
-                    <li><a href="http://qgis.org/pt_PT/docs/index.html" target="_blank">Documentação</a></li>
-                    <li><a href="participar.html">Como participar</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li class="dropdown">
-                    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">QGIS PT <b class="caret"></b></a>
-                    	<ul class="dropdown-menu">
-                    		<li><a href="traducao.html">Tradução</a></li>
-                    		<li><a href="plugins.html">Módulos para QGIS</a></li>
-                    		<li><a href="pdm2qgis.html">Norma PDM2QGIS</a></li>
-                    		<!-- <li><a href="">Casos de estudo</a></li>
-                    		<li><a href="">Estilos e simbologia</a></li>
-                    		<li><a href="">Modelos de processamento</a></li> -->
-                    	</ul>
+                    <li>
+                        <a href="http://qgis.org/pt_PT/site/forusers/download.html" target="_blank">Download</a>
                     </li>
-                    <li><a href="blog/">Blog</a></li>
-                    <!--<li><a href="servicos.html">Suporte</a></li>-->
+
+                    <li>
+                        <a href="http://qgis.org/pt_PT/docs/index.html" target="_blank">Documentação</a>
+                    </li>
+
+                    <li>
+                        <a href="participar.html">Como participar</a>
+                    </li><!-- <li><a href="eventos.html">Eventos</a></li> -->
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">QGIS PT <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="traducao.html">Tradução</a>
+                            </li>
+
+                            <li>
+                                <a href="plugins.html">Módulos para QGIS</a>
+                            </li>
+
+                            <li>
+                                <a href="pdm2qgis.html">Norma PDM2QGIS</a>
+                            </li><!-- <li><a href="">Casos de estudo</a></li>
+                            <li><a href="">Estilos e simbologia</a></li>
+                            <li><a href="">Modelos de processamento</a></li> -->
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="blog/">Blog</a>
+                    </li><!--<li><a href="servicos.html">Suporte</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div><!-- Content -->
+    <!-- Slideshow container -->
+    <!-- 
+    <div class="slideshow-container">
+        <div class="meeting-container">
+            <div class="meeting">
+                <h1>3º Encontro de Utilizadores QGIS Portugal</h1>
+                <h2>5 de Junho, 2015 - Covilhã</h2>
+                <div class="cancelled">CANCELADO</div> 
+                <div class="time-to-event"></div>
+                <div class="meeting-btns">
+                    <a class="btn btn-primary btn-lg" href="eventos.html#inscricoes">Inscreva-se já</a>
+                    <a class="btn btn-primary btn-lg" href="eventos.html#encontro-utilizadores">Mais informações aqui</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    <!-- User Group container -->
+
+    <div class="container adjust-margin">
+        <div class="row">
+            <div class="group-title">
+                Grupo de Utilizadores QGIS PT
+            </div>
+
+            <ul class="sub-menu">
+                <li>
+                    <a href="#sobre-qgis">Sobre o QGIS</a>
+                </li>
+
+                <li>
+                    <a href="#objectivos-grupo">Objectivos do grupo</a>
+                </li>
+
+                <li>
+                    <a href="#participe">Envolva-se e participe</a>
+                </li>
+            </ul>
+
+            <p>O grupo de utilizadores QGIS PT surgiu em 2014 com o objectivo de criar uma plataforma de partilha de informação e de experiências entre os utilizadores do QGIS de língua
+            portuguesa.</p>
+
+            <p>Se é um utilizador de SIG e se se interessa por tecnologias Geoespaciais <i>Open Source</i>, com particular relevância no QGIS, então está no local certo.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="section" id="sobre-qgis">
+                <h1>Sobre o QGIS</h1>
+
+                <div class="row">
+                    <div class="col-md-9 qgis-text">
+                        <p>O QGIS é um Sistema de Informação Geográfica (SIG) de Código Aberto licenciado segundo a Licença Pública Geral GNU (GPL). O QGIS é um projecto oficial da <i>Open Source
+                        Geospatial Foundation</i> (OSGeo). Funciona em Linux, Unix, Mac OSX, Windows e Android, disponibilizando um vasto conjunto de funcionalidades e suportando inúmeros formatos de
+                        vectores, rasters, bases de dados e geo-serviços.</p>
+
+                        <p>Poderá consultar todas as funcionalidades e características do QGIS na versão portuguesa do <a href="http://qgis.org/pt_PT/site/about/index.html" target="_blank">site
+                        oficial</a>. Existe ainda uma grande variedade de <a href="http://qgis.org/pt_PT/site/forusers/index.html" target="_blank">recursos e documentação</a> que o ajudarão bastante,
+                        quer seja um utilizador iniciado ou avançado de SIG.</p>
+                    </div>
+
+                    <div class="col-md-3 qgis-images">
+                        <a class="qgis" href="http://qgis.org/pt_PT/site/" target="_blank"></a> <a class="osgeo" href="http://www.osgeo.org" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="section" id="objectivos-grupo">
+                <h1>Objectivos do grupo de utilizadores QGIS PT</h1>
+
+                <p></p>
+
+                <ul>
+                    <li>Promover a utilização do QGIS nas mais diversas áreas de aplicação;</li>
+
+                    <li>Organizar encontros, sessões de apresentação e divulgação do QGIS junto de instituições de ensino, administração pública (central, regional, local), entre outras;</li>
+
+                    <li>Organizar encontros nacionais de utilizadores QGIS;</li>
+
+                    <li>Fomentar a realização de encontros informais de utilizadores QGIS a nível local;</li>
+
+                    <li>Promover a filosofia <i>Open Source</i>, encorajando a comunidade a contribuir para o projecto QGIS:</li>
+
+                    <li style="list-style: none; display: inline">
+                        <ul>
+                            <li>Angariar donativos;</li>
+
+                            <li>Promover e coordenar a tradução do QGIS para português;</li>
+
+                            <li>Testar novas versões;</li>
+
+                            <li>Promover/patrocinar o <i>bug fixing</i>;</li>
+
+                            <li>Contribuir com código fonte;</li>
+                        </ul>
+                    </li>
+
+                    <li>Desenvolver simbologia adaptada aos instrumentos de gestão territorial portugueses;</li>
+
+                    <li>Divulgar e promover o uso de informação geográfica aberta (modelos digitais de terreno, imagens de satélite, cartografia produzida no âmbito de projectos nacionais e europeus,
+                    OpenStreetMap, etc...);</li>
+
+                    <li>Desenvolver e partilhar modelos de processamento e <i>plugins</i>.</li>
                 </ul>
             </div>
         </div>
     </div>
-    
-    <!-- Content -->
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
-    	<div class="meeting-container">
-    		<div class="meeting">
-    			<h1>3º Encontro de Utilizadores QGIS Portugal</h1>
-	    		<h2>5 de Junho, 2015 - Covilhã</h2> 
-	    		<div class="time-to-event"></div>
-	    		<div class="meeting-btns">
-	    			<a class="btn btn-primary btn-lg" href="eventos.html#inscricoes">Inscreva-se já</a>
-	    			<a class="btn btn-primary btn-lg" href="eventos.html#encontro-utilizadores">Mais informações aqui</a>
-	    		</div>
-    		</div>
-    	</div>
-    </div>
-    
-    <!-- User Group container -->
-    <div class="container adjust-margin">
-    	<div class="row">
-	    	<div class="group-title">Grupo de Utilizadores QGIS PT</div>
-	    	<ul class="sub-menu">
-	   			<li><a href="#sobre-qgis">Sobre o QGIS</a></li>
-	   			<li><a href="#objectivos-grupo">Objectivos do grupo</a></li>
-	   			<li><a href="#participe">Envolva-se e participe</a></li>
-	   		</ul>
-	   		<p>O grupo de utilizadores QGIS PT surgiu em 2014 com o objectivo de criar uma plataforma de partilha de informação e de experiências entre os utilizadores do QGIS de língua portuguesa.</p>
-	   		<p>Se é um utilizador de SIG e se se interessa por tecnologias Geoespaciais <i>Open Source</i>, com particular relevância no QGIS, então está no local certo.</p>
-	   	</div>
-    </div>
-    
+
     <div class="container">
-    	<div class="row">
-    		<div id="sobre-qgis" class="section">
-	    		<h1>Sobre o QGIS</h1>
-	    		<div class="row">
-	    			<div class="col-md-9 qgis-text">
-		    			<p>O QGIS é um Sistema de Informação Geográfica (SIG) de Código Aberto licenciado segundo a Licença Pública Geral GNU (GPL). O QGIS é um projecto oficial da <i>Open Source Geospatial Foundation</i> (OSGeo). 
-				    	   Funciona em Linux, Unix, Mac OSX, Windows e Android, disponibilizando um vasto conjunto de funcionalidades  e suportando inúmeros formatos de vectores, rasters, bases de dados e geo-serviços.</p>
-				    	<p>Poderá consultar todas as funcionalidades e características do QGIS na versão portuguesa do <a href="http://qgis.org/pt_PT/site/about/index.html" target="_blank">site oficial</a>.
-				    	   Existe ainda uma grande variedade de <a href="http://qgis.org/pt_PT/site/forusers/index.html" target="_blank">recursos e documentação</a> que o ajudarão bastante, quer seja um utilizador iniciado ou avançado de SIG.
-				    	</p>
-		    		</div>
-			    	<div class="col-md-3 qgis-images">
-			    		<a class="qgis" href="http://qgis.org/pt_PT/site/" target="_blank"></a>
-			    		<a class="osgeo" href="http://www.osgeo.org" target="_blank"></a>
-			    	</div>
-	    		</div>
-	    	</div>
-    	</div>
-    </div>
-    
-    <div class="container">
-    	<div class="row">
-    		<div id="objectivos-grupo" class="section">
-				<h1>Objectivos do grupo de utilizadores QGIS PT</h1>
-				<p></p> 
-		    	<ul>
-		    		<li>Promover a utilização do QGIS nas mais diversas áreas de aplicação;</li>
-		    		<li>Organizar encontros, sessões de apresentação e divulgação do QGIS junto de instituições de ensino, administração pública (central, regional, local), entre outras;</li>
-		    		<li>Organizar encontros nacionais de utilizadores QGIS;</li>
-                    <li>Fomentar a realização de encontros informais de utilizadores QGIS a nível local;</li>
-		    		<li>Promover a filosofia <i>Open Source</i>, encorajando a comunidade a contribuir para o projecto QGIS:</li>
-		    			<ul>
-		    				<li>Angariar donativos;</li>
-                            <li>Promover e coordenar a tradução do QGIS para português;</li>
-		    				<li>Testar novas versões;</li>
-                            <li>Promover/patrocinar o <i>bug fixing</i>;</li>
-                            <li>Contribuir com código fonte;</li>
-                        </ul>
-		    		<li>Desenvolver simbologia adaptada aos instrumentos de gestão territorial portugueses;</li>
-		    		<li>Divulgar e promover o uso de informação geográfica aberta (modelos digitais de terreno, imagens de satélite, cartografia produzida no âmbito de projectos nacionais e europeus, OpenStreetMap, etc...);</li>
-		    		<li>Desenvolver e partilhar modelos de processamento e <i>plugins</i>.</li>
-		    	</ul>
-	    	</div>
-    	</div>
-    </div>
-    
-    <div class="container">
-    	<div class="row">
-    		<div id="participe" class="section">
-    			<h1>Envolva-se e participe</h1>
-	    		<p>O grupo de utilizadores QGIS PT é feito por utilizadores e para utilizadores. Se precisa de esclarecer uma dúvida de utilização, se deseja partilhar a sua experiência
-	    		   e/ou um caso de estudo, se é um entusiasta de SIG's, se gosta de se envolver em debates construtivos e abertos sobre esta tecnologia e se deseja contribuir activamente para
-	    		   o projecto QGIS, <b>JUNTE-SE A NÓS!</b>
-	    		</p>
-	    		<div class="row">
-	    			<div class="col-md-4">
-		    			<h3><i>Mailing list</i></h3>
-		    			<p>Registe-se na <i>mailing list</i> para ter acesso às últimas novidades da comunidade, pedir conselhos e ajuda sobre a utilização de QGIS.</p>
-		    			<a class="btn btn-success btn-lg" href="http://lists.osgeo.org/cgi-bin/mailman/listinfo/qgis-pt" target="_blank">Registe-se</a>
-		    		</div>
-		    		<div class="col-md-4">
-		    			<h3>Redes Sociais</h3>
-		    			<p>Foram criados, nas redes sociais, vários canais QGIS PT para divulgar informação sobre o projecto QGIS, a comunidade QGIS PT, tutoriais, eventos e outros.</p>
-		    			<a class="btn btn-success btn-lg" href="participar.html#redes-sociais">Saiba mais aqui</a>
-		    		</div>
-		    		<div class="col-md-4">
-		    			<h3>Tradução</h3>
-		    			<p>Foi feito um esforço para traduzir a interface gráfica, documentação e site do QGIS para português. É um esforço contínuo e precisamos de ajuda.</p>
-		    			<a class="btn btn-success btn-lg" href="traducao.html">Ajude-nos a traduzir</a>
-		    		</div>
-	    		</div>
-    		</div>
-    	</div>
-    </div>
-    
-    <!-- Footer -->
-         <!--#include file="footer.html" --> 
-         
-  </body>
+        <div class="row">
+            <div class="section" id="participe">
+                <h1>Envolva-se e participe</h1>
+
+                <p>O grupo de utilizadores QGIS PT é feito por utilizadores e para utilizadores. Se precisa de esclarecer uma dúvida de utilização, se deseja partilhar a sua experiência e/ou um caso
+                de estudo, se é um entusiasta de SIG's, se gosta de se envolver em debates construtivos e abertos sobre esta tecnologia e se deseja contribuir activamente para o projecto QGIS,
+                <b>JUNTE-SE A NÓS!</b></p>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 style="font-style: italic">Mailing list</h3>
+
+                        <p>Registe-se na <i>mailing list</i> para ter acesso às últimas novidades da comunidade, pedir conselhos e ajuda sobre a utilização de QGIS.</p><a class=
+                        "btn btn-success btn-lg" href="http://lists.osgeo.org/cgi-bin/mailman/listinfo/qgis-pt" target="_blank">Registe-se</a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Redes Sociais</h3>
+
+                        <p>Foram criados, nas redes sociais, vários canais QGIS PT para divulgar informação sobre o projecto QGIS, a comunidade QGIS PT, tutoriais, eventos e outros.</p><a class=
+                        "btn btn-success btn-lg" href="participar.html#redes-sociais">Saiba mais aqui</a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Tradução</h3>
+
+                        <p>Foi feito um esforço para traduzir a interface gráfica, documentação e site do QGIS para português. É um esforço contínuo e precisamos de ajuda.</p><a class=
+                        "btn btn-success btn-lg" href="traducao.html">Ajude-nos a traduzir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Footer -->
+    <!--#include file="footer.html" -->
+</body>
 </html>

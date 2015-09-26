@@ -1,164 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
-         <!--#include file="head.html" -->
 
-  <body>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Site do Grupo Utilizadores QGIS Portugal" name="description">
+    <meta content="Grupo Utilizadores QGIS Portugal" name="author">
+    <meta content="QGIS,Quantum GIS,SIG,GIS,Open Source,Software Livre,Software Aberto" name="keywords">
+    <link href="images/favicon.png" rel="shortcut icon" type="image/png">
+
+    <title>Grupo Utilizadores QGIS Portugal</title>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700,700italic" rel="stylesheet" type='text/css'><!-- Bootstrap core CSS -->
+    <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="libs/bootstrapvalidator/dist/css/bootstrapValidator.min.css" rel="stylesheet"><!-- Leaflet CSS -->
+    <link href="libs/leaflet/leaflet.css" rel="stylesheet"><!-- Custom styles -->
+    <link href="styles/style.css" rel="stylesheet">
+</head>
+
+<body>
     <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+    <div class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="."></a>
+                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+                <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="."></a>
             </div>
+
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="http://qgis.org/pt_PT/site/forusers/download.html" target="_blank">Download</a></li>
-                    <li><a href="http://qgis.org/pt_PT/docs/index.html" target="_blank">Documentação</a></li>
-                    <li><a href="participar.html">Como participar</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li class="dropdown active">
-                    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">QGIS PT <b class="caret"></b></a>
-                    	<ul class="dropdown-menu">
-                    		<li><a href="traducao.html">Tradução</a></li>
-                    		<li class="active"><a href="plugins.html">Módulos para QGIS</a></li>
-                    		<li><a href="pdm2qgis.html">Norma PDM2QGIS</a></li>
-                    		<!-- <li><a href="">Casos de estudo</a></li>
-                    		<li><a href="">Estilos e simbologia</a></li>
-                    		<li><a href="">Modelos de processamento</a></li> -->
-                    	</ul>
+                    <li>
+                        <a href="http://qgis.org/pt_PT/site/forusers/download.html" target="_blank">Download</a>
                     </li>
-                    <li><a href="blog/">Blog</a></li>
-                    <!--<li><a href="servicos.html">Suporte</a></li>-->
+
+                    <li>
+                        <a href="http://qgis.org/pt_PT/docs/index.html" target="_blank">Documentação</a>
+                    </li>
+
+                    <li>
+                        <a href="participar.html">Como participar</a>
+                    </li><!-- <li><a href="eventos.html">Eventos</a></li> -->
+
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">QGIS PT <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="traducao.html">Tradução</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="plugins.html">Módulos para QGIS</a>
+                            </li>
+
+                            <li>
+                                <a href="pdm2qgis.html">Norma PDM2QGIS</a>
+                            </li><!-- <li><a href="">Casos de estudo</a></li>
+                            <li><a href="">Estilos e simbologia</a></li>
+                            <li><a href="">Modelos de processamento</a></li> -->
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="blog/">Blog</a>
+                    </li><!--<li><a href="servicos.html">Suporte</a></li>-->
                 </ul>
             </div>
         </div>
-    </div>
-    
-    <!-- Content -->
-    
-    <div class="container adjust-margin">
-    	<div class="row">
-    		<div class="section">
-	    		<h1>Repositório de módulos para QGIS</h1>
-	    	</div>
-    	</div>
-    	<div class="row traducao">
-    		<p> Desde Agosto 2014 o Grupo utilizadores QGIS PT disponibiliza um repositório de extensões (<i>plugins</i>) 
-		        para QGIS onde irão ser publicadas ferramentas criadas pelo grupo, para utilização no contexto específico de Portugal.</p>
-		    <p>O repositório encontra-se no seguinte URL:&nbsp;&nbsp;<a href="http://www.qgis.pt/plugins/plugins.xml" target="_blank"><i><b>http://www.qgis.pt/plugins/plugins.xml</b></i></a></p>
-		<br>
-		<p>
-		    Para acrescentar este repositório ao seu QGIS deverá seguir os seguintes passos:
-		</p>
-		<ol style="text-align:left">
-			<li>Abra a janela de gestão e configuração de módulos</li>
-				<ul>
-					<li><b>Português: </b><i>Módulos -> Gerir e Instalar Módulos -> Configurações</i></li>
-			    	<li><b>Inglês: </b><i>Plugins -> Manage and Install Plugins -> Settings</i></li>
-				</ul>
-			<li>Active a caixa dos módulos experimentais</li>
-				<ul>
-					<li><b>Português: </b><i>Mostrar também módulos experimentais</i></li>
-			    	<li><b>Inglês: </b><i>Show also experimental plugins</i></li>
-				</ul>
-			<li>Adicione o repositório</li>
-				<ul>
-					<li><b>Português: </b><i>Repositório de Módulos -> Adicionar</i></li>
-			    	<li><b>Inglês: </b><i>Plugins Repositories -> Add...</i></li>
-				</ul>
-		    <li>Preencha os campos de acordo com a seguinte figura</li>
-		    <p style="text-align:left; padding: 0px 20px 0px 0px;">
-		    	<img src="images/plugin_repo1.png" alt="QGIS" title="QGIS"/>
-			</p>
-		</ol>
-    	</div>
-    </div>
-    
-    <div class="container">
-    	<div class="row">
-    		<div id="objectivos-grupo" class="section">
-				<h1>Tranformação de Datum para Portugal</h1>
-		    	<img src="images/pttransform.png" alt="Tranformações de Datum para caixa de ferramentas Processing" title="Tranformações de Datum para caixa de ferramentas Processing"/>		
-		         <p>Este módulo foi criado para facilitar a tarefa de transformação de dados vectoriais e raster em sistemas de coordenadas obsoletos (Datum 73, Datum Lisboa e ED50) 
-		            para o novo sistema de coordenadas oficial de Portugal Continental (ETRS89-PTTM06), utilizando o <a href="http://qgis.pt/blog/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis/"><b>método das grelhas de tranformação de Datum (NTv2)</b></a>.
-				</p>
-				<p>
-				    As grelhas suportadas são as disponibilizadas pelo <b>Prof. José Alberto Gonçalves (UP)</b> e pela <b>Direção-Geral do Território (DGT)</b>:
-				    <ul style="list-style-type:none;">
-				    	<li><a href="http://www.fc.up.pt/pessoas/jagoncal/coordenadas/" target="_blank"><i><b>http://www.fc.up.pt/pessoas/jagoncal/coordenadas/</b></i></a></li>
-				    	<li><a href="http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/grelhas_em_ntv2/" target="_blank"><i><b>http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/grelhas_em_ntv2/</b></i></a></li>
-				    </ul>
-				</p>		
-			<p>
-			    Estas grelhas são instaladas automaticamente aquando da instalação do módulo, evitando-se dessa forma toda e qualquer
-			    configuração manual por parte do utilizador. O módulo foi criado com o objectivo de simplificar ao máximo a utilização destas metodologias pelo utilizador. 
-			</p>
-			<h3 style="text-align: justify;">Instalação</h3>
-			<p>
-			    Para instalar este módulo deverá efectuar os seguintes passos:
-			    <ol style="text-align:left">
-			    	<li>Abrir a janela de gestão e configuração de módulos</li>
-			    	<ul>
-						<li><b>Português: </b><i>Módulos -> Gerir e Instalar Módulos -> Tudo</i></li>
-				    	<li><b>Inglês: </b><i>Plugins -> Manage and Install Plugins -> All</i></li>
-					</ul>
-			    	<li>Pesquisar por <b><i>Portugal</i></b> e carregar no botão de instalação do módulo</li>
-			    	<p style="text-align:left; padding: 20px 20px 0px 0px;">
-				    	<img src="images/install_datumplugin.png" alt="QGIS" title="QGIS"/>
-					</p>
-			    </ol>
-			</p>
-			
-			<h3 style="text-align: justify;">Utilização</h3>
-			<p>
-				Este módulo destina-se a ser usado dentro do <i>Processing</i> do QGIS. As ferramentas estão organizadas por tipo de dados (vector ou <i>raster</i>) e por 
-				sistemas de coordenadas dos dados de origem (Datum 73, Datum Lisboa ou ED50). 
-			</p>
-			
-			<p style="text-align:center;">
-			    <img src="images/pttransform_menu.png" alt="Tranformações de Datum menu" title="Tranformações de Datum menu"/>
-	        </p>
-			<p>
-			    Depois de seleccionar a ferramenta que deseja, o utilizador tem que simplesmente definir a camada de origem, a grelha NTv2 a utilizar e a camada de destino.
-			</p>
-			<p style="text-align:center;">
-	    		<img src="images/pttransform_gui.png" alt="Tranformações de Datum interface" title="Tranformações de Datum interface"/>
-   	        </p>
-	            	        
-		    <h3 style="text-align: justify;">Notas</h3>
-			<ul>
-				<li>O desenvolvimento do módulo foi suportado pelo <b>Grupo utilizadores QGIS PT</b>, tendo sido desenvolvido pelo grupo, pela <a href="http://www.naturalgis.pt/" target="_blank"><b>NaturalGIS</b></a> e <b>Alexander Bruy</b></li>
-				<li>Como qualquer outra ferramenta do <i>Processing</i> do QGIS, também estas ferramentas podem ser utulizadas em modalidade <i>batch</i>, tornando  a tarefa de transformação
-				do sistema de coordenadas para conjuntos de dados grandes, uma tarefa muito simples e eficiente</li>
-				<li>Repositório do código fonte: <a href="https://github.com/qgispt/processing_pttransform" target="_blank">https://github.com/qgispt/processing_pttransform</a></li>
-				<li>Bug tracker: <a href="https://github.com/qgispt/processing_pttransform/issues" target="_blank">https://github.com/qgispt/processing_pttransform/issues</a></li>
-				<li>O módulo requer QGIS versão 2.4 ou master (a próxima versão 2.6) para funcionar.</li>
-				<li>É necessário verificar que na pasta <i>.qgis2/python/plugins</i> <b>não</b> exista uma pasta chamada "processing". Se esta esxistir é necessário apagá-la antes de instalar a extensão.</li>
-			</ul>
-    	    <h3 style="text-align: justify;">Problemas conhecidos</h3>
-			<ul>
-				<li>Nas ferramentas de transformação de raster há um <i>bug</i> conhecido no
-				    QGIS 2.4, mas já resolvido no QGIS master: se a opção "<i>open output file after
-				    running algorithm</i>" for activada, então o raster será carregado com o sistema de coordenadas
-				    errado (o dos dados de input). Se este for carregado manualmente no QGIS o problema já não
-				    se apresenta.</li>
-				<li>Nalguns casos no QGIS 2.4 poderá aparecer um aviso (não um erro) sem uma aparente razão real: <i>Layers do not all use the same CRS.
-				    This can cause unexpected results. Do you want to continue?</i>. Este aviso pode ser ignorado de momento e não está relacionado com o módulo. 
-				    À semelhança do <i>bug</i> anterior, também este já foi resolvido no QGIS master.</li>
-				<li>Os paths dos ficheiros de input/output <b>não</b> devem conter caracteres especiais <b>(espaços, acentos, tildes, etc.)</b>.</li>
-				<li>De momento, as ferramentas de transformação de vectores apenas funcionam com ficheiros de entrada no formato Shapefile.</li>
-			</ul>
-			<br>		
-	    	</div>
-    	</div>
-    </div>    
-    <!-- Footer -->
-         <!--#include file="footer.html" -->
+    </div><!-- Content -->
 
-  </body>
+    <div class="container adjust-margin">
+        <div class="row">
+            <div class="section">
+                <h1>Repositório de módulos para QGIS</h1>
+            </div>
+        </div>
+
+        <div class="row traducao">
+            <p>Desde Agosto 2014 o Grupo utilizadores QGIS PT disponibiliza um repositório de extensões (<i>plugins</i>) para QGIS onde irão ser publicadas ferramentas criadas pelo grupo, para
+            utilização no contexto específico de Portugal.</p>
+
+            <p>O repositório encontra-se no seguinte URL:&nbsp;&nbsp;<a href="http://www.qgis.pt/plugins/plugins.xml" style="font-style: italic; font-weight: bold" target=
+            "_blank">http://www.qgis.pt/plugins/plugins.xml</a></p><br>
+
+            <p>Para acrescentar este repositório ao seu QGIS deverá seguir os seguintes passos:</p>
+
+            <ol style="text-align:left">
+                <li>Abra a janela de gestão e configuração de módulos
+
+                    <ul>
+                        <li><b>Português:</b> <i>Módulos -&gt; Gerir e Instalar Módulos -&gt; Configurações</i></li>
+
+                        <li><b>Inglês:</b> <i>Plugins -&gt; Manage and Install Plugins -&gt; Settings</i></li>
+                    </ul>
+                </li>
+
+                <li>Active a caixa dos módulos experimentais
+
+                    <ul>
+                        <li><b>Português:</b> <i>Mostrar também módulos experimentais</i></li>
+
+                        <li><b>Inglês:</b> <i>Show also experimental plugins</i></li>
+                    </ul>
+                </li>
+
+                <li>Adicione o repositório
+
+                    <ul>
+                        <li><b>Português:</b> <i>Repositório de Módulos -&gt; Adicionar</i></li>
+
+                        <li><b>Inglês:</b> <i>Plugins Repositories -&gt; Add...</i></li>
+                    </ul>
+                </li>
+
+                <li>Preencha os campos de acordo com a seguinte figura
+
+                    <p style="text-align:left; padding: 0px 20px 0px 0px;"><img alt="QGIS" src="images/plugin_repo1.png" title="QGIS"></p>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="section" id="objectivos-grupo">
+                <h1>Tranformação de Datum para Portugal</h1><img alt="Tranformações de Datum para caixa de ferramentas Processing" src="images/pttransform.png" title=
+                "Tranformações de Datum para caixa de ferramentas Processing">
+
+                <p>Este módulo foi criado para facilitar a tarefa de transformação de dados vectoriais e raster em sistemas de coordenadas obsoletos (Datum 73, Datum Lisboa e ED50) para o novo
+                sistema de coordenadas oficial de Portugal Continental (ETRS89-PTTM06), utilizando o <a href=
+                "http://qgis.pt/blog/2014/07/13/transformacao-de-coordenadas-e-utilizacao-das-grelhas-ntv2-no-qgis/" style="font-weight: bold">método das grelhas de tranformação de Datum
+                (NTv2)</a>.</p>
+
+                <p>As grelhas suportadas são as disponibilizadas pelo <b>Prof. José Alberto Gonçalves (UP)</b> e pela <b>Direção-Geral do Território (DGT)</b>:</p>
+
+                <ul style="list-style-type:none;">
+                    <li>
+                        <a href="http://www.fc.up.pt/pessoas/jagoncal/coordenadas/" style="font-style: italic; font-weight: bold" target="_blank">http://www.fc.up.pt/pessoas/jagoncal/coordenadas/</a>
+                    </li>
+
+                    <li>
+                        <a href="http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/grelhas_em_ntv2/" style="font-style: italic; font-weight: bold" target=
+                        "_blank">http://www.dgterritorio.pt/cartografia_e_geodesia/geodesia/transformacao_de_coordenadas/grelhas_em_ntv2/</a>
+                    </li>
+                </ul>
+                <p>
+
+                <p>Estas grelhas são instaladas automaticamente aquando da instalação do módulo, evitando-se dessa forma toda e qualquer configuração manual por parte do utilizador. O módulo foi
+                criado com o objectivo de simplificar ao máximo a utilização destas metodologias pelo utilizador.</p>
+
+                <h3 style="text-align: justify;">Instalação</h3>
+
+                <p>Para instalar este módulo deverá efectuar os seguintes passos:</p>
+
+                <ol style="text-align:left">
+                    <li>Abrir a janela de gestão e configuração de módulos
+
+                        <ul>
+                            <li><b>Português:</b> <i>Módulos -&gt; Gerir e Instalar Módulos -&gt; Tudo</i></li>
+
+                            <li><b>Inglês:</b> <i>Plugins -&gt; Manage and Install Plugins -&gt; All</i></li>
+                        </ul>
+                    </li>
+
+                    <li>Pesquisar por <b style="font-style: italic">Portugal</b> e carregar no botão de instalação do módulo
+
+                        <p style="text-align:left; padding: 20px 20px 0px 0px;"><img alt="QGIS" src="images/install_datumplugin.png" title="QGIS"></p>
+                    </li>
+                </ol>
+                <p>
+
+                <h3 style="text-align: justify;">Utilização</h3>
+
+                <p>Este módulo destina-se a ser usado dentro do <i>Processing</i> do QGIS. As ferramentas estão organizadas por tipo de dados (vector ou <i>raster</i>) e por sistemas de coordenadas
+                dos dados de origem (Datum 73, Datum Lisboa ou ED50).</p>
+
+                <p style="text-align:center;"><img alt="Tranformações de Datum menu" src="images/pttransform_menu.png" title="Tranformações de Datum menu"></p>
+
+                <p>Depois de seleccionar a ferramenta que deseja, o utilizador tem que simplesmente definir a camada de origem, a grelha NTv2 a utilizar e a camada de destino.</p>
+
+                <p style="text-align:center;"><img alt="Tranformações de Datum interface" src="images/pttransform_gui.png" title="Tranformações de Datum interface"></p>
+
+                <h3 style="text-align: justify;">Notas</h3>
+
+                <ul>
+                    <li>O desenvolvimento do módulo foi suportado pelo <b>Grupo utilizadores QGIS PT</b>, tendo sido desenvolvido pelo grupo, pela <a href="http://www.naturalgis.pt/" style=
+                    "font-weight: bold" target="_blank">NaturalGIS</a> e <b>Alexander Bruy</b>
+                    </li>
+
+                    <li>Como qualquer outra ferramenta do <i>Processing</i> do QGIS, também estas ferramentas podem ser utulizadas em modalidade <i>batch</i>, tornando a tarefa de transformação do
+                    sistema de coordenadas para conjuntos de dados grandes, uma tarefa muito simples e eficiente</li>
+
+                    <li>Repositório do código fonte: <a href="https://github.com/qgispt/processing_pttransform" target="_blank">https://github.com/qgispt/processing_pttransform</a>
+                    </li>
+
+                    <li>Bug tracker: <a href="https://github.com/qgispt/processing_pttransform/issues" target="_blank">https://github.com/qgispt/processing_pttransform/issues</a>
+                    </li>
+
+                    <li>O módulo requer QGIS versão 2.4 ou master (a próxima versão 2.6) para funcionar.</li>
+
+                    <li>É necessário verificar que na pasta <i>.qgis2/python/plugins</i> <b>não</b> exista uma pasta chamada "processing". Se esta esxistir é necessário apagá-la antes de instalar a
+                    extensão.</li>
+                </ul>
+
+                <h3 style="text-align: justify;">Problemas conhecidos</h3>
+
+                <ul>
+                    <li>Nas ferramentas de transformação de raster há um <i>bug</i> conhecido no QGIS 2.4, mas já resolvido no QGIS master: se a opção "<i>open output file after running
+                    algorithm</i>" for activada, então o raster será carregado com o sistema de coordenadas errado (o dos dados de input). Se este for carregado manualmente no QGIS o problema já não
+                    se apresenta.</li>
+
+                    <li>Nalguns casos no QGIS 2.4 poderá aparecer um aviso (não um erro) sem uma aparente razão real: <i>Layers do not all use the same CRS. This can cause unexpected results. Do you
+                    want to continue?</i>. Este aviso pode ser ignorado de momento e não está relacionado com o módulo. À semelhança do <i>bug</i> anterior, também este já foi resolvido no QGIS
+                    master.</li>
+
+                    <li>Os paths dos ficheiros de input/output <b>não</b> devem conter caracteres especiais <b>(espaços, acentos, tildes, etc.)</b>.</li>
+
+                    <li>De momento, as ferramentas de transformação de vectores apenas funcionam com ficheiros de entrada no formato Shapefile.</li>
+                </ul><br>
+            </div>
+        </div>
+    </div><!-- Footer -->
+    <!--#include file="footer.html" -->
+</body>
 </html>

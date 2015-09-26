@@ -1,102 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
-         <!--#include file="head.html" -->
 
-  <body>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Site do Grupo Utilizadores QGIS Portugal" name="description">
+    <meta content="Grupo Utilizadores QGIS Portugal" name="author">
+    <meta content="QGIS,Quantum GIS,SIG,GIS,Open Source,Software Livre,Software Aberto" name="keywords">
+    <link href="images/favicon.png" rel="shortcut icon" type="image/png">
+
+    <title>Grupo Utilizadores QGIS Portugal</title>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700,700italic" rel="stylesheet" type='text/css'><!-- Bootstrap core CSS -->
+    <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="libs/bootstrapvalidator/dist/css/bootstrapValidator.min.css" rel="stylesheet"><!-- Leaflet CSS -->
+    <link href="libs/leaflet/leaflet.css" rel="stylesheet"><!-- Custom styles -->
+    <link href="styles/style.css" rel="stylesheet">
+</head>
+
+<body>
     <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+    <div class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="."></a>
+                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+                <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="."></a>
             </div>
+
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="http://qgis.org/pt_PT/site/forusers/download.html" target="_blank">Download</a></li>
-                    <li><a href="http://qgis.org/pt_PT/docs/index.html" target="_blank">Documentação</a></li>
-                    <li><a href="participar.html">Como participar</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li class="dropdown active">
-                    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">QGIS PT <b class="caret"></b></a>
-                    	<ul class="dropdown-menu">
-                    		<li class="active"><a href="traducao.html">Tradução</a></li>
-                    		<li><a href="plugins.html">Módulos para QGIS</a></li>
-                    		<li><a href="pdm2qgis.html">Norma PDM2QGIS</a></li>
-                    		<!-- <li><a href="">Casos de estudo</a></li>
-                    		<li><a href="">Estilos e simbologia</a></li>
-                    		<li><a href="">Modelos de processamento</a></li> -->
-                    	</ul>
+                    <li>
+                        <a href="http://qgis.org/pt_PT/site/forusers/download.html" target="_blank">Download</a>
                     </li>
-                    <li><a href="blog/">Blog</a></li>
-                    <!--<li><a href="servicos.html">Suporte</a></li>-->
+
+                    <li>
+                        <a href="http://qgis.org/pt_PT/docs/index.html" target="_blank">Documentação</a>
+                    </li>
+
+                    <li>
+                        <a href="participar.html">Como participar</a>
+                    </li><!-- <li><a href="eventos.html">Eventos</a></li> -->
+
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">QGIS PT <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu">
+                            <li class="active">
+                                <a href="traducao.html">Tradução</a>
+                            </li>
+
+                            <li>
+                                <a href="plugins.html">Módulos para QGIS</a>
+                            </li>
+
+                            <li>
+                                <a href="pdm2qgis.html">Norma PDM2QGIS</a>
+                            </li><!-- <li><a href="">Casos de estudo</a></li>
+                            <li><a href="">Estilos e simbologia</a></li>
+                            <li><a href="">Modelos de processamento</a></li> -->
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="blog/">Blog</a>
+                    </li><!--<li><a href="servicos.html">Suporte</a></li>-->
                 </ul>
             </div>
         </div>
-    </div>
-    
-    <!-- Content -->
-    
-    <div class="container adjust-margin">
-    	<div class="row">
-    		<div class="section">
-	    		<h1>Tradução do QGIS para pt-PT</h1>
-	    		<div class="col-md-4">
-	    			<h4>Tradução do Site QGIS</h4>
-	    			<p class="stats-subtitle">Estatística actualizada em <span id="site-date"></span><p>
-	    			<div class="progress progress-striped active">
-						<div id="site-progress" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">A carregar...</div>
-					</div>
-					<div class="stats-text">
-						<p id="site-untrans"></p>
-						<p id="site-trans"><p>
-					</div>
-	    		</div>
-	    		
-	    		<div class="col-md-4">
-	    			<h4>Tradução da Documentação</h4>
-	    			<p class="stats-subtitle">Estatística actualizada em <span id="docs-date"></span><p>
-	    			<div class="progress progress-striped active">
-						<div id="docs-progress" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">A carregar...</div>
-					</div>
-					<div class="stats-text">
-						<p id="docs-untrans"></p>
-						<p id="docs-trans"><p>
-					</div>
-	    		</div>
-	    		
-	    		<div class="col-md-4">
-	    			<h4>Tradução da Interface QGIS</h4>
-	    			<p class="stats-subtitle">Estatística actualizada em <span id="gui-date"></span><p>
-	    			<div class="progress progress-striped active">
-						<div id="gui-progress" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">A carregar...</div>
-					</div>
-					<div class="stats-text">
-						<p id="gui-untrans"></p>
-						<p id="gui-trans"><p>
-					</div>
-	    		</div>
-	    	</div>
-    	</div>
-    	<div class="row traducao">
-    		<p>Alguns membros do Grupo de Utilizadores QGIS PT têm estado a trabalhar arduamente na tradução de todos os materiais, documentação, site official e interface gráfica do QGIS.
-    		   No entanto a tradução ainda não está completa. Por outro lado, o QGIS é um projecto bastante activo e com uma vasta comunidade internacional que não cessa de produzir novos
-    		   conteúdos para QGIS, pelo que, o esforço de tradução é algo permanente. O próprio projecto QGIS desenvolveu diversas metodologias para apoiar e fomentar a tradução do QGIS 
-    		   para os mais diversos idiomas. Colabore connosco neste processo e ajude-nos a garantir que o idioma pt-PT seja sempre um dos idiomas com uma cobertura de 100%.
-    		</p>
-    		<p>No nosso <i><a href="/blog">Blog</a></i> poderá encontrar uma <a href="/blog/2014/04/20/traducao-de-conteudos-qgis-com-transifex/">publicação</a> que lhe explica passo a passo, como colaborar na 
-    		   tradução através do <a href="https://www.transifex.com/" target="_blank">Transifex</a>. Esperamos que com este pequeno e simples tutorial lhe seja mais fácil iniciar-se neste 
-    		   processo. Ajude-nos através da sua colaboração na tradução e partilhando esta publicação nas suas redes sociais.
-    		</p>
-    	</div>
-    </div>
-    
-    <!-- Footer -->
-         <!--#include file="footer.html" -->
+    </div><!-- Content -->
 
-  </body>
+    <div class="container adjust-margin">
+        <div class="row">
+            <div class="section">
+                <h1>Tradução do QGIS para pt-PT</h1>
+
+                <div class="col-md-4">
+                    <h4>Tradução do Site QGIS</h4>
+
+                    <p class="stats-subtitle">Estatística actualizada em <span id="site-date"></span></p>
+
+                    <p></p>
+
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar" id="site-progress" style="width: 0%;">
+                            A carregar...
+                        </div>
+                    </div>
+
+                    <div class="stats-text">
+                        <p id="site-untrans"></p>
+
+                        <p id="site-trans"></p>
+
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>Tradução da Documentação</h4>
+
+                    <p class="stats-subtitle">Estatística actualizada em <span id="docs-date"></span></p>
+
+                    <p></p>
+
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar" id="docs-progress" style="width: 0%;">
+                            A carregar...
+                        </div>
+                    </div>
+
+                    <div class="stats-text">
+                        <p id="docs-untrans"></p>
+
+                        <p id="docs-trans"></p>
+
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>Tradução da Interface QGIS</h4>
+
+                    <p class="stats-subtitle">Estatística actualizada em <span id="gui-date"></span></p>
+
+                    <p></p>
+
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar" id="gui-progress" style="width: 0%;">
+                            A carregar...
+                        </div>
+                    </div>
+
+                    <div class="stats-text">
+                        <p id="gui-untrans"></p>
+
+                        <p id="gui-trans"></p>
+
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row traducao">
+            <p>Alguns membros do Grupo de Utilizadores QGIS PT têm estado a trabalhar arduamente na tradução de todos os materiais, documentação, site official e interface gráfica do QGIS. No entanto
+            a tradução ainda não está completa. Por outro lado, o QGIS é um projecto bastante activo e com uma vasta comunidade internacional que não cessa de produzir novos conteúdos para QGIS, pelo
+            que, o esforço de tradução é algo permanente. O próprio projecto QGIS desenvolveu diversas metodologias para apoiar e fomentar a tradução do QGIS para os mais diversos idiomas. Colabore
+            connosco neste processo e ajude-nos a garantir que o idioma pt-PT seja sempre um dos idiomas com uma cobertura de 100%.</p>
+
+            <p>No nosso <i><a href="/blog">Blog</a></i> poderá encontrar uma <a href="/blog/2014/04/20/traducao-de-conteudos-qgis-com-transifex/">publicação</a> que lhe explica passo a passo, como
+            colaborar na tradução através do <a href="https://www.transifex.com/" target="_blank">Transifex</a>. Esperamos que com este pequeno e simples tutorial lhe seja mais fácil iniciar-se neste
+            processo. Ajude-nos através da sua colaboração na tradução e partilhando esta publicação nas suas redes sociais.</p>
+        </div>
+    </div><!-- Footer -->
+    <!--#include file="footer.html" -->
+</body>
 </html>
