@@ -13,7 +13,7 @@
     <meta name="author" content="Grupo de Utilizadores QGIS PT">
 
     
-    <meta name="description" content="Category: OSGeo4W">
+    <meta name="description" content="Plugin refFunctions 06 de Maio, 2015 Este tutorial pretende exemplificar como é possível utilizar operações espaciais no QGIS para preencher um &hellip;">
     
 
     <!-- http://t.co/dKP3o1e -->
@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     
-    <link rel="canonical" href="http://qgis.ptcategories/osgeo4w">
+    <link rel="canonical" href="http://qgis.pt/2015/05/06/plugin-reffunctions">
     <!-- CUSTOM CSS -->
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700,700italic" rel="stylesheet" type='text/css'>
     <link href="http://qgis.pt/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -89,44 +89,131 @@
   <div id="main" class="container">
     <div id="content" class="row">
       <div class="col-sm-9">
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-        
-        <h1 class="entry-title">Categoria: OSGeo4W</h1>
     
+      <h2 class="entry-title-static">Plugin refFunctions</h2>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<div class="blog-time" datetime="2015-05-06T17:40:08+01:00" pubdate data-updated="true">06 de Maio, 2015</div>
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>Este tutorial pretende exemplificar como é possível utilizar operações espaciais no QGIS para preencher um campo na tabela de atributos com informação retirada da relação espacial existente
+entre dois layers.<!-- more --> Isso é possível com recurso ao plugin <a href="http://planet.qgis.org/plugins/refFunctions/" target="_blank"><i><b>refFunctions</b></i></a>.</p>
+Vamos então supor que temos um layer de pontos referentes aos clientes de uma empresa e um layer de polígonos com os limites de território de cada loja da empresa. O objetivo é então criar e preencher um
+determinado campo da tabela de atributos dos pontos, fazendo uso do posicionamento espacial existente entre cada um e o polígono onde está inserido.
 
-  
-  <h3>2014</h3>
-  <hr>
-
-<article>
-  
-<div class="jumbotron adjust-jumbotron">
-<h2><a href="/blog/2014/06/18/instalacao-do-qgis-via-osgeo4w/">Instalação Do QGIS via OSGeo4W</a></h2>
-
-
-
-<div class="blog-time" datetime="2014-06-18T18:22:27+01:00" pubdate>18 de Junho, 2014</div>
-
-<div class="post-metadata">
-  <span class="categories">Categorias: <a class='category' href='/blog/categories/instalacao/'>Instalação</a>, <a class='category' href='/blog/categories/osgeo4w/'>OSGeo4W</a></span>
+<h4>1º Instalação do Plugin</h4>
+<ul>
+    <li>No menu <i><b>Plugins</b></i>, escolher a opção <i><b>Manage and Install Plugins</b></i></li>
+    <li>Pesquise o plugin <i><b>refFunctions</b></i> e proceda à sua instalação</li>
+</ul>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/install_plugin.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/install_plugin.png" width="500"  alt="Pesquisa do plugin">
+    </a>
 </div>
 
+<h4>2º Utilização do Plugin</h4>
+<ul>
+    <li>Abra a tabela de atributos do layer de pontos e coloque em modo de edição</li>
+    <li>Aceda ao <i><b>Field Calculator</b></i></li>
+	<li>Na seção <i><b>Create a new field</b></i>, crie um novo campo segundo as suas necessidades</li>
+	<li>Agora na seção central onde estão listadas todas as categorias de funções, irá encontrar uma nova entrada, designada por <i><b>Reference</b></i>. Das opções existentes, efetue duplo clique sobre a função <i><b>geomintersects</b></i></li>
+	<li>Segundo a sintax que é mostrado no help da função, teremos de definir o layer e o campo alvo onde se irá buscar a informação para preencher o nosso campo. Neste exemplo, será então o layer Lojas e o campo Loja</li>
+	<li>Por fim, mande correr o processo, o qual poderá demorar ou não em função da quantidade de objectos geográficos que os layers possuem</li>
+</ul>
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/field_calculator.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/field_calculator.png" width="500"  alt="Utilização da função geomintersects do plugin">
+    </a>
+</div>
+<ul>
+    <li>Após a conclusão deste processo, o resultado será então a criação do novo campo, preenchido com indicação da loja em que cada ponto está inserido</li>
+</ul>
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/attributes.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/attributes.png" width="500"  alt="Resultado na tabela de atributos">
+    </a>
 </div>
 
+<p></p>
+<p>Para mais informação sobre o plugin, <a href="https://geogear.wordpress.com/2014/11/13/reffunctions-v1-0/" target="_blank">https://geogear.wordpress.com/2014/11/13/reffunctions-v1-0/</a></p>
+
+<p>Esperamos que esta dica vos seja de ajuda. Caso tenha dúvidas, não hesite em usar a <i>mailing list qgis-pt</i> para as esclarecer.</p>
+
+<br />
+</div>
+
+
+  <div class="post-metadata">
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Publicado pelo utilizador: <span class="fn">Nelson Silva</span></span>
+
+      <br />
+      
+
+<span class="categories">Categorias: 
+  
+    <a class='category' href='/blog/categories/intersect/'>Intersect</a>, <a class='category' href='/blog/categories/plugins/'>Plugins</a>, <a class='category' href='/blog/categories/spatial-operators/'>Spatial Operators</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://qgis.pt/2015/05/06/plugin-reffunctions/" data-via="" data-counturl="http://qgis.pt/2015/05/06/plugin-reffunctions/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+  <div class="fb-like" data-send="true" data-width="450" data-layout="button_count" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <hr>
+  </div>
+  <ul class="pager">
+    
+      <li class="previous"><a class="basic-alignment left" href="/blog/2014/10/04/participacao-no-hackfest-do-qgis/" title="Previous Post: Participação no Hackfest do QGIS">&laquo; Participação no Hackfest do QGIS</a></li>
+    
+    
+  </ul>
+ 
 </article>
 
+  <section class="disqus">
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-
-  
-</article>
+  </section>
 
 </div>
 
@@ -210,7 +297,22 @@
       var disqus_shortname = 'qgispt';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_config = function(){
+            console.log(this.callbacks);
+            this.callbacks.onReady =[function(){
+                var footer = $('footer');
+                footer.css('position', 'inherit');
+                var innerHeight = $(window).height();
+                if (footer.position().top < innerHeight - 106){
+                    footer.css('position', 'fixed');
+                    footer.css('width', '100%');
+                }
+            }];
+        }
+        var disqus_identifier = 'http://qgis.pt/2015/05/06/plugin-reffunctions/';
+        var disqus_url = 'http://qgis.pt/2015/05/06/plugin-reffunctions/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

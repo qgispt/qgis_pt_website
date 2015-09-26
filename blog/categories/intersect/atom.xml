@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Intersect | QGIS-PT]]></title>
+  <link href="http://qgis.pt/categories/intersect/atom.xml" rel="self"/>
+  <link href="http://qgis.pt/"/>
+  <updated>2015-05-07T16:28:33+01:00</updated>
+  <id>http://qgis.pt/</id>
+  <author>
+    <name><![CDATA[Grupo de Utilizadores QGIS PT]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Plugin refFunctions]]></title>
+    <link href="http://qgis.pt/2015/05/06/plugin-reffunctions/"/>
+    <updated>2015-05-06T17:40:08+01:00</updated>
+    <id>http://qgis.pt/2015/05/06/plugin-reffunctions</id>
+    <content type="html"><![CDATA[<p>Este tutorial pretende exemplificar como é possível utilizar operações espaciais no QGIS para preencher um campo na tabela de atributos com informação retirada da relação espacial existente
+entre dois layers.<!-- more --> Isso é possível com recurso ao plugin <a href="http://planet.qgis.org/plugins/refFunctions/" target="_blank"><i><b>refFunctions</b></i></a>.</p>
+
+
+<p>Vamos então supor que temos um layer de pontos referentes aos clientes de uma empresa e um layer de polígonos com os limites de território de cada loja da empresa. O objetivo é então criar e preencher um
+determinado campo da tabela de atributos dos pontos, fazendo uso do posicionamento espacial existente entre cada um e o polígono onde está inserido.</p>
+
+<h4>1º Instalação do Plugin</h4>
+
+
+<ul>
+    <li>No menu <i><b>Plugins</b></i>, escolher a opção <i><b>Manage and Install Plugins</b></i></li>
+    <li>Pesquise o plugin <i><b>refFunctions</b></i> e proceda à sua instalação</li>
+</ul>
+
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/install_plugin.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/install_plugin.png" width="500"  alt="Pesquisa do plugin">
+    </a>
+</div>
+
+
+
+
+<h4>2º Utilização do Plugin</h4>
+
+
+<ul>
+    <li>Abra a tabela de atributos do layer de pontos e coloque em modo de edição</li>
+    <li>Aceda ao <i><b>Field Calculator</b></i></li>
+    <li>Na seção <i><b>Create a new field</b></i>, crie um novo campo segundo as suas necessidades</li>
+    <li>Agora na seção central onde estão listadas todas as categorias de funções, irá encontrar uma nova entrada, designada por <i><b>Reference</b></i>. Das opções existentes, efetue duplo clique sobre a função <i><b>geomintersects</b></i></li>
+    <li>Segundo a sintax que é mostrado no help da função, teremos de definir o layer e o campo alvo onde se irá buscar a informação para preencher o nosso campo. Neste exemplo, será então o layer Lojas e o campo Loja</li>
+    <li>Por fim, mande correr o processo, o qual poderá demorar ou não em função da quantidade de objectos geográficos que os layers possuem</li>
+</ul>
+
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/field_calculator.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/field_calculator.png" width="500"  alt="Utilização da função geomintersects do plugin">
+    </a>
+</div>
+
+
+<ul>
+    <li>Após a conclusão deste processo, o resultado será então a criação do novo campo, preenchido com indicação da loja em que cada ponto está inserido</li>
+</ul>
+
+
+
+
+<div class="post-img">
+    <a href="http://qgis.pt/blog/images/posts/attributes.png" rel="prettyPhoto" title="">
+        <img class="img-responsive thumbnail" src="http://qgis.pt/blog/images/posts/attributes.png" width="500"  alt="Resultado na tabela de atributos">
+    </a>
+</div>
+
+
+
+
+<p></p>
+
+
+<p>Para mais informação sobre o plugin, <a href="https://geogear.wordpress.com/2014/11/13/reffunctions-v1-0/" target="_blank">https://geogear.wordpress.com/2014/11/13/reffunctions-v1-0/</a></p>
+
+
+
+
+<p>Esperamos que esta dica vos seja de ajuda. Caso tenha dúvidas, não hesite em usar a <i>mailing list qgis-pt</i> para as esclarecer.</p>
+
+
+
+
+<br />
+
+]]></content>
+  </entry>
+  
+</feed>
