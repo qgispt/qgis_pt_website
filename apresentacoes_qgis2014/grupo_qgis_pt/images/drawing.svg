@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   inkscape:export-filename="/home/hfpm/Documents/QGISPT/presentation/images/plus_one.png"
+   inkscape:export-xdpi="9.1779375"
+   inkscape:export-ydpi="9.1779375"
+   sodipodi:docname="New document 1">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-97.857143"
+     inkscape:cy="514.28571"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1031"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3801"
+       inkscape:export-filename="/home/hfpm/Documents/QGISPT/presentation/images/plus_one.png"
+       inkscape:export-xdpi="23.91"
+       inkscape:export-ydpi="23.91"
+       transform="translate(-1914.2857,320)">
+      <path
+         transform="matrix(1.1791109,0,0,1.1520877,185.92637,-228.78741)"
+         inkscape:transform-center-y="-25.736761"
+         inkscape:transform-center-x="-105.11366"
+         d="M 351.0857,712.01934 376.62054,833.22973 263.28471,783.23997 224.79333,900.97866 151.63651,801.01834 59.432649,883.73735 46.057139,760.59077 -75.153249,786.1256 -25.163488,672.78977 -142.90218,634.2984 -42.941865,561.14157 -125.66087,468.93772 -2.5142891,455.5622 -28.049124,334.35182 85.286702,384.34158 123.77808,266.60289 l 73.15682,99.96031 92.20386,-82.71901 13.37551,123.14659 121.21039,-25.53484 -49.98976,113.33583 117.73869,38.49138 -99.96031,73.15682 82.71901,92.20386 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="0.88928763"
+         sodipodi:arg1="0.62748824"
+         sodipodi:r2="321.18402"
+         sodipodi:r1="218.40514"
+         sodipodi:cy="583.79077"
+         sodipodi:cx="174.28571"
+         sodipodi:sides="12"
+         id="path2995"
+         style="fill:#eee8d5;fill-opacity:0.94117647;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:type="star" />
+      <text
+         transform="matrix(0.85894916,0.51206088,-0.51206088,0.85894916,0,0)"
+         sodipodi:linespacing="125%"
+         id="text2997"
+         y="259.23065"
+         x="334.73633"
+         style="font-size:279.7588501px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#002b36;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         xml:space="preserve"><tspan
+           y="259.23065"
+           x="334.73633"
+           id="tspan2999"
+           sodipodi:role="line">+1</tspan></text>
+    </g>
+    <g
+       id="g3809"
+       inkscape:export-filename="/home/hfpm/Documents/QGISPT/presentation/images/donations.png"
+       inkscape:export-xdpi="23.91"
+       inkscape:export-ydpi="23.91">
+      <path
+         sodipodi:type="star"
+         style="fill:#eee8d5;fill-opacity:0.94117647;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="path3784"
+         sodipodi:sides="12"
+         sodipodi:cx="174.28571"
+         sodipodi:cy="583.79077"
+         sodipodi:r1="218.40514"
+         sodipodi:r2="321.18402"
+         sodipodi:arg1="0.62748824"
+         sodipodi:arg2="0.88928763"
+         inkscape:flatsided="false"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 351.0857,712.01934 376.62054,833.22973 263.28471,783.23997 224.79333,900.97866 151.63651,801.01834 59.432649,883.73735 46.057139,760.59077 -75.153249,786.1256 -25.163488,672.78977 -142.90218,634.2984 -42.941865,561.14157 -125.66087,468.93772 -2.5142891,455.5622 -28.049124,334.35182 85.286702,384.34158 123.77808,266.60289 l 73.15682,99.96031 92.20386,-82.71901 13.37551,123.14659 121.21039,-25.53484 -49.98976,113.33583 117.73869,38.49138 -99.96031,73.15682 82.71901,92.20386 z"
+         inkscape:transform-center-x="-105.11366"
+         inkscape:transform-center-y="-25.736761"
+         transform="matrix(1.1791109,0,0,1.1520877,163.06923,-211.64455)" />
+      <text
+         xml:space="preserve"
+         style="font-size:155.49563599000001091px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#002b36;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         x="346.29523"
+         y="262.11359"
+         id="text3786"
+         sodipodi:linespacing="125%"
+         transform="matrix(0.85894916,0.51206088,-0.51206088,0.85894916,0,0)"><tspan
+           sodipodi:role="line"
+           id="tspan3788"
+           x="346.29523"
+           y="262.11359">570€</tspan></text>
+    </g>
+  </g>
+</svg>

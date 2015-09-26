@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>QGIS-PT</title>
+        
+		<meta name="description" content="Apresentação do Grupo de Utilizadores QGIS-PT">
+		<meta name="author" content="Hugo Martins">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <!--link rel="stylesheet" href="css/qgispt.css"-->
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>2&#176 Encontro de Utilizadores QGIS PT</h1>
+					<h2>Workshop WebGIS e serviços OGC com QGIS Desktop/Server</h2>
+                    <img src="images/qgis_pt.png" height="200"></img>
+                    <p>
+						<small>Hugo Martins, 2014 - &copy; <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons CC-BY-SA</a></small>
+					</p>
+				</section>
+                
+                <!-- Cap #1 -->
+				<section>
+					<h2>Instalação</h2>
+                    <h4>Componentes necessárias</h4>
+                    <ol>
+                        <li>Qgis-mapserver</li>
+                        <li>Apache</li>
+                        <li>Fast CGI (libapache2-mod-fcgid)</li>
+                        <li>CURL</li>
+                        <li>PHP</li>
+                            <ul>
+                                <li>PHP5-CURL</li>
+                                <li>PHP5-Sqllite</li>
+                                <li>PHP5-gd</li>
+                            </ul>
+                    </ol>
+                </section>
+                
+                <section>
+					<h2>Instalação</h2>
+                    <h4>Componentes necessárias</h4>
+                    <ol>
+                        <li>Linux (baseado em Debian)</li>
+                            <pre><code data-trim contenteditable>
+                                sudo apt-get install apache2 php5 curl php5-curl php5-sqlite php5-gd libapache2-mod-fcgid qgis-mapserver
+                            </code></pre>
+                        <li>Windows</li>
+                            <ul>
+                                <li><a href="http://www.3liz.com/blog/rldhont/index.php?post/2012/11/06/Test-LizMap-on-Windows-with-OSGEO4W" target="_blank">Link 1 -Instalação a partir do OSGEO4W</a></li>
+                                <li><a href="http://docs.3liz.com/en/lizmap-web-client/installation/windows.html" target="_blank">Link 2 -Instalação a partir do OSGEO4W</a></li>
+                            </ul>
+                    </ol>
+                </section>
+                
+                <section>
+					<h2>Testar instalações</h2>
+                    <ol>
+                        <li>Apache</li>
+                            <a href="http://localhost" target="_blank">http://localhost</a>
+                        <li>Qgis-Server</li>
+                            <a href="http://localhost/cgi-bin/qgis_mapserv.fcgi" target="_blank">http://localhost/cgi-bin/qgis_mapserv.fcgi</a>
+                    </ol>
+                </section>
+                
+                <section>
+					<h2>QGIS SERVER</h2>
+                    <ol>
+                        <li>OGC WebServices</li>
+                            <ul>
+                                <li>WMS - Web Map Service</li>
+                                <li>WFS (t) - Web Feature Service (transactional)</li>
+                                <li>WCS - Web Coverage Service</li>
+                            </ul>
+                        <li>Criar Projecto no QGIS Desktop</li>
+                        <li>Configurar QGIS Server</li>
+                    </ol>
+                </section>
+                <section>
+                    <h2>QGIS SERVER</h2>
+                    <p>Testar WMS</p>
+                    <ol>
+                        <li>No <i>Browser</i></li>
+                            <a href="http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/var/www/ws/qgis_pt.qgs&service=WMS&request=GetCapabilities" target="_blank">http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/var/www/ws/qgis_pt.qgs&service=WMS&request=GetCapabilities</a>
+                        <li>No QGIS: adicionar servidor WMS com o endereço</li>
+                            <a href="http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/var/www/ws/qgis_pt.qgs" target="_blank">http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/var/www/ws/qgis_pt.qgs</a>
+                    </ol>
+                </section>
+                
+                <section>
+                    <h2>QGIS SERVER</h2>
+                    <p>Testar WFS</p>
+                    <ol>
+                        <li>No <i>Browser</i></li>
+                            <a href="http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/var/www/ws/qgis_pt.qgs&service=WFS&request=GetCapabilities" target="_blank">http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/var/www/ws/qgis_pt.qgs&service=WFS&request=GetCapabilities</a>
+                        <li>No QGIS: adicionar servidor WFS com o endereço</li>
+                            <a href="http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/var/www/ws/qgis_pt.qgs" target="_blank">http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/var/www/ws/qgis_pt.qgs</a>
+                    </ol>
+                </section>
+                <section>
+                    <h2>QGIS SERVER</h2>
+                    <p>Testar WCS</p>
+                    <ol>
+                        <li>No <i>Browser</i></li>
+                            <a href="http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/var/www/ws/qgis_pt.qgs&service=WCS&request=GetCapabilities" target="_blank">http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/var/www/ws/qgis_pt.qgs&service=WCS&request=GetCapabilities</a>
+                        <li>No QGIS: adicionar servidor WCS com o endereço</li>
+                            <a href="http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/var/www/ws/qgis_pt.qgs" target="_blank">http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/var/www/ws/qgis_pt.qgs</a>
+                    </ol>
+                </section>
+                <section>
+                    <h2>LIZMAP WebClient</h2>
+                    <ul>
+                        <li>Bibliotecas usadas</li>
+                            <ul>
+                                <li>OpenLayers</li>
+                                <li>Bootstrap</li>
+                                <li>Jelix PHP Framework</li>
+                            </ul>
+                        <li>Documentação</li>
+                            <a href="http://docs.3liz.com/en/" target="_blank">Lizmap docs</a>
+                        <li>Instalação</li>
+                            <ul>
+                                <li>QGIS Desktop: Instalar <i>plugin</i> chamada <i>Lizmap</i></li>
+                                <li>Fazer <i>download</i> do cliente e colocar na pasta pública do <strong>Apache</strong></li>
+                                    <a href="https://github.com/3liz/lizmap-web-client/tags" target="_blank">Lizmap Github</a>
+                            </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h2>LIZMAP WebClient</h2>
+                    <p>Testar instalação</p>
+                    <a href="http://localhost/lizmap/lizmap/www/index.php/view/" target="_blank">http://localhost/lizmap/lizmap/www/index.php/view/</a>
+                </section>
+                
+                <section>
+                    <h2>LIZMAP WebClient</h2>
+                    <p><strong>Login</strong></p>
+                    <p><strong>Username:</strong> admin</p>
+                    <p><strong>Password:</strong> admin</p>
+                </section>
+                
+                <section>
+                    <h2>LIZMAP WebClient</h2>
+                    <p>Criar novo projecto no Lizmap</p>
+                    <ol>
+                        <li>Criar pasta dentro do Lizmap para conter todos os dados do projecto</li>
+                        <li>Carregar o Lizmap no <i>browser</i> e efectuar <i>Login</i></li>
+                            <ol>
+                                <li>Admin > Your account > Lizmap configuration</li>
+                                <li>Create Respository</li>
+                                    <ul>
+                                        <li><strong>id:</strong> (sem espaços e caracteres especiais)</li>
+                                        <li><strong>label</strong></li>
+                                        <li><strong>path:</strong> ../install/nome_da_pasta/ (apenas um exemplo)</li>
+                                    </ul>
+                            </ol>
+                    </ol>
+                </section>
+                
+                <section>
+                    <h2>LIZMAP WebClient</h2>
+                    <p>Configurar e Publicar um projecto através da <i>plugin</i> no QGIS</p>
+                    <ol>
+                        <li>Abrir projecto no QGIS Desktop</li>
+                        <li>Abrir o <i>plugin Lizmap</i></li>
+                        <li>Configurar todos os separadores</li>
+                        <li>Copiar ficheiros para o servidor (SCP, FTP)</li>
+                    </ol>
+                </section>
+                
+                <section>
+                    <h2>QGIS WebClient</h2>
+                    <ul>
+                        <li>Bibliotecas usadas</li>
+                            <ul>
+                                <li>OpenLayers</li>
+                                <li>ExtJS</li>
+                                <li>GeoExt</li>
+                            </ul>
+                        <li>Documentação e Instalação</li>
+                            <a href="https://github.com/qgis/QGIS-Web-Client" target="_blank">QGIS WebClient GitHub</a>
+                            <ul>
+                                <li>Seguir as instruções do ficheiro README</li>
+                                <li>Existe um manual em PDF (README.pdf) na pasta <strong>doc</strong></li>
+                            </ul>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>QGIS WebClient</h2>
+                    <p>Testar aplicação</p>
+                    <a href="http://localhost/qgiswebclient.html?map=/var/www/ws/qgis_pt.qgs" target="_blank">http://localhost/qgiswebclient.html?map=/var/www/ws/qgis_pt.qgs</a>
+                </section>
+                
+                <!-- 
+                    https://github.com/qgis/QGIS-Web-Client
+                -->
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
