@@ -163,13 +163,6 @@ jQuery(document).ready(function() {
 						}
 					}
 				},
-                almoco: {
-                    validators: {
-                        notEmpty:{
-                            message: 'Este campo é obrigatório'
-                        }
-                    }
-                },
 			}
 		});
 		
