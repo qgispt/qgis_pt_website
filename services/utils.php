@@ -59,7 +59,7 @@
 	}
 	
 	function sendEmail($to, $msg){
-		$subject = 'Inscrição no 2º Encontro de Utilizadores QGIS Portugal';
+		$subject = 'Inscrição no 3º Encontro de Utilizadores QGIS Portugal';
 		$headers = 'From: Grupo de Utilizadores QGIS PT <qgis.portugal@gmail.com>' . "\r\n";
 		$headers .= 'Bcc: qgis.portugal@gmail.com' . "\r\n";
 		if (!mail($to, $subject, $msg, $headers)){

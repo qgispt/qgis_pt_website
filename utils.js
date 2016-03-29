@@ -4,9 +4,10 @@ jQuery(document).ready(function() {
 	if (slideshow.size() != 0){
 		//SLIDESHOW
 		slideshow.backstretch([
-            //"images/slideshow/covilha_3d.jpg",
-		 	"images/slideshow/old_map.jpg",
-		 	"images/slideshow/cascais_pi.jpg"
+            "images/slideshow/porto.jpg",
+		 	"images/slideshow/qgis1.png",
+		 	"images/slideshow/qgis2.jpg"
+		 	//"images/slideshow/qgis3.jpg"
 		],{
 			duration: 3000, fade: 1000
 		});
