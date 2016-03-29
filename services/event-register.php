@@ -42,8 +42,8 @@
 		exit(json_encode($response));
 	} else {
 		$msg = "Caro(a) ".$nome.",\r\n";
-		$msg .= "Vimos por este meio confirmar a sua inscrição no 3º Encontro de Utilizadores QGIS PT.";
-		$msg .= "Deverá depois enviar-nos o comprovativo de pagamento da inscrição para qgis.portugal@gmail.com. Até dia 17 de Junho!";
+		$msg .= "Vimos por este meio confirmar a sua inscrição no 3º Encontro de Utilizadores QGIS PT. ";
+		$msg .= "Deverá enviar-nos o comprovativo de pagamento para qgis.portugal@gmail.com. Até dia 17 de Junho!";
 		if (sendEmail($email, $msg) == true){
 			$response['success'] = true;
 			$response['message'] = 'Seja bem-vindo ao 3º Encontro de Utilizadores QGIS Portugal! O seu registo foi concluido com sucesso e em breve deverá receber uma confirmação por email.';
