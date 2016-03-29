@@ -60,9 +60,12 @@
 	
 	function sendEmail($to, $msg){
 		$subject = 'Inscrição no 3º Encontro de Utilizadores QGIS Portugal';
-		$headers = 'From: Grupo de Utilizadores QGIS PT <qgis@qgis.pt>' . "\r\n";
-		$headers .= 'Bcc: qgis.portugal@gmail.com' . "\r\n";
-		$headers .= 'Reply-To: qgis.portugal@gmail.com' . "\r\n";
+		$headers = 'MIME-Version: 1.0' . "\r\n";
+		$headers .= 'Content-type: text/plain; charset=iso-8859-1' . "\r\n";
+		$headers .= 'From: Grupo de Utilizadores QGIS Portugal <qgis@qgis.pt>' . "\r\n";
+		$headers .= 'Bcc: qgis@qgis.pt' . "\r\n";
+		$headers .= 'Reply-To: Grupo de Utilizadores QGIS Portugal <qgis@qgis.pt>' . "\r\n";
+		$headers .= 'X-Mailer: PHP/'.phpversion() . "\r\n";
 		if (!mail($to, $subject, $msg, $headers)){
 			return false;
 		}
