@@ -59,18 +59,49 @@
 	}
 	
 	function sendEmail($to, $msg){
-		$subject = 'Inscrição no 3º Encontro de Utilizadores QGIS Portugal';
-		$headers = 'From: Grupo de Utilizadores QGIS Portugal <qgis@qgis.pt>' . "\r\n";
-		$headers .= 'Reply-To: Grupo de Utilizadores QGIS Portugal <qgis@qgis.pt>' . "\r\n";
-		$headers .= 'Return-Path: Grupo de Utilizadores QGIS Portugal <qgis@qgis.pt>' . "\r\n";		
-		$headers .= 'Bcc: qgis@qgis.pt' . "\r\n";
-		$headers .= 'MIME-Version: 1.0' . "\r\n";
-		$headers .= 'Content-type: text/plain; charset=iso-8859-1' . "\r\n";
-		$headers .= 'X-Priority: 3\r\n';
-		$headers .= 'X-Mailer: PHP'.phpversion() . "\r\n";
-		if (!mail($to, $subject, $msg, $headers)){
+  $subject = 'Inscrição no 3º Encontro de Utilizadores QGIS Portugal';
+  $from = "qgis@qgis.pt"; // this is the sender's Email address
+  $headers = "Reply-To: $from\r\n";
+  $headers .= "Return-Path: $from\r\n";
+  $headers .= "From: $from\r\n";
+  $headers .= "Bcc: $from\r\n";  
+  $headers .= "Organization: Grupo de Utilizadores QGIS Portugal\r\n";
+  $headers .= "MIME-Version: 1.0\r\n";
+  $headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
+  $headers .= "X-Priority: 3\r\n";
+  $headers .= "X-Mailer: PHP". phpversion() ."\r\n";
+	
+		if (!mail($to, $subject, $msg, $headers, "-f$from")){
 			return false;
 		}
 		return true;
 	}
+	
+	
+	function sendEmailPhpMailer($to, $msg){
+
+$correio = new PHPMailer(); // create a new object
+$correio->IsSMTP(); // enable SMTP
+//$correio->SMTPDebug = 2; // debugging: 1 = errors and messages, 2 = messages only
+$correio->SMTPAuth = true; // authentication enabled
+$correio->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+$correio->Host = "smtp.gmail.com";
+$correio->Port = 465; // or 587
+$correio->IsHTML(true);
+$correio->Username = "qgis.portugal@gmail.com";
+$correio->Password = "***";
+$correio->SetFrom("qgis.portugal@gmail.com", "Grupo Utilizadores QGIS Portugal");
+$correio->Subject = "Inscrição no 3º Encontro de Utilizadores QGIS Portugal";
+$correio->Body = $msg;
+$correio->AddAddress($to);
+$correio->AddBCC("qgis.portugal@gmail.com");
+$correio->CharSet = 'UTF-8';
+//$correio->Send();
+	
+		if (!$correio->Send()){
+			return false;
+		}
+		return true;	
+	}	
+	
 ?>
